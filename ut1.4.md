@@ -254,15 +254,11 @@ Modos de direccionamiento según el enlace de difusión visto anteriormente:
 
 ### Según el propietario de la red
 
-- **Redes privadas**: son redes instaladas y gestionadas por particulares,
-empresas u organizaciones privadas. Puede ocurrir que sean alquiladas a
-compañías para su uso exclusivo. Sólo tendrán acceso los propietarios
-autorizados.
+- **Redes privadas**: son redes instaladas y gestionadas por particulares, empresas u organizaciones privadas. Puede ocurrir que sean alquiladas a
+compañías para su uso exclusivo. Sólo tendrán acceso los propietarios autorizados.
 
-- **Redes públicas**: Son redes de titularidad pública. Las líneas de
-comunicación soportan información de diferentes usuarios. Se trata en todo caso de redes de servicio público ofertadas por compañías de
-telecomunicaciones bajo cuotas de alquiler en función del uso realizado.
-Las redes de área extensa suelen ser públicas.
+- **Redes públicas**: Son redes de titularidad pública. Las líneas de comunicación soportan información de diferentes usuarios. Se trata en todo caso de redes de servicio público ofertadas por compañías de
+telecomunicaciones bajo cuotas de alquiler en función del uso realizado. Las redes de área extensa suelen ser públicas.
 
 - **Redes mixtas o dedicadas**: Una línea puede ser pública, pero también puede ser exclusiva para quien la alquila, apareciendo lo que se denomina las líneas dedicadas.
 
@@ -315,7 +311,8 @@ Por esta razón resulta determinante contar con un **hardware redundante** para 
 
 -   La **escalabilidad** hace referencia a la capacidad y facilidad para cambiar de tamaño de una red. Una red no puede añadir nuevos componentes de forma continua y esperar que funcione a la misma velocidad. A medida que añadimos nuevos nodos y estos se hallan funcionando a la vez, la conexión a Internet se reduce, la velocidad de transmisión de datos en general es menor y hay más probabilidad de errores.
 -   Es por eso importante ver la facilidad y las posibilidades de añadir o cambiar componentes de hardware y software o nuevos servidores para mejorar el rendimiento de la red.
-![](media/d3ee695c2c06bcfef04e6e7be9f2b48c.jpeg)
+
+    ![](media/d3ee695c2c06bcfef04e6e7be9f2b48c.jpeg)
 
 ### Disponibilidad
 
@@ -336,4 +333,13 @@ Es el dispositivo o software que realiza solicitudes para acceder a un servicio 
 
 Es el dispositivo o software que responde a las solicitudes de los clientes, proporcionando los recursos o servicios solicitados. Un servidor web, por ejemplo, responde con páginas HTML, imágenes u otros contenidos a los clientes que lo solicitan.
 
-![](media/2fc70c14a00bf7f9324daa0f5cd6ef61.png)
+![](media/2fc70c14a00bf7f9324daa0f5cd6ef61.jpg)
+
+## Servicios web
+
+```note
+Un **servicio web** es cualquier software que se pone a su disposición a través de Internet y utiliza un formato estandarizado (como XML o JSON) para la solicitud y la
+respuesta de una interacción con la interfaz de programación de aplicaciones (API).
+```
+
+![](media/web_service.jpg)
