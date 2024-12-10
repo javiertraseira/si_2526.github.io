@@ -384,10 +384,101 @@ Los programadores tienen a su vez acceso a tipos específicos de interfaces llam
 
 Un SDK (Software Development Kit) es un conjunto de herramientas, bibliotecas, documentación y ejemplos de código que permiten a los desarrolladores crear software o aplicaciones que interactúan con un sistema operativo, hardware o plataforma específica. Se utiliza como un medio de comunicación entre las aplicaciones creadas por el desarrollador y el sistema operativo moderno, facilitando la integración con sus características y funciones.
 
+## Gestión de procesos
 
-## Modos de explotación	
+### Hilos (threads)
 
-![](media\explota_SO.png)
+```note
+💡 Se denomina **hebra** o **hilo** a un punto de ejecución cualquiera en un proceso. Un proceso tendrá siempre una hebra, en la que corre el propio programa, pero puede tener más hebras.
+```
+
+Un proceso clásico es aquel que solo posee una **hebra**.
+
+[^1]: Si por ejemplo ejecutamos un procesador de textos como Word, con un solo documento abierto, el programa Word convertido en proceso estará ejecutándose en un único espacio de memoria (con acceso a archivos, galerías de imágenes, corrector ortográfico..). Este proceso, de momento, tendrá una hebra. Si en esta situación, sin cerrar Word abrimos un nuevo documento, Word no se volverá a cargar como proceso. Simplemente el programa, convertido en proceso, tendrá a su disposición **dos hebras **o hilos diferentes, de tal forma que el proceso sigue siendo el mismo (el original). Word se está ejecutando una sola vez y el resto de documentos de texto que abramos serán hilos o hebras del proceso principal, que es el propio procesador de textos.
+
+![hebras_hilos](media/hebras_hilos.png)
+
+### Estados y transiciones de los procesos	
+
+Existen **tres estados** para los procesos (o hilos correspondientes):
+
+-   **En ejecución:** El procesador está ejecutando instrucciones del proceso
+    cargado en ese momento (tiene su atención y prioridad)
+
+-   **Preparado, en espera o activo:** El proceso está preparado para ser
+    ejecutado y esperando su turno para ser atendido por la CPU.
+    
+-   **Bloqueado:** El proceso ha entrado en un estado de bloqueo que puede
+    darse por causas múltiples (acceso a un mismo fichero, errores..)
+    
+    [^2]: En algunas biografías pueden utilizarse también los estados **nuevo** y **terminado** .
+    
+    
+
+------
+
+Una vez que un programa se ha lanzado y se ha convertido en proceso, puede atravesar varias fases o **estados** hasta que termina.
+
+![](media/transiciones.jpg)
+
+Los cambios de estado en los que se puede encontrar un proceso es lo que se denomina **transiciones**:
+
+- **Transición A**. Ocurre porque el proceso que está en ejecución necesita algún elemento, señal, dato, para poder continuar ejecutándose.
+
+- **Transición B**. Ocurre cuando un proceso ha utilizado el tiempo asignado por la CPU y deja paso al siguiente proceso.
+
+- **Transición C**. Ocurre cuando el proceso que está preparado pasa a estado de ejecución en la CPU. 
+
+- **Transición D**. Ocurre cuando el proceso pasa a preparado, es decir, al recite la orden o señal que estaba esperando en estado de bloqueado.
+
+![estados_procesos](media/estados_procesos.png)
+
+En el siguiente diagrama observamos tres procesos (*o hilos*) pasando de estado de ejecución a quedar en espera o bloqueados:
+
+![diagrama_procesos](media/diagrama_procesos.jpg)
+
+Del que un proceso cambie de estado en un momento u otro se encarga el **planificador de procesos del sistema operativo.**
+
+```note
+💡 El **planificador** de un sistema operativo se encarga de asignar **prioridades** a los diferentes procesos para llevar a cabo su ejecución en el menor tiempo y de la forma más óptima posible.
+```
+
+Mediante técnicas que veremos a continuación, se consigue indicar a la CPU del ordenador que procesos deben ejecutarse en qué momento concreto y los diferentes estados que deben ir adoptando. Ello se lleva cabo mediante **algoritmos de planificación**.
+
+Como hemos visto, cualquier proceso, pasará por diferentes estados y el cambio de un estado a otro no es trivial y tanto la forma como el tiempo para hacerlo marcarán la eficiencia del sistema. 
+
+```note
+Un **cambio de contexto** consiste en interrumpir la ejecución de un proceso para comenzar o seguir con otro.
+```
+
+![cambio_contexto](media/cambio_contexto.png)
+
+
+### Bloque de control de procesos	
+
+```note
+💡 La información de un proceso que el sistema operativo necesita para controlarlo se  guarda en un **bloque de control de procesos o BCP**. 
+```
+
+En el **BCP** cada proceso almacena información como:
+
+- Nombre del proceso
+- **Identificador del nombre e identificador del proceso**. A cada proceso se le asigna un identificador denominado **PID**. Si tiene un proceso padre se identificará a su vez con su **PPID**.
+- **Estado actual del proceso**: Ejecución, preparado o bloqueado.
+- **Prioridad del proceso**. Se la asigna el planificador o el usuario de forma manual.
+- **Ubicación y tamaño usado en memoria**. Dirección de memoria en la que está cargado el proceso y espacio utilizado.  
+- **Recursos utilizados**. Otros recursos hardware y software para poder ejecutarse.
+
+
+| BCP básico de un proceso |
+| ------------------------ |
+| Nombre del proceso       |
+| PID del proceso y PPID   |
+| Estado del proceso       |
+| Prioridad del proceso    |
+| Ubicación en memoria     |
+| Tamaño en memoria        |
+| Recursos                 |
 
 
 ##  Conceptos de servicios y procesos
