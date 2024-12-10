@@ -408,3 +408,53 @@ Los **procesos** son gestionados por el sistema operativo y están formados por:
 Un **proceso** es la instancia en memoria de un programa ejecutable (un archivo ejecutable .exe o binario) que se ejecuta. Una aplicación puede tener varios procesos que se ejecutan simultáneamente. Por ejemplo, algunos navegadores modernos como Google Chrome o Firefox, ejecutan varios procesos a la vez (cada uno de los cuales representa una pestaña).
 
 Un **servicio** es también un proceso, pero que se ejecuta en segundo plano y no interactúa con nosotros de forma directa como un programa o aplicación. En sistemas Windows, los servicios casi siempre se ejecutan como una instancia del proceso *svchost*, también identificado como host de servicio (En Linux systemd) 
+
+
+
+## Interrupciones y excepciones
+
+Las interrupciones y las excepciones son mecanismos que tienen los sistemas operativos para gestionar situaciones que requieren atención inmediata o especial, interrumpiendo el flujo normal de ejecución de las instrucciones de un programa. 
+
+A pesar de que ambos conceptos están relacionados con la alteración del flujo de un programa, se diferencian tanto en su origen como en la forma en que son manejados. 
+
+### Interrupciones
+
+```note
+💡 Una **interrupción** es una señal que obliga al SO a tomar el control del procesador para estudiarla y tratarla.
+```
+
+Las interrupciones son un mecanismo que permite que el hardware comunique eventos y es fundamental en sistemas multitarea y en el manejo de dispositivos de entrada/salida. A cada momento se producen miles de interrupciones manejadas con total normalidad por el SO.
+
+Por ejemplo, si un usuario pulsa una tecla en un teclado, o si un paquete de datos llega a una tarjeta de red, se genera una interrupción de hardware. El sistema operativo detiene temporalmente la ejecución del programa actual, gestiona el evento (por ejemplo, leyendo el valor de la tecla pulsada), y luego vuelve a continuar la ejecución del programa en el punto en que fue interrumpido, dando la impresión de que todo funciona a la vez (multitarea).
+
+<img src="media/interrupciones_so.png" alt="interrupciones_so" style="zoom:80%;" />
+
+
+### Excepciones
+
+```note
+💡 Una **excepción** es un evento que ocurren durante la ejecución de las instrucciones de un programa, como resultado de una operación que genera una condición anómala o un **error**.
+```
+
+A diferencia de las interrupciones, que son provocadas por señales externas, las excepciones son generadas internamente por el procesador como respuesta a situaciones inesperadas durante la ejecución de un programa o aplicación (que puede ser el propio SO).
+
+Es el proceso o el propio programa el que intenta llevar a cabo el manejo y control de dicho error abortando su ejecución.
+
+
+<img src="media/exception.png" alt="exception" style="zoom:50%;" />
+
+
+### Comparativa entre interrupciones y excepciones
+
+
+
+|                      **Interrupciones**                      |                       **Excepciones**                        |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| Las interrupciones se presentan inesperadamente y sin relación con el proceso en ejecución. Son parte intrínseca del funcionamiento de cualquier sistema. | Las excepciones se producen como efecto directo de una instrucción concreta del proceso que se esta ejecutando. |
+| El SO atiende la interrupción y a continuación continúa con al ejecución del proceso con la que estaba. | Aparecen por defectos de programación y errores graves. Son fallos no recuperables. |
+| Si se producen varias interrupciones simultáneamente, sólo se tratará una, quedando bloqueadas el resto. |          Las excepciones se producen de una en una.          |
+
+
+
+
+
