@@ -11,7 +11,7 @@ Comúnmente se utiliza este término para referirse de una forma muy genérica a
 Para que un ordenador funcione necesita información o **datos** con los que trabajar. Esta información es de varios tipos dependiendo de su función. El ordenador puede servir para procesar información en forma de datos, los cuales pueden ser textos, imágenes, datos de sensores, hojas de cálculo,
 tablas de una base datos, etc.
 
-1.  **Datos de entrada**: Los que se suministran al ordenador desde los periféricos de entrada (teclado, ratón, escáner) o soportes como disocs (HDDs, DVDs, etc). Forman parte de la primera fase del tratamiento de la información denominada **entrada**.
+1.  **Datos de entrada**: Los que se suministran al ordenador desde los periféricos de entrada (teclado, ratón, escáner) o soportes como discos (HDDs, DVDs, etc). Forman parte de la primera fase del tratamiento de la información denominada **entrada**.
     
 2.  **Datos intermedios:** Son los que se obtienen en el tratamiento de la información denominada **proceso**.
     
