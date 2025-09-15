@@ -203,9 +203,13 @@ Gestionan y controlan el comportamiento de equipos o máquinas. Suelen ser de ta
 
 ### Sistemas de procesamiento de transacciones
 
-Los sistemas de procesamiento de transacciones **TPS** (Transaction Processing System) son los sistemas empresariales básicos que sirven al nivel operacional de la organización.
+Los sistemas de procesamiento de transacciones **TPS** (Transaction Processing System) son los sistemas básicos que registran y gestionan las operaciones diarias y rutinarias de una organización. Se sitúan en el nivel operativo de la empresa y permiten que las actividades cotidianas funcionen de forma ordenada y sin errores.
 
-Un sistema de procesamiento de transacciones es un sistema computarizado que realiza y registra las transacciones rutinarias diarias necesarias para el funcionamiento de la empresa. Se encuentran en el nivel más bajo de la jerarquía organizacional y soportan las actividades cotidianas del negocio.
+Ejemplos:
+- El sistema de un banco que registra depósitos y retiradas de dinero.
+- El sistema de un supermercado que procesa las ventas en caja.
+- Una aplicación de reservas de vuelos que gestiona cada compra de billetes.
+
 
 ### Sistemas de control de procesos de negocio
 
@@ -213,15 +217,31 @@ Los Sistemas de control de procesos de negocio, conocidas también como BPM (Bus
 
 Estos sistemas monitorizan y controlan los procesos industriales o físicos, como puede ser la refinación de petróleo, generación de energía o los sistemas de producción de acero en una planta siderúrgica a través de sensores electrónicos y sistemas en tiempo real.
 
+Ejemplos:
+- Un sistema que regula la temperatura y presión en una planta química.
+- El control automático de una central eléctrica.
+- La supervisión de una línea de montaje en una fábrica de automóviles.
+
+
 ### Sistemas de apoyo en toma de decisiones
 
 Un Sistema informático de apoyo a la toma de decisiones, también conocido como Sistema de soporte a la decisión o **DSS** (Decision Support System), básicamente es un sistema basado en computadoras diseñado con el propósito de ser usado por una gerencia o gerencia de área para ayudarlos en el proceso de tomar una decisión para resolver problemas y con ello poder diagramar las directrices para seleccionar la mejor opción o predecir los futuros escenarios para afrontar nuevos desafíos.
+
+Ejemplos:
+- Un sistema que analiza datos de ventas y recomienda qué productos promocionar.
+- Un software que simula diferentes escenarios de inversión para elegir la más rentable.
+
 
 ![](media/dss.png)
 
 ### Sistemas de colaboración empresarial
 
 Los sistemas **ERP** (Enterprise Resource Planning) son uno de los más claros ejemplos de sistema informático. Los sistemas ERP, también conocidos como Sistemas de colaboración empresarial, son el tipo de sistema informático más utilizado por empresas alrededor del mundo, ya que les permiten a las compañías a gestionar la gran cantidad de información que circula dentro de la misma.
+
+Ejemplos:
+- SAP: usado por grandes corporaciones para gestionar toda la cadena de valor.
+- Microsoft Dynamics o Odoo: usados por medianas y pequeñas empresas.
+
 
 ![](media/erp_icon.png)
 
