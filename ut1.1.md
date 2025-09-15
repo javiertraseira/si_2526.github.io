@@ -8,7 +8,6 @@ Según el Diccionario de la Real Academia Española se define a la **informátic
 Conjunto de conocimientos científicos y técnicas que hacen posible el tratamiento automático de la información por medio de dispositivos digitales, denominados ordenadores o computadoras.
 ```
 
-
 Su aparición como ciencia se debe a la presentación del primer ordenador en el año 1936 denominado **Z1** y usado como arma de cálculo durante la 2ª Guerra Mundial.
 
 El objeto de estudio de la Informática es muy amplio:
@@ -51,40 +50,57 @@ Campos fundamentales de las **ciencias de la computación**:
     - Estructuras de datos. Organización y manipulación de los datos.
 
     
-- **Inteligencia Artificial (IA):**
+- **Sistemas de IA:**
 
-    - La implementación y estudio de sistemas que exhiben (ya sea por una inteligencia autónoma o comportamiento propio, a veces inspirado por las características de los seres vivos.
-    - Inteligencia artificial conversacional y generativa.
-    - Robótica: algoritmos para el control de robots autónomos
+    - La implementación y estudio de sistemas que exhiben ya sea por una inteligencia autónoma o comportamiento inspirado por las características de los seres vivos.
+
+- **IA conversacional y generativa:**
+
+    - Conversacional: Permite interactuar con humanos (asistentes de voz).
+    - Inteligencia artificial generativa: Crea contenido nuevo (texto, imágenes..)
+
+- **Robótica:**
+    - Robótica: algoritmos e IA para el control de robots autónomos.
 
     <img src="media/driving.jpg" alt="driving" style="zoom:67%;" />
 
     ![](media/ia_generative.png)
 
     
-
 - **Gráficos por ordenador:**
 
-    - Algoritmos para generar sintéticamente imágenes fotorrealistas.
+    - Algoritmos para generar sintéticamente imágenes fotorrealistas (Raytracing)
     - Reconocimiento y procesamiento de imágenes.
+    - Técnicas de fabricación y materiales.
+    
 
 ![](media/ff7522a9b0e06950a524d6ca10b6627b.jpg)
 
 - **Computación científica:**
 
    - Bioinformática
+   - Análisis numérico
+   - Física computacional
    - Computación cuántica
    
    ![](media/3a7dde2b6c5d4b4823a060c22adeb388.jpg)
 
 
-- **Ingeniería del software y de sistemas:**
+- **Ingeniería del software:**
 
     - Estudio del diseño de software
     - Análisis del software, soporte y su mantenimiento
-    - Testeo y planificación
-
+    - planificación y testeo.
+    - Interacción Humano-Computadora (HCI)
+    
    ![](media/software_engineering.png)
+
+- **Redes y Seguridad Informática:**
+
+    - Arquitectura de redes
+    - Seguridad informática
+    - Cloud Computing
+
 
 ## El ordenador
 
