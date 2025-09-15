@@ -221,9 +221,12 @@ Se la puede considerar como Licencia de software libre con protección heredada.
 
 
 - **Licencia GNU.** 
- El caso de licencia GPL más destacada es Licencia Pública General de GNU (**GNU GPL**) en la que autor conserva los derechos de autor (copyright), y permite la redistribución y modificación bajo términos diseñados para asegurarse de que todas las versiones modificadas del software permanecen bajo los términos de la propia licencia.
+ El caso de licencia GPL más destacada es Licencia Pública General de GNU (**GNU GPL**) en la que autor conserva los derechos de autor (copyright) en la que autor conserva los derechos de autor (copyright), y permite la redistribución y modificación bajo términos diseñados para asegurarse de que todas las versiones modificadas del software permanecen bajo los términos de la propia licencia.
+ 
 
     ![](media/gnugpl_logo.png)
+
+> El software comercial se basa en que para usarse hay que realizar un pago. Puede existir software libre y propietario de este tipo. 
 
 ### Licencias libres permisivas
 
