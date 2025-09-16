@@ -50,15 +50,10 @@ El software se suele clasificar de forma típica en tres tipos según su funció
 Este software se divide en:
 
 -   Sistemas Operativos
-
 -   Controladores de dispositivos (drivers)
-
 -   BIOS/UEFI
-
 -   Hipervisores de Máquinas Virtuales
-
 -   Gestores de arranque
-
 -   Otros programas (como *OpenGL, directX*..)
 
 ### Software de programación
@@ -68,12 +63,10 @@ Este software se divide en:
 Este tipo de software incluye principalmente:
 
 -   Editores de código
-
 -   Compiladores y depuradores de código
-
+-   Sistemas de gestión de versiones (Git)
 -   Intérpretes o ensambladores
-
--   Entornos de desarrollo integrado (IDEs)
+-   Entornos de desarrollo integrado (IDEs) y sus frameworks asociados.
 
 ### Software de aplicación
 
@@ -81,14 +74,11 @@ Este tipo de software incluye principalmente:
 
 Este software se podría dividir en:
 
+-   Aplicaciones móviles
 -   Aplicaciones de negocio.
-
 -   Aplicaciones ofimáticas.
-
 -   Aplicaciones educativas.
-
 -   Aplicaciones de entretenimiento.
-
 -   Aplicaciones personales.
 
 ### Otras clasificaciones
@@ -102,7 +92,7 @@ El software también se suele clasificar siguiendo el siguiente esquema:
 
 **Inteligencia Artificial**
 
-Integración de algoritmos de IA en aplicaciones para mejorar la toma de decisiones.
+Integración de algoritmos de IA en aplicaciones para mejorar la toma de decisiones. IA generativa.
 
 **Computación en la Nube**
 
@@ -142,7 +132,6 @@ Cuando compramos o bajamos de Internet un programa, al instalarlo solemos acepta
 ### Software libre (GNU)
 
 >   💡 El proyecto GNU fue iniciado en 1984 por Richard Stallman y fundó la Free Software Foundation sin ánimo de lucro.
-
 Se fundamenta en la moral y exige la libertad absoluta del software. 
 
 Las **cuatro libertades** del software libre son:
@@ -155,17 +144,24 @@ Las **cuatro libertades** del software libre son:
     
 4.  La libertad de mejorar el programa y hacer públicas las mejoras a los demás, de modo que toda la comunidad se beneficie (libertad 3)
 
->   📌 **El software libre no referencia a que sea gratis** (de hecho no siempre lo es)
+>   📌 Para proteger estas libertades existe el concepto de **copyleft**: el copyleft garantiza que cualquier modificación o distribución de un programa libre deba mantenerse también como libre, evitando que alguien lo convierta en software propietario.
 
-- Aunque se confunden, software de **código abierto** y el **software libre** no son exactamente lo mismo debido a diferencias sutiles de concepto.
 
 ![](media/libertades_software.png)
 
+
+>   📌 El software libre no hace referencia a que sea gratuito (de hecho, no siempre lo es).
+
+El término libre en software libre se refiere a la libertad del usuario, no al precio del programa. Un software libre puede ser gratuito, pero también puede venderse o tener un coste asociado (por ejemplo, servicios de soporte, formación o distribución). Lo importante es que, sea gratis o de pago, el usuario siempre conserva las cuatro libertades fundamentales: usar, estudiar, modificar y redistribuir el programa.
+
+Aunque se confunden, el **software de código abierto** (open source) y **software libre** no son exactamente lo mismo debido a diferencias sutiles de concepto. Ambos permiten acceder al código fuente, pero sus objetivos y filosofías no son iguales como veremos a continuación
+
+
 ### El software de código abierto (Open Source)
 
-El software de código abierto trata de suavizar las condiciones del *GNU* para facilitar su uso por las compañías.
+El software de código abierto trata de suavizar las condiciones del *GNU* para facilitar su uso por las compañías y fomentar la colaboración entre empresas y comunidades.
 
->   💡 El Open Source o código abierto, es la expresión con la que se conoce al software distribuido y desarrollado libremente.
+>   💡 El término **Open Source** (código abierto) surge a finales de los años 90 con la creación de la Open Source Initiative (**OSI**).
 
 Es un movimiento más ‘**pragmático**’, que se enfoca más en los beneficios prácticos como acceso al código fuente que en aspectos éticos o de libertad que son tan relevantes en el Software Libre.
 
@@ -175,7 +171,9 @@ Es un movimiento más ‘**pragmático**’, que se enfoca más en los beneficio
 
 El software propietario es aquel que sin permiso del propietario queda prohibida la copia, redistribución o modificación como hemos visto. Para poder usar se suele pedir permiso a la organización que lo desarrollo. Generalmente para su disponibilidad hay que pagar bajo unos derechos de autor (un **Copyright**).
 
-En conclusión, los propietarios son los que establecen los derechos de uso, distribución, redistribución, copia, modificación, cesión y en general cualquier otra consideración que se estime necesaria. Los fabricantes de programas sometidos a este tipo de licencias por lo general ofrecen servicios de soporte técnico y actualizaciones durante el tiempo de vida del producto, también regulan el número de copias que pueden ser instaladas e incluso los fines concretos para los cuales puede ser utilizado.
+En conclusión, los propietarios son los que establecen los derechos de uso, distribución, redistribución, copia, modificación, cesión y en general cualquier otra consideración que se estime necesaria. 
+
+Los fabricantes de programas sometidos a este tipo de licencias por lo general ofrecen servicios de soporte técnico y actualizaciones durante el tiempo de vida del producto, también regulan el número de copias que pueden ser instaladas e incluso los fines concretos para los cuales puede ser utilizado.
 
 ## Licencias de software propietario
 
@@ -191,7 +189,7 @@ Tipos de licencias de software propietario:
     
 - **Licencias por volumen (VLM)**: es un tipo de licencia de software destinado a grandes usuarios (empresas), normalmente bajo unas condiciones similares a las de las licencias OEM, aunque sin estar supeditadas a equipos nuevos.
     
-- **Alquiler o suscripción**: El cada vez más habitual modelo de suscripción. El tipo más común es el conocido como Software como servicio (SaaS). Estas son cada vez más habituales, especialmente en las implementaciones cloud. Con este modelo de pago de licencias, la empresa paga una cantidad bastante menor de coste inicial. Algunos proveedores permiten que el número de licencias usadas cambie de mes en mes, otros requieren que las licencias se alquilen por periodos de tiempo más largos.
+- **Alquiler o suscripción**: El cada vez más habitual modelo de suscripción. El tipo más común es el conocido como Software como servicio (**SaaS**). Estas son cada vez más habituales, especialmente en las implementaciones cloud. Con este modelo de pago de licencias, la empresa paga una cantidad bastante menor de coste inicial. Algunos proveedores permiten que el número de licencias usadas cambie de mes en mes, otros requieren que las licencias se alquilen por periodos de tiempo más largos.
 
 - **Otro tipo de licencias especiales**: Por ejemplo, las licencias de educación, empresariales, desarrollo o de sectores específicos como el militar. También las licencias shareware, demos o freeware.
 
@@ -201,14 +199,16 @@ Tipos de licencias de software propietario:
 
 Podemos clasificar las licencias de software en diferentes tipos, ya que no todas cumplen con un grado de libertad absoluto que da la licencia GNU estándar:
 
-- **Licencias libres:** se basan en las cuatro libertades vistas anteriormente
+- **Licencias libres (copyleft fuerte o recíprocas estrictas)** se basan en las cuatro libertades vistas anteriormente. Todo lo que derive de ellas debe mantenerse con la misma licencia. Garantizan que el software siempre sea libre.
 
-   - Licencias **recíprocas** (o copyleft): requieren que cualquier software derivado se distribuya bajo la misma licencia.
-   - Licencias **permisivas**: más flexibles que las anteriores. Permiten redistribuir el software con o sin modificaciones, incluso bajo una licencia diferente.
+- **Licencias semi-libres (copyleft débil o recíprocas flexibles)**: permiten mezclar partes libres con propietarias, siempre que las piezas originales se mantengan libres. Fomentan la adopción de librerías en entornos comerciales.
 
-- **Licencias semi-libres**: permiten la distribución y modificación del software, pero con ciertas restricciones que limitan su uso en ciertos contextos, como el uso comercial o la redistribución en ciertas condiciones.
+- **Licencias permisivas (no recíprocas)**: se puede hacer casi de todo, incluso reutilizar el código en software propietario, siempre reconociendo la autoría. 
 
-### Licencias libres recíprocas
+> El copyleft obliga a que las obras derivadas mantengan la misma licencia.
+
+
+### Licencias libres (copyleft fuerte)
 
 - **Licencias GPL (General Public License).** 
 Se la puede considerar como Licencia de software libre con protección heredada. Creada por la Free Software Foundation (FSF), es una de las licencias más usadas y estrictas en cuanto a copyleft:
@@ -228,9 +228,23 @@ Se la puede considerar como Licencia de software libre con protección heredada.
 
 > El software comercial se basa en que para usarse hay que realizar un pago. Puede existir software libre y propietario de este tipo. 
 
-### Licencias libres permisivas
+### Licencias semilibres (copyleft débil)
 
--  **Licencias BSD (Berkeley Software Distribution).** Es un tipo de licencia conocida por ser menos “restrictiva” lo que permite que desarrolladores puedan modificar, distribuir e incluso vender el software derivado.
+- **Licencia MPL (Mozilla Public License)**
+
+- Creada por Mozilla para el navegador Firefox.
+- Obliga a mantener bajo MPL los archivos de código originales y modificados, pero permite combinarlos con otros módulos bajo licencias distintas (incluso propietarias).
+- Se considera un término medio entre GPL (muy restrictiva) y MIT/Apache (muy permisivas).
+
+- **Licencia EPL (Eclipse Public License)**
+
+- Similar a MPL, usada en el proyecto del IDE Eclipse.
+- Obliga a que las modificaciones directas al código EPL se mantengan con esa licencia, pero permite coexistencia con código propietario.
+
+
+### Licencias permisivas (no recíprocas)
+
+-  **Licencia BSD (Berkeley Software Distribution).** Es un tipo de licencia conocida por ser menos “restrictiva” lo que permite que desarrolladores puedan modificar, distribuir e incluso vender el software derivado.
 
    ![](media/0a2b39a8862349d551c17c4b1a83fc11.png)
 
@@ -239,10 +253,28 @@ Se la puede considerar como Licencia de software libre con protección heredada.
 
 -  **Licencia Apache** Ofrece más protección legal que la licencia MIT o BSD, incluyendo cláusulas sobre patentes. Permite la modificación y redistribución del software bajo otras licencias, siempre que se mantengan los avisos de derechos de autor y licencias.
 
-### Licencias semi-libres 
+ ![](media/apache_license.png)
 
--   **Licencias Creative Commons**: Una de las más conocidas; esta licencia posibilita un modelo legal de distribución y uso de contenidos basada en 4 condiciones principales que pueden ser combinadas para hacer licencias <u>mixtas</u> (libres o semilibres) combinando características:
-    
+### Licencias software libre vs open source
+
+**Software Libre (FSF – Free Software Foundation)**
+- Se centra en la defensa de las **4 libertades**.
+- Muchas licencias libres (como la **GPL**) imponen copyleft fuerte; si distribuyes software derivado, estás obligado a hacerlo bajo la misma licencia.
+- Filosofía ética/moral: la obligación no es solo legal, también es un compromiso con la comunidad.
+
+**Open Source (OSI – Open Source Initiative)**
+- Se centra en la **apertura del código**, no en la libertad como principio moral.
+- Incluye tanto licencias con **copyleft fuerte** (GPL) como licencias **permisivas** (MIT, BSD, Apache).
+- Dependiendo de la licencia elegida, las obligaciones cambian:
+    - Con copyleft fuerte → mismas obligaciones que en software libre.
+    - Con licencias permisivas → muy pocas obligaciones, basta con reconocer la autoría.
+
+
+### Creative Commons
+
+Las licencias **Creative Commons (CC)** son unas licencias que no están pensadas para software, sino contenido de obras culturales, educativas o artísticas.   
+Esta licencia posibilita un modelo legal de distribución y uso de contenidos basada en 4 condiciones principales que pueden ser combinadas para hacer licencias mixtas:
+
     -  **Atribución** (**BY**).- Se conceden derechos de copia, distribución, exhibición y derivación siempre y cuando se reconozca y cite la obra de la forma especificada por el autor o el licenciante.
     -  **No Comercial** (**NC**).- Se puede copiar, distribuir, exhibir y representar la obra y hacer obras derivadas pero sin fines comerciales.
     -  **No Derivadas** (**ND**).- En este caso podemos copiar, distribuir, exhibir y representar copias literales de la obra pero no producir obras derivadas.
