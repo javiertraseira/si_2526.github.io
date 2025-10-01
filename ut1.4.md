@@ -67,15 +67,19 @@ La tecnología subyacente a Internet ha revolucionado la forma en que vivimos, t
 ### Componentes de Internet
 
 **Tecnologías**
+
 Internet utiliza una combinación inmensa de tecnologías que permiten el intercambio de información entre millones de dispositivos.
 
 **Infraestructura**
+
 La infraestructura de Internet incluye cables, satélites y antenas que facilitan la conexión global.
 
 **Protocolos**
+
 Los protocolos de Internet permiten la comunicación y el intercambio de datos entre dispositivos a nivel mundial.
 
 **Elementos Físicos**
+
 Aunque parezca invisible, Internet está compuesto de millones de elementos/dispositivos físicos: centros de datos, cables submarinos,etc.
 
 
@@ -131,6 +135,24 @@ Desde la aparición de la World Wide Web, Internet ha evolucionado enormemente. 
 - Hoy, gracias a tecnologías como **HTML5**, **CSS**, **JavaScripty** frameworks modernos, tenemos **aplicaciones web interactivas**: desde Gmail hasta editores de imágenes online.
 
 **Aparición de los servicios web**
+
+Un servicio web es cualquier software que se pone a su disposición a través de Internet y utiliza un formato estandarizado (como XML o JSON) para la solicitud y la respuesta de una interacción con la interfaz de programación de aplicaciones (API)
+
+**Software como Servicio (SaaS)**
+
+- Con la aparicióm de los servicios web en lugar de instalar programas localmente en un ordenador, se utilizan desde un navegador.
+- Ejemplos: Google Workspace, Microsoft 365, Canva, Figma.
+
+**Servicios descentralizados**
+
+Internet ya no depende solo de servidores centrales. Esto hace que sean más resistentes a fallos y a la censura, ya que no existe un único punto vulnerable
+- Han surgido sistemas basados en blockchain y redes P2P.
+- Ejemplos: Bitcoin, Ethereum, torrents
+
+**Inteligencia Artificial en la red**
+
+- La IA está cada vez más integrada en servicios online: buscadores inteligentes, chatbots, traducción automática, asistentes virtuales.
+- Ejemplos: ChatGPT, traductores online, algoritmos de recomendación en Netflix o Spotify.
 
 
 ¿Qué pasa en un minuto en **Internet** en 2024?
@@ -295,13 +317,12 @@ Modos de direccionamiento según el enlace de difusión visto anteriormente:
 
 ### Según el propietario de la red
 
-- **Redes privadas**: son redes instaladas y gestionadas por particulares, empresas u organizaciones privadas. Puede ocurrir que sean alquiladas a
-compañías para su uso exclusivo. Sólo tendrán acceso los propietarios autorizados.
+- **Redes privadas**: Son redes instaladas y gestionadas por particulares, empresas u organizaciones privadas. Puede ocurrir que sean alquiladas a compañías para su uso exclusivo. Sólo tendrán acceso los propietarios autorizados. No son accesibles directamente desde Internet.
 
-- **Redes públicas**: Son redes de titularidad pública. Las líneas de comunicación soportan información de diferentes usuarios. Se trata en todo caso de redes de servicio público ofertadas por compañías de
-telecomunicaciones bajo cuotas de alquiler en función del uso realizado. Las redes de área extensa suelen ser públicas.
+- **Redes públicas**: Son redes de titularidad pública. Las líneas de comunicación soportan información de diferentes usuarios. Se trata en todo caso de redes ofertadas por compañías de telecomunicaciones bajo cuotas de alquiler en función del uso realizado. Las redes de área extensa suelen ser públicas. 
 
-- **Redes mixtas o dedicadas**: Una línea puede ser pública, pero también puede ser exclusiva para quien la alquila, apareciendo lo que se denomina las líneas dedicadas.
+- **Redes mixtas o dedicadas**: Una red que combina recursos públicos y privados, pero organizados para que convivan. Por ejemplo, puede haber una parte de acceso público y otra privada (la base de datos) a la que no se puede acceder directamente.
+
 
 ### Según la velocidad de transmisión
 
@@ -312,12 +333,27 @@ La unidad que se utiliza al medir el caudal de datos transmitidos por las redes 
 -   **Gigabit Ethernet** Standard (IEEE 802.3z) - *1000* Mbps. 
 -   **10 Gitabit Ethernet** Standar (IEE 802.3a) - *10000* Mbps
 
+### Según su tipo de topología
+
+**Topología física**
+
+Es la forma en que los dispositivos de una red están conectados físicamente entre sí, es decir, el dibujo real del cableado o conexiones inalámbricas.
+- Representa la disposición física de cables, switches, routers, ordenadores, etc.
+- Ejemplos: en estrella (todos los equipos conectados a un switch) o en anillo (cada equipo conectado con el siguiente formando un círculo).
+
+
+**Topología lógica**
+
+Es la forma en que circula la información dentro de la red, independientemente de cómo estén conectados físicamente los equipos.
+- Describe cómo viajan los datos y qué reglas siguen en la comunicación.
+- Ejemplos: Una LAN Ethernet puede tener topología lógica en bus, aunque físicamente sea en estrella (todos al switch).
+
 
 ## Características de una red
 
 ### Velocidad
 
-Hace referencia a la velocidad a la que se transmiten los datos por segundo a través de una red. La rapidez de subida y descarga de datos será diferente según los estándares que utilicemos y también según el tipo de red o medio a través del que se transmiten los datos (inalámbrica, fibra óptica, cables de teléfono o coaxial).
+Hace referencia a la velocidad a la que se transmiten los datos por segundo a través de una red. La rapidez de subida y descarga de datos será diferente según los estándares que utilicemos y también según el tipo de red o medio a través del que se transmiten los datos (inalámbrica, fibra óptica, cables, etc.).
 
 No se debe confundir la velocidad de una red con su **ancho de banda** o la **latencia** de dicha red. El **ancho de banda** mida la cantidad de datos que se pueden transmitir en la unidad de tiempo, mientras que la **latencia** hace referencia es el tiempo que tarda en transmitirse un paquete dentro de una red y es otro factor clave en las conexiones a Internet.
 
@@ -412,7 +448,7 @@ El uso prolongado de ordenadores puede provocar fatiga visual, dolores musculare
 
 ### Prevención riesgos eléctricos/ambientales
 
-Los equipos informáticos funcionan con electricidad y pueden presentar riesgos de incendio o electrocución:
+Los equipos informáticos funcionan con electricidad y pueden presentar riesgos de incendio o electrocución:
 - Usar **regletas** con protección contra sobretensiones.
 - No sobrecargar enchufes ni conectar muchos equipos a una misma toma.
 - Mantener limpios los ventiladores de los ordenadores para evitar sobrecalentamientos.
