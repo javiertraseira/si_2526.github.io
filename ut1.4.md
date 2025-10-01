@@ -64,6 +64,21 @@ Internet se basa en una arquitectura de red de telecomunicaciones distribuida qu
 
 La tecnología subyacente a Internet ha revolucionado la forma en que vivimos, trabajamos e interactuamos entre nosotros, y continúa evolucionando a un ritmo acelerado.
 
+### Componentes de Internet
+
+**Tecnologías**
+Internet utiliza una combinación inmensa de tecnologías que permiten el intercambio de información entre millones de dispositivos.
+
+**Infraestructura**
+La infraestructura de Internet incluye cables, satélites y antenas que facilitan la conexión global.
+
+**Protocolos**
+Los protocolos de Internet permiten la comunicación y el intercambio de datos entre dispositivos a nivel mundial.
+
+**Elementos Físicos**
+Aunque parezca invisible, Internet está compuesto de millones de elementos/dispositivos físicos: centros de datos, cables submarinos,etc.
+
+
 ### Historia y origen
 
 En 1958 los EEUU fundaron la *Advanced Researchs Projects Agency* (**ARPA**) a través del Ministerio de Defensa. El ARPA estaba formado por unos 200 científicos de alto nivel y gran presupuesto. El ARPA se centró en crear comunicaciones directas entre ordenadores para comunicar las diferentes bases de investigación.
@@ -106,8 +121,17 @@ A partir de la publicación de la tecnología **WWW** y de los navegadores se co
 
 La WWW no es lo mismo que Internet; es una de sus aplicaciones más populares, la que hace posible navegar por páginas web tal y como la usamos hoy en día.
 
-
 ### Evolución de Internet
+
+Desde la aparición de la World Wide Web, Internet ha evolucionado enormemente. Ya no se utiliza solo para acceder a páginas estáticas de texto e imágenes, sino que se ha convertido en la infraestructura digital que soporta parte de nuestra vida diaria.
+
+**De páginas estáticas a aplicaciones web**
+
+- Al principio, las páginas web solo mostraban información básica.
+- Hoy, gracias a tecnologías como **HTML5**, **CSS**, **JavaScripty** frameworks modernos, tenemos **aplicaciones web interactivas**: desde Gmail hasta editores de imágenes online.
+
+**Aparición de los servicios web**
+
 
 ¿Qué pasa en un minuto en **Internet** en 2024?
 
