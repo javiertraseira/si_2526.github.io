@@ -21,6 +21,7 @@
     ![](media/fbbf602ed1ad5265cf508f9506be9610.png)
 
 - La **fuente de alimentación** a su vez proporciona electricidad a los componentes internos del SI.
+
     ![](media/87b6460cce53702dd5958d837672bab1.jpeg) 
 
 - La **placa base** (*mainboard*) es el elemento principal de cualquier ordenador o computadora. A ella se conectan todos los demás dispositivos, como pueden ser el disco duro, la memoria o el microprocesador, y hace que todos estos componentes funcionen en equipo. De ella dependerán los componentes que podremos instalar y las posibilidades de ampliación del ordenador. Físicamente, es una placa de material sintético formada por un circuito impreso, en la que se halla un conjunto de chips, el chipset, la BIOS, los puertos del ratón y del teclado, los conectores IDE y SATA, el zócalo del microprocesador, los zócalos de memoria, los puertos paralelo y serie, etc.
