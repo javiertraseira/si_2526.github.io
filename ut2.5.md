@@ -326,9 +326,9 @@ El puerto **PCI-Express** la ranura de video utilizada para la interconexión de
 
 ![](media/b80513c393def004d86815a8402699fc.jpeg)
 
-### Ranuras de memoria
+### Ranuras DIMM de memoria
 
-La memoria RAM es otro de los dispositivos críticos de cualquier equipo informático. En las ranuras o zócalos se insertan los módulos de memorias RAM. Existen diversos zócalos de memoria dependiendo de su tecnología y formato forma.
+La memoria RAM es otro de los dispositivos críticos de cualquier equipo informático. Las ranuras o zócalos donde se insertan los módulos de memorias RAM se denominan **ranuras DIMM**. Existen diversos zócalos de memoria dependiendo de su tecnología y formato forma.  
 
 El **dual channel** es una tecnología para memorias aplicada en las computadoras u ordenadores personales, la cual permite el incremento del rendimiento gracias al acceso simultáneo a dos módulos distintos de memoria.
 
