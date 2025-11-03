@@ -14,9 +14,6 @@ En principio tenemos que hacer una diferenciación elemental entre el **micropro
 
 Actualmente, el objetivo de la ingeniería informática es conseguir el mayor **rendimiento** a través de un microprocesador con el mayor número de núcleos posible especializados, mayor **frecuencia** de reloj y con un **consumo energético** reducido.
 
-
-![](media/acbba4c7c9974e1ea219eb8bf3761ec7.png)
-
 Estamos viviendo una época de cambios, de nuevas tecnologías y sobre todo de nuevos microprocesadores y arquitecturas que están consiguiendo aumentar la potencia por cada chip permaneciendo vigente por el momento la Ley de Moore.
 
 ![](media/bdde12c27ffa50ab270011f41ad09136.png)![](media/ed1ae7f35e262889057ba8d6b750116e.png)![](media/511b5cf9a089999f38a192fbccf39e45.jpeg)![](media/07f6d653cb00a9d64970e400664d1e99.png)![](media/55dd69684b8b9390f332b151ca2a4e9e.jpeg)
@@ -24,8 +21,6 @@ Estamos viviendo una época de cambios, de nuevas tecnologías y sobre todo de n
 Sin embargo, la capacidad de los procesadores no será suficiente por sí sola para manejar la enorme cantidad de datos que se generará en los próximos años. Por ello, se están desarrollando soluciones complementarias como la computación paralela, la computación en la nube, la inteligencia artificial y los procesadores especializados (GPU, TPU, NPU, etc.) que permiten aumentar la capacidad de cómputo de forma más eficiente.
 
 ### Partes lógicas
-
-![](media/acbba4c7c9974e1ea219eb8bf3761ec7.png)
 
 Las **partes lógicas** que integran un procesador, ya conocidas son:
 
@@ -52,7 +47,7 @@ En cuanto a las **partes físicas** de un procesador, observables a simple vista
 A continuación, veremos y describiremos sus principales **características**:
 
 -   Velocidad e IPC del microprocesador
--   ![](media/b002652a9a421510502b574de196a970.jpeg)Arquitectura CISC o RISC.
+-   Arquitectura CISC o RISC.
 -   Tecnología de fabricación.
 -   Memoria caché.
 -   Núcleos del procesador.
@@ -62,6 +57,8 @@ A continuación, veremos y describiremos sus principales **características**:
 -   Potencia (TDP) y TurboBoost.
 -   Refrigeración y Overclocking.
 -   Otros elementos integrados.
+
+![](media/b002652a9a421510502b574de196a970.jpeg)
 
 ### Velocidad e IPC
 
@@ -92,6 +89,7 @@ En cada nueva generación de procesadores, los fabricantes (Intel, AMD, Apple, A
 Hoy podemos distinguir entre dos tipos fundamentales de arquitecturas de **64 bits**:
 
 -   **Arquitectura CISC** (*Complex Instruction Set Computer*): Usa instrucciones complejas y muy potentes, lo cual complica mucho el diseño de este tipo de microprocesadores. Algunos chips que usan la arquitectura CISC son los Motorola 68000 y toda la familia **Intel** x86 y **AMD**.
+
  -   **Arquitectura RISC** (*Reduced Instruction Set Computer*): Utiliza instrucciones muy simples y con un número limitado de instrucciones. Esta arquitectura destaca por ser *Open Source* y por estar orientada a ser totalmente modular. Se ejecutan muchas instrucciones en muy poco tiempo. Chips que usan esta arquitectura son los **PowerPC** y toda la familia **ARM** (*Snapdragon, Exynos, Kirin, A10, A11…)*
 
 
@@ -128,7 +126,6 @@ Que un microprocesador tenga una tecnología de **5 nanómetros** no quiere deci
 
 ### Memoria caché
 
-
 Una de las características de los microprocesadores es la **memoria caché**, muy rápida y de pequeño tamaño, tal y como vimos en unidades anteriores.
 
 Existen diversos niveles de caché denominados **L1**, **L2** y **L3**:
@@ -139,17 +136,16 @@ Existen diversos niveles de caché denominados **L1**, **L2** y **L3**:
 
 ![](media/276cdc661276e49673748623431f6eb1.jpeg)
 
-![](media/cb48765749785018cbc5af5fdc4c8aae.jpeg)
-
 ### Núcleos del procesador
 
 Los procesadores más antiguos eran **mononúcleo** (single core) es decir, de un único núcleo. Los actuales van mucho más allá. Un procesador está formado por varios bloques, entre los que se encuentran los denominados **núcleos** o cores. Dichos núcleos se encargan de ejecutar las instrucciones, es decir son CPU que pueden ser consideradas como micros en miniatura.
 
 A más núcleos, más unidades de procesamiento independientes y, por tanto, mayor cantidad de instrucciones se podrán procesar de forma simultánea, lo que se conoce como **paralelización**.
 
+![](media/cb48765749785018cbc5af5fdc4c8aae.jpeg)
+
 ![](media/2b4281d7a4c6eef1c5531a99d0d9b715.jpeg)
 
-![](media/acbba4c7c9974e1ea219eb8bf3761ec7.png)
 
 ### big.LITTLE 
 
