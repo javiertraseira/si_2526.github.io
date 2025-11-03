@@ -30,8 +30,6 @@ Las **partes lógicas** que integran un procesador, ya conocidas son:
 -   **Unidad de coma flotante o coprocesador** (*FPU*): realiza las operaciones en coma flotante, es decir aquellas operaciones matemáticas demasiado complejas y con decimales. Es conocido como coprocesador matemático y es el origen de las tarjetas gráficas modernas.
 -   **Registros y memoria caché**: En los registros se almacena y se opera con los datos, mientras que la memoria cache sirve para acelerar el sistema.
 
-![](media/acbba4c7c9974e1ea219eb8bf3761ec7.png)
-
 ### Partes físicas
 
 En cuanto a las **partes físicas** de un procesador, observables a simple vista:
@@ -193,7 +191,6 @@ La potencia o **TDP** (*Thermal Design Power*) se define como la máxima potenci
 
 ![Turbo-Boost-2.0](media/68f83c1213ab899d1b901f0f6197f5ed.jpeg)
 
-![](media/acbba4c7c9974e1ea219eb8bf3761ec7.png)
 
 ### Refrigeración y Overclocking
 
