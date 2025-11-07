@@ -469,27 +469,50 @@ Los **periféricos** pueden clasificarse en los siguientes tipos:
 -   Periféricos de **comunicación**
 -   Periféricos **híbridos**
 
-![](media/bd1bdedf3d0f96314ce601dc8cb2ad5e.jpeg)
+## El monitor o pantalla
+
+El monitor o pantalla de un ordenador es el principal dispositivo de salida (interfaz), que muestra datos o información al usuario.
 
 También puede considerarse un periférico de *Entrada/Salida* si el monitor tiene pantalla táctil o multitáctil, o si se trata de la pantalla de una tablet o smartphone.
 
 La historia de los monitores siempre ha ido muy pareja al de las tarjetas gráficas. Al principio estas sólo podían trabajar con texto y no fue hasta varios años después cuando gracias a las tarjetas CGA consiguen llegar hasta los cuatro colores.
 
-![](media/b20a9dc9d765219a3f3a32ba61ccf5a4.jpeg)![](media/dc80700bc9c3d8f256df511a88feed2d.jpeg)Después se pasó a 16, luego a 256, y a 65536 colores llegando a la actualidad donde cualquier monitor puede mostrar sin problemas unos 17 millones de colores distintos en altas resoluciones y nuevas tecnologías como el HDR.
+Después se pasó a 16, luego a 256, y a 65536 colores llegando a la actualidad donde cualquier monitor puede mostrar sin problemas unos 17 millones de colores distintos en altas resoluciones y nuevas tecnologías como el HDR.
+
+![](media/b20a9dc9d765219a3f3a32ba61ccf5a4.jpeg)![](media/dc80700bc9c3d8f256df511a88feed2d.jpeg)
 
 ![](media/696aee22244005944d719068b0b2da17.jpeg)![](media/07973625cf7256d966ddcd44e3da1b8a.jpeg)
 
-![](media/b07b91cc5e0bd74858b487556636a33f.jpeg)Características técnicas subyacentes a un monitor o pantalla:
+### Características
 
-![](media/64e07705bb0747e8b4af2ffa2794c491.jpeg)El **tamaño de la pantalla** es la distancia en diagonal de un
+Características técnicas subyacentes a un monitor o pantalla:
 
-vértice de la pantalla al opuesto y se mide en pulgadas.
+- Tamaño. 
+- Relación de aspecto.
+- Resolución
+- Luminosidad o brillo
+- Profundidad de color
+- Contraste (estático y dinámico)
+- Tiempo de respuesta
+- Tasa de refresco
+- Espectro de color
+- Angulo de visión
+- Conectores
+- Ahorro energético
 
-![](media/53d5618847767ab352aff30dd963f087.jpeg)La **proporción** o relación de aspecto es una medida de proporción entre el ancho y el alto de la pantalla, así por ejemplo una proporción de 4:3 (cuatro tercios) significa que por cada 4 píxeles de ancho tenemos 3 de alto, una resolución de 800x600 tiene una relación de aspecto 4:3, sin embargo estamos hablando de la proporción del monitor.
+![](media/b07b91cc5e0bd74858b487556636a33f.jpeg)
+
+El **tamaño de la pantalla** es la distancia en diagonal de un vértice de la pantalla al opuesto y se mide en pulgadas.
+
+![](media/64e07705bb0747e8b4af2ffa2794c491.jpeg)
+
+La **proporción** o relación de aspecto es una medida de proporción entre el ancho y el alto de la pantalla, así por ejemplo una proporción de 4:3 (cuatro tercios) significa que por cada 4 píxeles de ancho tenemos 3 de alto, una resolución de 800x600 tiene una relación de aspecto 4:3, sin embargo estamos hablando de la proporción del monitor.
+
+![](media/53d5618847767ab352aff30dd963f087.jpeg)
 
 Estas dos medidas describen el tamaño de lo que se muestra por la pantalla, históricamente hasta no hace mucho tiempo y al igual que las televisiones los monitores de ordenador tenían un proporción de 4:3. Posteriormente se desarrollaron estándares para pantallas de aspecto panorámico 16:9 (a veces también de 16:10 o incluso 21:9 ultrapanorámico) hasta entonces solo usado en el cine.
 
-![móviles relación de aspecto](media/99fc73a48d64bb33a62e0adb46ca4a04.png)
+![](media/99fc73a48d64bb33a62e0adb46ca4a04.png)
 
 | **Relación de aspecto** | **Anchura** (en píxeles) | **Altura** (en píxeles) | **Descripción**                  | **Pulgadas Monitor** |
 |-------------------------|--------------------------|-------------------------|----------------------------------|----------------------|
