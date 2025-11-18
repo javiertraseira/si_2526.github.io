@@ -223,12 +223,12 @@ Con el paso del tiempo, los microprocesadores han dejado de ser únicamente una 
 Las siglas de SoC (System on a Chip) se refieren a un sólo chip que integra todos los elementos necesarios para que un dispositivo pueda funcionar autónomamente.
 ```
 
-En el SoC de un microprocesador, especialmente en aquellos de dispositivos como teléfonos móviles o tabletas donde se intenta concentrar su contenido, suelen integrar varios de los componentes fundamentales de un ordenador, como la CPU, un procesador gráfico integrado (IGP, diferente y sobre todo menos potentes que las GPU de tarjetas gráficas dedicadas), memoria, puertos de entrada salida, un módem, un DSP o chips dedicados a la seguridad.
+En el SoC de un microprocesador, especialmente en aquellos de dispositivos como teléfonos móviles, tabletas o consolas, donde se intenta concentrar su contenido, suelen integrar varios de los componentes fundamentales de un ordenador, como la CPU, un procesador gráfico integrado (IGP, diferente y sobre todo menos potentes que las GPU de tarjetas gráficas dedicadas), memoria, puertos de entrada salida, un módem, un DSP o chips dedicados a la seguridad.
 
 ![](media/1fd57f719ee6a0d72ee93e629620e70e.png)
 
 
-Los **SoCs** han emergido de forma espectacular con la revolución móvil y con los diseños de ARM y desarrollos de fabricantes como Qualcomm, MediaTek, Apple, Samsung o Huawei, que han sacado mucho partido de este concepto para lograr procesadores que en realidad son mucho más que eso.
+Los **SoCs** han emergido de forma espectacular con la revolución móvil y con los diseños de ARM y desarrollos de fabricantes como Qualcomm, MediaTek, Apple, Samsung o Huawei, que han sacado mucho partido de este concepto para lograr procesadores que en realidad son mucho más que eso. También AMD para RISC.
 
 Los Qualcomm *Snapdragon 8xx,* los Apple *Bionic Axx*, o los recientes M1/M2 de Apple, por ejemplo, son un buen ejemplo de este tipo de concepto: engloban una CPU con núcleos basados en los diversos Cortex-AXX de ARM en muchos casos, pero también motores neuronales para el ámbito de la inteligencia artificial, chips gráficos (como los Mali), módems para la conectividad LTE/5G o procesadores de señal digital (DSP), entre otros muchos componentes.
 
