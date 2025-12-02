@@ -29,10 +29,9 @@ Las unidades lógicas de un sistema, por tanto, pueden ser distintas de sus corr
 Las unidades **lógicas **utilizan una *nomenclatura* específica dependiente del sistema operativo utilizado:
 
 -   Sistemas **Windows**: Letras individuales para las unidades lógicas: ***A,C,D,E***..
--   Sistemas **Linux**: **hd** o **sd** (si es un disco *IDE* o *SATA*) seguido de:
--   Una letra para las unidades físicas: *sda, sdb, sdc*
--   Un número para las lógicas (particiones que veremos más adelante)
-    *sda1, sda2, sdb1 \| hda1..*
+-   Sistemas **Linux**: **hd**,**sd** (discos *IDE* o *SATA*), **vd** (disco virtual), **mvme**, seguido de:
+    -   Una letra para las unidades físicas: *sda, sdb, sdc*
+    -   Un número para las lógicas (particiones que veremos más adelante) *sda1, sda2, sdb1 \| hda1 \| vdc2 ..*
 
 ![](media\unidades_almacenamiento.png)
 
