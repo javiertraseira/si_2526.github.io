@@ -46,6 +46,21 @@ Listado en un supuesto equipo:
 - **E**\| (*sdc*): Disco duro 2
 
 
+### Nomenclaturas unidades lógicas linux
+
+
+| **Prefijo / Ejemplo**                | **Tipo de dispositivo**                                           | **Uso habitual / Explicación**                                                                                                                    |
+| ------------------------------------ | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **sda, sdb, sdc, sda1, sdb3…** | Discos SATA, SCSI o USB (los más comunes)                         | Cada letra identifica un disco físico; los números, sus particiones. Es la nomenclatura estándar en la mayoría de sistemas modernos.              |
+| **hda, hdb, hda1…**            | Discos IDE (obsoletos)                                            | Usado en equipos antiguos con controladoras IDE. Se mantiene por compatibilidad histórica.                                                        |
+| **nvme0n1, nvme0n1p1**               | Unidades NVMe                                                     | Discos muy rápidos conectados por PCIe. La nomenclatura incluye disco (*0*), namespace (*n1*) y partición (*p1*).                                 |
+| **vda, vdb, vda1…**            | Discos virtuales Virtio (KVM/QEMU/Proxmox)                        | Discos paravirtualizados usados en máquinas virtuales, ofrecen mejor rendimiento que los simulados como sdX.                                      |
+| **loop0, loop1, loop0p1**      | Dispositivos loopback                                             | Permiten tratar un archivo como si fuera un disco. Común en imágenes ISO, AppImages y contenedores.                                               |
+| **md0, md1**                         | Discos RAID por software (mdadm)                                  | Representan arrays RAID creados con *mdadm*, como RAID 1, 5 o 10.                                                                                 |
+| **dm-0, dm-1**<br>*(device mapper)*  | Volúmenes gestionados por device-mapper (LVM) | Se generan dinámicamente para LVM, cifrado LUKS o sistemas multipath. Suelen aparecer como enlaces en `/dev/mapper/`.                             |
+
+
+
 ## Ficheros
 
 ```note
