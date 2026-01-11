@@ -335,3 +335,5 @@ Android es una pila de software de código abierto basada en Linux creada para u
 Por otra parte, **macOS** es el sistema operativo propietario de Apple diseñado específicamente para su línea de computadoras Mac.
 
 Se distingue por su interfaz elegante, funciones de seguridad sólidas y una integración excelente con el ecosistema móvil de Apple iOS.
+
+![](media/mac_history.png)
