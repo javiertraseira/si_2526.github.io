@@ -430,12 +430,12 @@ Podemos usar el comando ICACLS para modificar permisos de sistema de archivos *
 
 Donde modificadores puede ser:
 
-    /GRANT: Conceder permisos
-    /DENY: Denegar permisos
+    /GRANT: Conceder permisos.
+    /DENY: Denegar permisos.
     /SAVE: Guarda las ACLS de los objetos en el fichero que se le indique.
     /RESTORE: Recupera las ACLS almacenadas en el archivo especificado.
     /SETOWNER: Cambiar el propietario de los objetos que se le especifiquen.
-    /INHERITANCE: Habiltar/deshabilitar herencia 
+    /INHERITANCE: e|d|r Habilitar/deshabilitar herencia/quitar ACE heredadas.
     
 Y opciones puede ser:
 
