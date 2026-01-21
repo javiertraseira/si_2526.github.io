@@ -18,15 +18,15 @@ Se define como arquitectura de red al conjunto de capas o niveles, junto con los
 
 ![](media/7b3b2bc83da46b9f234b53104361f243.jpeg)
 
-La arquitectura de una red viene definida por 3 características fundamentales:
+La arquitectura de una red viene definida por **tres elementos**:
 
--   **La topología**: la topología de una red es la organización de su cableado, ya que define la configuración básica de la interconexión de estaciones y en algunos casos, el camino de una transmisión de datos sobre el cable.
--   **Método de acceso a la red**: cada tipo de red tiene definido un método de acceso al cable que evita o reduce los conflictos de comunicaciones y controla el modo en que la información es enviada de una estación a otra.
--   **Protocolos de comunicación**: existen diferentes niveles de protocolos:
-    -   Los de alto nivel definen como se comunican las aplicaciones o programas y los de bajo nivel definen como se transmiten las señales por el medio (pj cableado).
-    -   Existen protocolos que realizan otras funciones como establecer y mantener sesiones de comunicaciones y controlar las transmisiones para detectar errores.
-    -   Los protocolos de bajo nivel son específicos del tipo de medio utilizado y sus características (cableado o inalámbrico)
-    -   Lo habitual es que los protocolos estén expuestos y sean públicos.
+1. **La topología**: la topología de una red es la organización de su cableado, ya que define la configuración básica de la interconexión de estaciones y en algunos casos, el camino de una transmisión de datos sobre el cable.
+2. **Método de acceso a la red**: cada tipo de red tiene definido un método de acceso al cable que evita o reduce los conflictos de comunicaciones y controla el modo en que la información es enviada de una estación a otra.
+3. **Protocolos de comunicación**: existen diferentes niveles de protocolos:
+    -  Protocolos de **alto nivel**: comunicación entre aplicaciones.
+    - Protocolos de **bajo nivel**: transmisión de señales por el medio físico.
+    - Protocolos de **control**: gestión de sesiones, errores, flujo y seguridad.
+    - Los protocolos normalmente son públicos y estandarizados, lo que garantiza interoperabilidad.
 
 Los problemas que tratan de solucionar las arquitecturas de red son:
 
