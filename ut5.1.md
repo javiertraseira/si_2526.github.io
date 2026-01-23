@@ -28,7 +28,7 @@ La arquitectura de una red viene definida por **tres elementos**:
     - Protocolos de **control**: gestión de sesiones, errores, flujo y seguridad.
     - Los protocolos normalmente son públicos y estandarizados, lo que garantiza interoperabilidad.
 
-Los problemas que tratan de solucionar las arquitecturas de red son:
+Los **problemas** que tratan de solucionar las arquitecturas de red son:
 
 -   **Enrutamiento**: Decidir cuál de las rutas existentes entre origen y destino es la más adecuada.
 -   **Direccionamiento**: Identificar cada equipo de manera inequívoca, independientemente del nivel de la red en el que esté trabajando, gestionando la correspondencia entre las distintas direcciones de un mismo dispositivo.
