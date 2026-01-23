@@ -144,6 +144,7 @@ Por ejemplo, en el caso de **Ethernet** todos los equipos estarán conectados a 
 >Para redes inalámbricas se utiliza otra técnica llamada *CSMA/CA*
 
 Control de acceso al medio para medios compartidos:
+
 ![](media/6165e9077ebce35e0d9b30fb01877105.jpeg)
 
 | **Método control acceso** | **Características**                                                                                                                                                              | **Ejemplo**          |
