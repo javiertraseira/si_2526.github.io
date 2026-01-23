@@ -621,7 +621,7 @@ Los valores de las columnas pueden ser los siguientes:
 
 ![Resultado de imagen de JULIA EVANS PS](media/ab1fa042371f861acd12228e38991b60.jpeg)
 
-## Introducción  a los servicios (daemons) en Linux
+## Introducción a los servicios (daemons) en Linux
 
 ### Systemctl
 
