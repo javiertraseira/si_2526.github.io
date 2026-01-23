@@ -1,9 +1,5 @@
 # UT3.2 Gestión del almacenamiento en los SO
 
-## Contenido y debate introductorio
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/V7qg1WGSdvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 ## Unidades de almacenamiento secundario
 
 Al hablar de unidades de almacenamiento nos referimos a la memoria secundaria de almacenamiento permanente de la información.
