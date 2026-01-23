@@ -423,15 +423,21 @@ Pasos para el montaje de un disco desde su creación en la MV y formateo:
 
 3. Se le da **formato** al disco en */dev/sd\** usando el comando *mkfs* y el sistema de archivos:
 
+```bash
     sudo mkfs –t ext4 /dev/sdb
+```
 
 4. Se crea la carpeta o directorio en *mnt* donde desees montar dicho disco:
 
+```bash
     sudo mkdir /mnt/midisco
+```
 
 5. Se proceder al **montaje** del disco en dicha carpeta volviendo a indicar el sistema de archivos:
 
+```bash
     sudo mount –t ext4 /dev/sdb /mnt/midisco
+```
 
 ### Montaje en el arranque
 
@@ -439,8 +445,10 @@ El archivo **fstab** (*File System Table*) se encuentra en el directorio /etc/fs
 
 Su **formato** es el siguiente:
 
-| Dispositivo \*UUID \<file system\> | Punto de montaje \<dir\> | Sistema de archivos \<type\> | Opciones sistema archivos \<options\> | Manejo backups \<dump\> | Orden chequeos \<pass\> |
-|------------------------------------|--------------------------|------------------------------|---------------------------------------|-------------------------|-------------------------|
+| Dispositivo <UUID \| file system> | Punto de montaje <dir> | Sistema de archivos <type> | Opciones sistema archivos <options> | Manejo backups <dump> | Orden chequeos <pass> |
+|-----------------------------------|------------------------|-----------------------------|-------------------------------------|-----------------------|------------------------|
+|                                   |                        |                             |                                     |                       |                        |
+
 
 | \# \<file system\> | \<dir\> | \<type\> | \<options\> | \<dump\> | \<pass\> |
 |--------------------|---------|----------|-------------|----------|----------|
