@@ -184,7 +184,7 @@ Por ejemplo, los sensores de un hogar inteligente que utilizan muchas soluciones
 
 ### Tecnologías redes WWAN
 
-Las redes inalámbricas de área extensa (WWAN) están basadas en la tecnología aplicada a la telefonía móvil. Ha pasado por protocolos para redes llamadas 1G, 2G (GMS), 3G, 4G o LTE y por último el más reciente 5G.
+Las redes inalámbricas de área extensa (WWAN) están basadas en la tecnología aplicada a la telefonía móvil. Ha pasado por protocolos para redes llamadas 1G, 2G (GSM), 3G, 4G o LTE y por último el más reciente 5G.
 
 ![](media/c66371fe811551ca264f6654b7c71c19.jpeg)**1990s 1990s 2003 2009 2020**
 
@@ -305,7 +305,7 @@ Este protocolo no estaría recomendado para realizar transferencia de datos, ya 
 | Fiabilidad                        | Alta                                    | Más baja                           |
 | Velocidad                         | Más baja                                | Alta                               |
 | Método de transferencia           | Los paquetes se envían en una secuencia | Los paquetes se envían en un flujo |
-| Nombre *PDU*                      | Datagrama                               | Segmento                           |
+| Nombre *PDU*                      | Segmento                                | Datagrama                          |
 | Detección y corrección de errores | Sí                                      | No                                 |
 | Control de congestión             | Sí                                      | No                                 |
 | Acuse de recibo                   | Sí                                      | Solo el *checksum*                 |
