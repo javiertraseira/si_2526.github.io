@@ -515,12 +515,12 @@ Este protocolo funciona como capa adicional a los protocolos de la capa de acces
 ## IPsec
 
 ```note
-**IPsec** es un conjunto de reglas o protocolos de comunicación para configurar conexiones seguras a través de una red. 
+**IPsec** (Internet Protocol Security) es un conjunto de protocolos de seguridad diseñado para proteger las comunicaciones a nivel de la **capa de red**. 
 ```
 
-El conjunto de **IPsec**, se utiliza habitualmente para establecer túneles a través de redes IP, conocidas como **Redes Privadas Virtuales** (VPN).
+Su función principal es garantizar que los datos enviados a través de redes IP lo hagan de forma **segura**, incluso cuando se transmiten por redes públicas como Internet.
 
-Actua en la **capa 3 de red**, permite proteger a los protocolos de red, transporte y aplicación. Ello lo hace mucho más seguro y flexible que, por ejemplo HTTPS, que solamente protege a nivel de la capa de aplicación.
+IPsec se utiliza habitualmente para establecer **túneles seguros** entre dispositivos o redes a través de infraestructuras IP. Este tipo de conexión es la base de muchas Redes Privadas Virtuales (VPN).
 
 ![](media/75f2273086d23ab8849990fa5c56bb8c.png)
 
