@@ -292,9 +292,12 @@ Funcionamiento del protocolo **TCP**:
 
 ### Protocolo UDP
 
-A diferencia de TCP, **UDP** *(User Datagram Protocol)* es un protocolo **no orientado a conexión** y no es tan confiable tal y como hemos visto. UDP no cuenta con posibilidad de realizar revisiones en búsqueda de errores o correcciones de transmisiones de datos. Sin embargo, hay ciertas aplicaciones en donde UDP es más factible de utilizar en vez de TCP. Un ejemplo de esto es una sesión de juegos en línea, en donde UDP permite que los paquetes de datos se descarten sin posibilidad de reintentos.
+A diferencia de TCP, **UDP** *(User Datagram Protocol)* es un protocolo **no orientado a conexión**, lo que significa que no establece una sesión previa entre emisor y receptor antes de comenzar la transmisión de datos. Tampoco garantiza la entrega, orden ni no duplicación de paquetes, por lo que se considera protocolo **no fiable**.
 
-Este protocolo no estaría recomendado para realizar transferencia de datos, ya que si algunos paquetes se pierden durante el proceso de transferencia, el resultado final es que el archivo se corrompería, y sería detectado por las capas superiores (capa de aplicación). Igualmente, para el escenario de juegos en línea o sesiones de *streaming* de vídeos, UDP sería el protocolo recomendado porque es el más rápido.
+Sin embargo, hay ciertas aplicaciones en donde UDP es más factible de utilizar en vez de TCP. Un ejemplo de esto es una sesión de juegos en línea, en donde UDP permite que los paquetes de datos se descarten sin posibilidad de reintentos.
+
+Por este motivo, **UDP no es recomendable para la transferencia de archivos**, ya que la pérdida de paquetes provocaría que el archivo resultante estuviera incompleto o corrupto y sería detectado por las capas superiores (capa de aplicación). En cambio, para el escenario de juegos online, streaming de vídeos o voz sobre IP, UDP sería el protocolo ideal porque es el más rápido.
+
 
 ![](media/ec9e872556a505d9128a04ae8c525fe9.jpeg)
 
@@ -318,9 +321,9 @@ Este protocolo no estaría recomendado para realizar transferencia de datos, ya 
 
 ![](media/b06cc06424a24b6527e6ec0f7564c9ca.png)
 
-### Protocolo HTTP
+### Protocolos HTTP y HTTPS
 
-**HTTP** el protocolo que permite que los navegadores y servidores web se comuniquen adecuadamente. Este es utilizado por navegadores web para solicitar archivos HTML de parte de los servidores remotos. Así mediante el servicio **WWW**, los usuarios podrán interactuar con dichos archivos mediante la visualización y navegación por páginas web que cuentan con imágenes, música, vídeos, texto, etc.
+**HTTP** y **HTTPS** es el protocolo que permite que los navegadores y servidores web se comuniquen adecuadamente. Este es utilizado por navegadores web para solicitar archivos HTML de parte de los servidores remotos. Así mediante el servicio **WWW**, los usuarios podrán interactuar con dichos archivos mediante la visualización y navegación por páginas web que cuentan con imágenes, música, vídeos, texto, etc.
 
 -   El protocolo **HTTP** tiene como base a **TCP**, el cual implementa un modelo de comunicación cliente-servidor.
 -   El protocolo **HTTPS** es actualmente el predominante, proporcionando seguridad y encriptado punto a punto (entre el cliente y el servidor). HTTPS utiliza el protocolo **TLS** (*Transport Layer Security*) que también utiliza TCP por encima.
