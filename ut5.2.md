@@ -524,7 +524,16 @@ IPsec se utiliza habitualmente para establecer **túneles seguros** entre dispos
 
 ![](media/75f2273086d23ab8849990fa5c56bb8c.png)
 
-Los servicios que proporciona **IPSec** son los siguientes:
+Una de las principales **ventajas** de IPsec es que, al actuar en la capa 3 de red, puede proteger de forma transparente a:
+
+- Protocolos de red (IP)
+- Protocolos de transporte (TCP, UDP)
+- Protocolos de aplicación (HTTP, FTP, SMTP, etc.)
+
+Esto lo hace más flexible y completo que otros mecanismos como HTTPS, que solo protegen el tráfico a nivel de la capa de aplicación.
+
+
+IPsec ofrece los siguientes **servicios de seguridad**:
 
 -   **Autenticación mutua**: Cada extremo de la comunicación verifica su identidad. Ya sea a través de contraseñas, *smart cards*, certificados, datos biométricos, etc.
 -   **Confidencialidad**: Todos los paquetes se encriptan para protegerlos de intercepciones de terceros no deseadas.
@@ -534,12 +543,17 @@ Los servicios que proporciona **IPSec** son los siguientes:
 
 ### VPN
 
-Una **VPN** (*Virtual Private Network*) es una tecnología que permite establecer una conexión segura entre dos o más puntos a través de una red pública (como internet).
+Una **VPN** (*Virtual Private Network*) es una tecnología que permite establecer una conexión segura entre dos o más puntos a través de una red pública como Internet.
 
 Las VPNs protegen la confidencialidad, integridad y autenticidad de los datos transmitidos en línea mediante el uso de técnicas de cifrado y autenticación.
 
 Una red privada virtual crea un **túnel de datos** seguro entre su máquina local y otro servidor VPN situado a miles de kilómetros. Cuando se conecta, este servidor VPN se convierte en el origen de todos sus datos. El proveedor de servicios de Internet (ISP) y otros terceros ya no podrán ver el contenido del tráfico en Internet. 
 
-Los protocolos VPN como **IPSec** codifican sus datos antes de enviarlos a través del túnel de datos.
+Una VPN no es un protocolo, sino una solución o tecnología que puede implementarse utilizando distintos protocolos de seguridad. 
+
+Cuando un equipo se conecta a una VPN:
+- Todo su tráfico se envía a través del túnel cifrado
+- El servidor VPN actúa como intermediario y origen del tráfico hacia Internet
+- El proveedor de servicios de Internet (ISP) y otros terceros no pueden ver el contenido de la comunicación.
 
 ![](media/30d4d57147d32eeaf02bb1e6291cf094.png)
