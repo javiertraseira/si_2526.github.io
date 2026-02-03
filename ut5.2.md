@@ -154,7 +154,7 @@ Cuando se contrata este servicio se instala una antena en el exterior, que se co
 
 En redes de área personal (**WPAN**) se utiliza el estándar **802.15.1**, que deﬁne las redes **Bluetooth**. Estas redes emplean un topología **piconet**, que es una red de 2 a 7 dispositivos, donde uno de ellos es el maestro (encargado de establecer y gestionar las conexiones). Cuando comunicamos dos piconet, formamos una *scatternet*. Los dispositivos Bluetooth utilizan la banda de frecuencias de **2,4 GHz** y su cobertura está entre 1 y 100 metros.
 
-![](media/aed62f74b2d8c047108e6857a53bcd54.jpeg)![þÿ](media/37aaf6cb65efd02c37626cff0a235f35.png)![þÿ](media/c390d172ee2c0ce4b14669b4ac2e5f95.jpeg)
+![](media/aed62f74b2d8c047108e6857a53bcd54.jpeg)![þÿ](media/37aaf6cb65efd02c37626cff0a235f35.png)![](media/c390d172ee2c0ce4b14669b4ac2e5f95.jpeg)
 
 | **Versión**  | **Año lanzamiento** | **Características/Novedades**                                       |
 |--------------|---------------------|---------------------------------------------------------------------|
@@ -168,7 +168,7 @@ En redes de área personal (**WPAN**) se utiliza el estándar **802.15.1**, que 
 | 4.2          | 2014                | Mayor seguridad y soporte para IPv6.                                |
 | **5.0**      | 2016                | Rango aumentado (4x) y velocidad (2x) para BLE; mejor conexión IoT. |
 | 5.1          | 2019                | Funcionalidad de localización con mayor precisión.                  |
-| 5.2          | 2020                | LE Audio y soporte para canales Isochronous para audio mejorado.    |
+| 5.2          | 2020                | LE Audio, canales isócronos y soporte para audífonos inalámbricos (LC3).   |
 | 5.3          | 2021                | Optimización de energía y mejoras en la transmisión de datos.       |
 | 5.4          | 2023                | Soporte para conexiones masivas IoT y mejoras de seguridad.         |
 
