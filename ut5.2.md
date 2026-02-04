@@ -445,7 +445,13 @@ El protocolo DNS utiliza un sistema jerárquico para crear una base de datos que
 
 ![](media/ddaa6da610a5fb73a8156bcb0bc5045c.jpeg)*Subdominio SLD TLD*
 
-Existe una **caché DNS local** que guarda un historial las direcciones IP de las webs que visitadas desde el equipo local. Si no tenemos guardada la dirección IP en la caché de nuestro navegador, habrá que realizar la petición a un servidor DNS, el cual a su vez si no la tiene se lo pasará al siguiente usando la estructura jerárquica vista.
+Para evitar repetir consultas constantemente, el sistema DNS utiliza **caché** en varios niveles:
+- Caché del sistema operativo
+- Caché del navegador
+- Caché del servidor DNS local (ISP o empresa)
+
+Si la IP ya está en caché y no ha caducado (TTL), la respuesta es inmediata, sin recorrer toda la jerarquía DNS.
+
 
 ![](media/3685e4f7acb67fdf62c84c2bb9d2781d.jpeg)
 
@@ -457,6 +463,18 @@ Los pasos concretos más detallados del funcionamiento de la resolución DNS los
 4.  Se enviará la resolución al servidor DNS local que se la enviará al equipo cliente local.
 
 ![](media/c7c9c1b21624a8a258f072f27f255639.jpeg)
+
+Además de los servidores DNS de los proveedores de Internet (ISP), existen proveedores DNS públicos, que ofrecen mayor rapidez, seguridad y fiabilidad.
+
+**Cloudflare (1.1.1.1)**
+Cloudflare ofrece uno de los servicios DNS públicos más conocidos.
+Características principales:
+- Dirección IPv4: 1.1.1.1
+- Dirección IPv6: 2606:4700:4700::1111
+- Muy rápido y con baja latencia
+- Enfocado en la privacidad (no vende datos de navegación)
+- Protección frente a ataques DNS (DNS spoofing, DDoS)
+
 
 ### Protocolo DHCP
 
