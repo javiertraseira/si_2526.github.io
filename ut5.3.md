@@ -424,13 +424,13 @@ Podemos encontrar los siguientes tipos de racks:
 ![](media/2ee7d5e4691fe5e6d2b190ada868b389.png) 
 
 
-## Tarjeta o adaptador de red (NIC)
+## Interfaces de red: tarjetas y adaptadores
 
 ```note
-Una tarjeta o adaptador de red, conocida también como NIC (Network Interface Card), básicamente realiza la función de intermediario entre el ordenador y la red de comunicación.
+Una tarjeta o adaptador de red, conocida también como NIC (Network Interface Card), básicamente realiza la función de intermediario entre el dispotivo y la red de comunicación (interfaz de red).
 ```
 
-En dicha tarjeta se encuentran grabados los protocolos de comunicación de la red, en los niveles físico, enlace de datos y red.
+En la interfaz de red se encuentran grabados los protocolos de comunicación de la red, en los niveles físico, enlace de datos y red.
 
 Se conecta al ordenador a través de sus ranuras de expansión PCI o mediante un puerto USB, aunque la mayoría de los equipos disponen de esta tarjeta integrada directamente en la placa base.
 
@@ -460,6 +460,7 @@ Una tarjeta de red por lo general tiene dos indicadores luminosos (LEDs):
 -   **Controladores de LAN** (Sistemas Operativos en que funciona)
 
 **Modo de transmisión:**
+
 -   **Half duplex**: el canal de comunicación no se puede utilizar para enviar y recibir información simultáneamente.
 -   **Full-duplex**: el canal de comunicación permite enviar y recibir información simultáneamente.
 
