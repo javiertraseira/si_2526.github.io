@@ -292,6 +292,14 @@ Las **microondas** operan entre el **UHF** y **EHF**
     -   Por haz directo: sin obstáculos entre emisor y receptor.
     -   Por haz difuso: con potencia para salvar obstáculos.
 
+## Infraestructura redes inalámbricas
+
+Tras estudiar los **medios no guiados** (radioondas, microondas e infrarrojos), es necesario analizar cómo se organizan y estructuran las redes inalámbricas en la práctica, siendo las redes WiFi el ejemplo más extendido en entornos domésticos, educativos y empresariales.
+
+Una **red WiFi** no está formada únicamente por dispositivos inalámbricos, sino que requiere una infraestructura compuesta por puntos de acceso, estaciones cliente y sistemas de distribución que permiten el acceso a la red cableada y a Internet.En los siguientes apartados se estudian los elementos, modos de funcionamiento y arquitecturas que forman una red WiFi.
+
+En cuanto a las **redes de telefonía móvil** están diseñadas para proporcionar cobertura en grandes áreas geográficas, garantizando la movilidad de los usuarios.
+
 ### Infraestructura redes Wi-Fi 
 
 El **SSID** de una WiFi es una cadena alfanumérica de 32 caracteres de longitud, que sirve para identificar a la red.
@@ -372,8 +380,9 @@ que conecta los diferentes distribuidores de ediﬁcio.
 
 ### Cableado horizontal
 
-
 ![](media/15be9b6745a3202b2a932823f3a0876e.jpeg)
+
+### Cableado horizontal y vertical
 
 ![](media/f9f39145a68644589afe9ae2894d74ef.jpeg)
 
