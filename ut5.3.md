@@ -210,7 +210,7 @@ Según la trasmisión de la luz, existen de dos tipos de cables de fibra óptica
 
 ## Medios no guiados: transmisión inalámbrica
 
-La transmisión de información a través del aire se realiza utilizando **ondas electromagnéticas**. Se transmiten, reciben o propagan desde un punto de la Tierra a otro, a la atmósfera o al espacio.
+En los **medios no guiados**, la transmisión de la información se realiza sin cables, utilizando **ondas electromagnéticas** que se propagan a través del aire o del espacio.
 
 Este tipo de ondas se propaga por el espacio (independientemente de cuál sea su frecuencia) a la velocidad de la luz; a la particularidad que tiene este tipo de ondas de viajar por el espacio es a lo que se le denomina técnicamente como propagación de las ondas electromagnéticas.
 
@@ -225,12 +225,12 @@ Una onda electromagnética se define con tres parámetros:
 ### Espectro electromagnético
 
 ```note
-El espectro electromagnético es el conjunto de radiaciones electromagnéticas que se propagan a través del espacio en forma de ondas ordenadas en función de su energía (de izquierda a derecha, de menor a mayor energía).
+El **espectro electromagnético** es el conjunto de todas las ondas electromagnéticas, ordenadas según su frecuencia o energía (de izquierda a derecha, de menor a mayor energía).
 ```
 
 ![](media/espectro_electromagnetico.jpg)
 
-Para la **transmisión inalámbrica** nos vamos a fijar en el espectro relativo a los campos electromagnéticos, en las **ondas de radio** y las **microondas**.
+Para la **transmisión inalámbrica** nos vamos a fijar en el espectro relativo a los campos electromagnéticos, en las **ondas de radio** y **microondas** e **infrarrojos**
 
 ![](media/506415372baae38b07709b02a804adf9.jpeg)
 
@@ -241,8 +241,8 @@ Para la **transmisión inalámbrica** nos vamos a fijar en el espectro relativo 
 |            | VLF (Very Low Frequency)             | 3 - 30 kHz      | 100 – 10 km       | Geofísica, GPS          |
 |            | LF (Low Frequency)                   | 30 - 300 kHz    | 10 – 1 km         | Radiofaros              |
 |            | MF (Medium Frequency)                | 300 kHz - 3MHz  | 1 km – 100 m      | Radio AM                |
-|            | **HF** (Very High Frecuency)         | 30 – 300 MHz    | 10 – 1 m          | Radio FM, TV            |
-|            | VHF (High Frequency)                 | 3 – 30 MHz      | 100 – 10 m        | Radioaficionados        |
+|            | **VHF** (Very High Frecuency)         | 30 – 300 MHz    | 10 – 1 m          | Radio FM, TV            |
+|            | HF (High Frequency)                 | 3 – 30 MHz      | 100 – 10 m        | Radioaficionados        |
 | Microondas | **UHF** (Ultra High Frequency)       | 300 MHz – 3 GHz | 1 m – 10 cm       | Telefonía, 4G, TV, WiFi |
 |            | **SHF** (Super High Frequency)       | 3 – 30 GHz      | 10 – 1 cm         | WiFi, satélite, radar   |
 |            | **EHF** (Extremely High Frequency)   | 30 – 300 GHz    | 1 – 0,1 cm        | Satélite, militar, 5G   |
@@ -256,7 +256,7 @@ Para la **transmisión inalámbrica** nos vamos a fijar en el espectro relativo 
 Las **radioondas** u **ondas de radio** operan entre el **ELF** y **UHF** (entre *3hz a 300Mhz*)
 -   Se transmiten en todas las direcciones y se difractan por el terreno llegando lejos.
 -   Poco sensibles a inclemencias meteorológicas.
--   Ejemplo: submarinos, radio AM, radio FM y televisión.
+-   Ejemplo: submarinos, radio AM/ FM y televisión TDT.
 
 
 Las **microondas** operan entre el **UHF** y **EHF**
@@ -292,7 +292,7 @@ Las **microondas** operan entre el **UHF** y **EHF**
     -   Por haz directo: sin obstáculos entre emisor y receptor.
     -   Por haz difuso: con potencia para salvar obstáculos.
 
-### Infraestructura redes WiFi 
+### Infraestructura redes Wi-Fi 
 
 El **SSID** de una WiFi es una cadena alfanumérica de 32 caracteres de longitud, que sirve para identificar a la red.
 
