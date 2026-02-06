@@ -176,6 +176,15 @@ Finalmente, varias ﬁbras suelen agruparse en haces protegidos por una funda ex
 ![þÿ](media/4a5d85a3c21151f3d826aa52cf943a84.jpeg)
 ![þÿ](media/16c2577fb445d70b0358486f2ea87b6d.jpeg)
 
+
+### Tipos fibra óptica
+
+Según la trasmisión de la luz, existen de dos tipos de cables de fibra óptica:
+-   **Monomodo**: la ﬁbra es tan delgada que la luz se transmite en línea recta. El núcleo tiene un radio de 10 micrones y la cubierta, de 125 micrones.
+-   **Multimodo**: La luz se transmite por el interior del núcleo incidiendo sobre su superﬁcie interna, como si se tratara de un espejo. Las pérdidas de luz en este caso también son prácticamente nulas. El núcleo tiene un diámetro de 50 micrones y la cubierta, de *140 micrones*.
+
+![](media/f79db1a43faf4c8b937a5674552b33b7.png)
+
 ### Estructura y características
 
 
@@ -188,16 +197,10 @@ Finalmente, varias ﬁbras suelen agruparse en haces protegidos por una funda ex
 **Características de la fibra:**
 
 -   Pérdidas bajas en larga distancia.
+    - En fibra monomodo hasta 50km
+    - En fibra multimodo hasta 500m
 -   Muy alta capacidad de transmisión y ancho de banda
 -   La información se transmite por luz que rebota en el cable.
-
-### Tipos fibra óptica
-
-Según la trasmisión de la luz, existen de dos tipos de cables de fibra óptica:
--   **Monomodo**: la ﬁbra es tan delgada que la luz se transmite en línea recta. El núcleo tiene un radio de 10 micrones y la cubierta, de 125 micrones.
--   **Multimodo**: La luz se transmite por el interior del núcleo incidiendo sobre su superﬁcie interna, como si se tratara de un espejo. Las pérdidas de luz en este caso también son prácticamente nulas. El núcleo tiene un diámetro de 50 micrones y la cubierta, de *140 micrones*.
-
-![](media/f79db1a43faf4c8b937a5674552b33b7.png)
 
 ### Conectores fibra óptica
 
