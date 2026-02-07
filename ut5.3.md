@@ -708,13 +708,13 @@ Muchos de los WAP pueden actuar como **repetidor** o **bridge**. Para ello, debe
 ![](media/fd8fddf56a99dc9beebeb3f46a8d0a83.jpeg)
 
 
-Los **puntos de acceso mesh** (o sistemas de redes mesh) son dispositivos de interconexión que forman una red **inalámbrica distribuida**, diseñada para proporcionar una cobertura Wi-Fi amplia y estable.
+Los **puntos de acceso mesh** (o sistemas de redes mesh), comentados previamente, son dispositivos de interconexión que forman una red **inalámbrica distribuida**, diseñada para proporcionar una cobertura WiFi amplia y estable.
 
 ![](media/5119d2ded7587f744fc7aa4e117c50c0.jpeg)
 
 A diferencia de los puntos de acceso WAP convencionales, que dependen de un único enrutador o repetidor, los sistemas mesh trabajan en conjunto para ofrecer una experiencia uniforme y sin interrupciones.
 
-Además de cara al usuario funcionan de forma transparente creando una única red Wifi con el mismo SSID y contraseña.
+Funcionan de forma transparente creando una única red WiFi con el mismo SSID y contraseña.
 
 Las redes mesh son capaces de redirigir el tráfico por la red de la forma óptima para disponer siempre de la mejor señal posible.
 
