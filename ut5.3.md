@@ -319,7 +319,7 @@ A la hora de crear una red inalámbrica WiFi se utilizan dos alternativas:
 
     Estación que da conexión inalámbrica a las STAs asociadas.
 
--   **BSS***(Basic service set)*
+-   **BSS** *(Basic service set)*
 
     Conjunto de un AP con sus STAs asociados.
 
@@ -330,6 +330,17 @@ A la hora de crear una red inalámbrica WiFi se utilizan dos alternativas:
 -   **DS (Distribution system)**
 
     Es el sistema que interconecta BSS.
+
+Dentro de la infraestructura de las redes WiFi existen un tipo particular denominado **redes mesh** o malladas, las cuales utilizan varios puntos de acceso para trabajan de forma coordinada y ofrecer:
+
+- Una misma red WiFi (SSID único)
+- Redirección automática del tráfico
+- Mejor cobertura y estabilidad
+
+Son habituales en:
+- Viviendas grandes
+- Centros educativos
+- Oficinas
 
 ![](media/11c0623ae79492368129dfe4f11c8170.jpeg)
 
@@ -410,6 +421,14 @@ Las paredes, la puerta y el techo son desmontables para facilitar la instalació
 Además, el suelo y el techo pueden tener una abertura para pasar todo el cableado.
 
 > El interior de un armario rack tiene 4 bastidores que forman un armazón de **19 pulgadas de anchura**.  
+
+
+![](media/rack_schema.jpg)
+
+Dentro de los racks el **panel de parcheo** (patch panel) es donde termina el cableado que viene de las diferentes tomas de red (aulas, oficinas, puestos de trabajo, cámaras, etc.) y, mediante latiguillos, se conectan a los equipos activos del rack.
+
+Su uso aporta orden y una identificación clara de las conexiones permitiendo una mayor durabilidad de la instalación, ya que protege los puertos de los dispositivos y permite una gestión más segura y centralizada del cableado estructurado.
+
 
 ```note
 Los bastidores tienen agujeros cada 5 cm, esta distancia se llama unidad U, de modo que la altura de un armario se mide en unidades U Los elementos para racks también se miden en unidades U.
