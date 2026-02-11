@@ -129,8 +129,8 @@ En una red de **clase A**, los primeros ocho bits de la dirección, o el primer 
 Hay **128** redes de clase A posibles.
 
 **0.0.0.0 a 127.255.255.255**
-
-Sin embargo, cualquier dirección que comience con *127* se denomina dirección de **loopback**, es decir, que apunta al propio host.
+ 
+Sin embargo, el bloque 127.0.0.0/8 está reservado para direcciones de **loopback**, utilizadas para que un equipo se comunique consigo mismo.
 
 La **máscara de subred** predeterminada para la clase A era **255.0.0.0** (/8)
 
@@ -152,7 +152,7 @@ La **máscara de subred** predeterminada de la Clase B era **255.255.0.0** (/16)
 
 En una red de **clase C**, los dos primeros bits están puestos a 1 y el tercero a 0. Eso hace que los primeros 24 bits de la dirección sean la parte de la red, y el resto, la del host.
 
-Las direcciones de red de clase C van desde **192.0.0.0** a **223.255.255.0**. 
+Las direcciones de red de clase C van desde **192.0.0.0** a **223.255.255.255**. 
 
 Hay más de 2 millones de redes (221) de clase C posibles.
 
