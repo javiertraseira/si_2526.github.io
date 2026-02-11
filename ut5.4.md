@@ -260,13 +260,20 @@ A la hora de estudiar la creación de **subredes**, podremos abordarlo de dos fo
 
 ## Creación de subredes: subnetting
 
-Hemos visto que con la máscara es posible identificar las direcciones que pertenecen a nuestra red. En ciertos casos, es posible segmentar una red en subredes las cuales pueden estar en contacto entre sí por medio de un **gateway**, lo cual es vital para un uso más eficiente y controlado de recursos.
+Hasta ahora hemos visto que la **máscara de subred **nos permite distinguir qué parte de una dirección IP identifica la red y qué parte identifica a los hosts.
 
-Es posible, por ejemplo, que tenga dos redes de servidores con 60 servidores cada una y se desee que estén visibles en Internet. Si se utilizan dos redes públicas de clase C se están desaprovechando los recursos de la empresa, ya que una red pública de clase C podría 254 equipos y en el ejemplo, la empresa solo requiere 60.
+Sin embargo, en redes medianas o grandes, no siempre interesa tener todos los equipos dentro de una única red. Por motivos de rendimiento, organización y seguridad, puede ser necesario dividir una red en varias subredes más pequeñas.
 
-Así por ejemplo para **192.168.3.0/24**, con 256 direcciones, podría dividirse en cuatro subredes, cada una de 64 direcciones (64×4=256). Las máquinas de cada subred pueden verse la una a la otra; sin embargo, para que una subred contacte a otra deberán pasar por un **gateway** o un **router** (común a todas las subredes).
+> A este proceso se le llama **subnetting**.
 
-El subnetting se logra **agregando bits 1 a la máscara de subred**, de modo de que se utilicen esos bits adicionales para determinar las subredes y se utilicen en cambio menos bits para determinar los hosts.
+**¿Por qué dividir una red?**
+Imaginemos que una empresa tiene:
+- 2 departamentos
+- 60 servidores en cada uno
+- Necesidad de que todos tengan acceso a Internet
+Si se asignara una red pública completa de clase C (por ejemplo, una red /24), esta permitiría hasta 254 hosts utilizables.
+Pero si solo necesitamos 60 equipos por departamento, estaríamos desperdiciando muchas direcciones IP. **El subnetting es lo que resuelve este problema.**
+
 
 ![](media/01a4cb689a1c7ed05058e70e9c92b3e9.png)
 
