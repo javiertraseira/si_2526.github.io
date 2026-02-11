@@ -128,7 +128,7 @@ En una red de **clase A**, los primeros ocho bits de la dirección, o el primer 
 
 Hay **128** redes de clase A posibles.
 
-**0.0.0.0 a 127.0.0.0**
+**0.0.0.0 a 127.255.255.255**
 
 Sin embargo, cualquier dirección que comience con *127* se denomina dirección de **loopback**, es decir, que apunta al propio host.
 
