@@ -126,7 +126,7 @@ Las siguientes son las máscaras para las direcciones clase A, B. y C:
 
 En una red de **clase A**, los primeros ocho bits de la dirección, o el primer punto decimal, son la parte de la red, y la parte restante es la del host.
 
-Hay **128** redes de clase A posibles.
+Hay **128** redes de clase A teóricas posibles.
 
 **0.0.0.0 a 127.255.255.255**
  
@@ -142,7 +142,7 @@ En una red de **clase B**, los primeros 16 bits de la dirección son la parte de
 
 Si dividimos la dirección en octetos, nos queda que las direcciones **128.0.0.0** a **191.255.255.255** corresponden a redes de clase B. 
 
-Hay 2^14 = **16.384** redes de clase B posibles.
+Hay 2^14 = **16.384** redes de clase B teóricas posibles.
 
 La **máscara de subred** predeterminada de la Clase B era **255.255.0.0** (/16)
 
@@ -154,7 +154,7 @@ En una red de **clase C**, los dos primeros bits están puestos a 1 y el tercero
 
 Las direcciones de red de clase C van desde **192.0.0.0** a **223.255.255.255**. 
 
-Hay más de 2 millones de redes (221) de clase C posibles.
+Hay más de 2 millones de redes (221) de clase C teóricas posibles.
 
 Su máscara será **255.255.255.0** (/24)
 
@@ -162,12 +162,12 @@ Su máscara será **255.255.255.0** (/24)
 
 ### Clase D
 
-Las direcciones de **clase D** se utilizan para aplicaciones de **multidifusión**.
-A diferencia de las clases anteriores, la Clase D no se utiliza para operaciones de red comunes.
+Las direcciones de **clase D** se utilizan para **multidifusión** (multicast). En este caso, la dirección IP no identifica una red ni un host individual, sino un grupo lógico de dispositivos que reciben tráfico simultáneamente.
 
-Las direcciones de clase D tienen los primeros tres bits a 1 y el cuarto bit establecido a 0. Las direcciones de clase D son direcciones de red de 32 bits, lo que significa que los valores que podemos encontrar en el rango 224.0.0.0 - 239.255.255.255 se utilizan para identificar grupos de multidifusión de forma única.
+Las direcciones de clase D se caracterizan porque sus cuatro primeros bits son 1110. Esto corresponde al rango comprendido entre 224.0.0.0 y 239.255.255.255.
+A diferencia de las clases A, B y C, las direcciones de clase D no se utilizan para asignación de redes ni de hosts. En su lugar, identifican grupos multicast a los que los dispositivos pueden suscribirse para recibir determinados datagramas enviados a esa dirección.
 
-No hay direcciones de host dentro del espacio de direcciones de clase D, puesto que todos los hosts dentro de un grupo comparten la dirección IP del grupo a la hora de recibir datagramas.
+Por tanto, dentro del espacio de direcciones de clase D no existen direcciones de red, de host ni de broadcast en el sentido tradicional.
 
 ### Clase E
 
