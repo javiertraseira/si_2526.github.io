@@ -140,7 +140,7 @@ La **máscara de subred** predeterminada para la clase A era **255.0.0.0** (/8)
 
 En una red de **clase B**, los primeros 16 bits de la dirección son la parte de la red. Todas las redes de clase B tienen el primer bit a 1 y el segundo bit a 0.
 
-Si dividimos la dirección en octetos, nos queda que las direcciones **128.0.0.0** a **191.255.0.0** corresponden a redes de clase B. 
+Si dividimos la dirección en octetos, nos queda que las direcciones **128.0.0.0** a **191.255.255.255** corresponden a redes de clase B. 
 
 Hay 2^14 = **16.384** redes de clase B posibles.
 
