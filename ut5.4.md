@@ -240,7 +240,7 @@ Resumen general:
 | **Clase E** (reservada) | **1111**           | No definido         | No definido          | -              | No definido             | No definido                        | 240.0.0.0                 | 255.255.255.255      |
 
 
-## Creación de subredes
+## Subredes
 
 A menudo es necesario segmentar las redes suficientemente grandes en **subredes** más pequeñas, con lo que se crean grupos más pequeños de dispositivos y servicios con los siguientes fines:
 -   Controlar el tráfico mediante la contención del tráfico de broadcast en la subred.
@@ -267,13 +267,18 @@ Sin embargo, en redes medianas o grandes, no siempre interesa tener todos los eq
 > A este proceso se le llama **subnetting**.
 
 **¿Por qué dividir una red?**
+
 Imaginemos que una empresa tiene:
+
 - 2 departamentos
 - 60 servidores en cada uno
 - Necesidad de que todos tengan acceso a Internet
+
 Si se asignara una red pública completa de clase C (por ejemplo, una red /24), esta permitiría hasta 254 hosts utilizables.
+
 Pero si solo necesitamos 60 equipos por departamento, estaríamos desperdiciando muchas direcciones IP. **El subnetting es lo que resuelve este problema.**
 
+Pasos para aplicar el subnetting:
 
 ![](media/01a4cb689a1c7ed05058e70e9c92b3e9.png)
 
@@ -316,7 +321,7 @@ Las redes de clase A y B están claramente infrautilizadas. El subnetting coge p
 
 ![](media/32b1afd7c71532b8feda6ef403991120.jpeg)
 
-### CIDR para el subnetting
+### CIDR 
 
 El **CIDR** (*Classless Inter-Domain Routing*) es un mecanismo para representar y gestionar direcciones IP de forma más flexible, ya que las divisiones tradicionales en clases (A, B y C) eran muy ineficientes para aprovechar el limitado espacio de direcciones IPv4.
 
