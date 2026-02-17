@@ -331,7 +331,6 @@ Por ejemplo, no es correcto afirmar que la dirección 172.17.25.12 pertenece a l
 
 CIDR permite así una gran flexibilidad en el **subnetting**, posibilitando la creación de subredes de distintos tamaños sin estar limitado por las máscaras fijas de las clases tradicionales.
 
-
 Así por ejemplo, hablando en términos de **subnetting**, podemos decir que la red 172.17.11.25 con máscara 255.255.255.0 (que no es en realidad una red de clase C) es una subred (o subnet) de la red de clase B 172.17.0.0.
 
 Evidentemente existe una coincidencia entre las máscaras tradicionales de las clases de red IP y las equivalentes en CIDR como se muestra en la siguiente tabla:
@@ -428,13 +427,23 @@ Se utilizan enrutadores (**routers**) para segmentar los **dominios de difusión
 
 ## Seguridad en redes inalámbricas
 
-Hay que tener en cuenta que las redes WiFi son muy vulnerables a la interceptación de paquetes, a los ataques o a que usuarios no autorizados se aprovechen de la conexión. Por tanto, los administradores de red deben de implementar medidas de seguridad para prevenir un uso indebido de la red.
+Las redes inalámbricas presentan **riesgos de seguridad** superiores a las redes cableadas, ya que el medio de transmisión es el aire y cualquier dispositivo dentro del alcance puede capturar las señales emitidas. 
+Esto facilita ataques como:
+- Interceptación de tráfico (**sniffing**), 
+- Intentos de acceso no autorizado 
+- Ataques de fuerza bruta contra las credenciales.
 
-Una medida que no proporciona ningún tipo de seguridad, pero dificulta a ciertos usuarios conectarse, consiste en **ocultar el SSID**. Desde los puntos de acceso se difunde el SSID, para que los dispositivos dentro de la cobertura puedan conectarse. Esto se hace mediante broadcast o emisión del SSID. Si esta función se desactiva los ordenadores deberán configurar manualmente el SSID, por tanto, aquellos que no lo conozcan, puede que no detecten la red. Esto es fácilmente salvable ya que existen herramientas que detectan el *SSID* oculto, pero es un primer paso.
+Por este motivo, el administrador de red debe aplicar mecanismos de autenticación, cifrado y control de acceso que garanticen la confidencialidad e integridad de las comunicaciones.
 
 ![](media/3d36619e00f631280bdab4e219680437.jpeg)
 
-La medida de seguridad más utilizada consiste en encriptar o codificar la información de la red utilizando protocolos de seguridad inalámbricos.
+Una medida básica que no proporciona seguridad real es **ocultar el SSID**. El SSID es el identificador de la red inalámbrica que los puntos de acceso anuncian periódicamente. Si se desactiva su difusión, los dispositivos deberán de configurarlo manualmente. 
+
+Sin embargo, esta medida no impide que la red sea detectada mediante herramientas de análisis de tráfico, por lo que no debe considerarse un mecanismo de protección efectivo.
+
+## Protocolos de autentic. y cifrado
+
+La seguridad real en redes WiFi se basa en el uso de **protocolos de autenticación y cifrado**. A lo largo del tiempo se han desarrollado distintos estándares.
 
 Actualmente existen cuatro **protocolos de seguridad inalámbrica**:
 
@@ -459,9 +468,9 @@ Es un método muy débil y que **ya no se utiliza**, ya que es fácilmente desci
 
 ### WPA
 
-WiFi Alliance introdujo **WPA** en 2003, como reemplazo para WEP. Mientras que WEP proporciona la misma clave a cada sistema autorizado, en WPA se generan claves nuevas de manera **dinámica** con lo que dificulta su descifrado usando el protocolo **TKIP** y claves de 256 bits para el cifrado.
+WiFi Alliance introdujo **WPA** (Wi-Fi Protected Access) en 2003, como reemplazo para WEP. Mientras que WEP proporciona la misma clave a cada sistema autorizado, en WPA se generan claves nuevas de manera **dinámica** con lo que dificulta su descifrado usando el protocolo **TKIP** y claves de 256 bits para el cifrado.
 
-WPA no está exento de defectos ya que el protocolo *TKIP* se diseñó para implementarse en los sistemas con WEP a través de actualizaciones de firmware. Esto hizo que el WPA siguiera basándose en elementos fácilmente explotables.
+WPA no está exento de defectos ya que el protocolo *TKIP* se diseñó para implementarse en los sistemas con WEP a través de actualizaciones de firmware. Esto hizo que el WPA siguiera basándose en elementos fácilmente explotables, con lo cual hoy también **se considera inseguro**.
 
 ![](media/c962b6942e256e736ce6c36bcf131fae.png)
 
@@ -469,9 +478,9 @@ WPA no está exento de defectos ya que el protocolo *TKIP* se diseñó para impl
 
 El **WPA2** (acceso WiFi protegido 2) es la segunda generación del protocolo de seguridad inalámbrica de acceso WiFi protegido.
 
-Una de las ventajas del sistema WPA2 fue que introdujo el sistema de cifrado avanzado **AES** para sustituir al sistema TKIP, más vulnerable, usado en el protocolo WPA original.
+WPA2 supuso una mejora significativa al introducir el sistema de cifrado avanzado **AES** para sustituir al sistema TKIP, más vulnerable, usado en el protocolo WPA original. 
 
-El AES proporciona un cifrado potente y lo utiliza el gobierno de Estados Unidos para proteger los datos clasificados.
+WPA2 puede funcionar en modo personal (mediante contraseña compartida) o en modo empresarial, utilizando autenticación basada en 802.1X y servidores RADIUS.
 
 ![](media/8ec6d61f21ea2e49c2af32a4788e34a2.png)
 
@@ -479,23 +488,37 @@ El AES proporciona un cifrado potente y lo utiliza el gobierno de Estados Unidos
 
 El **WPA3** (acceso WiFi protegido 3) es el protocolo de seguridad inalámbrica más reciente, diseñado para cifrar datos mediante un tipo de cifrado frecuente y automático denominado *Perfect Forward Secrecy*.
 
+Sustituye el intercambio de claves por el protocolo **SAE** que protege frente a ataques de diccionario offline y proporciona mayor seguridad incluso con contraseñas débiles. También mejora la protección del tráfico en redes abiertas con cifrado individualizado.
+
 Es más seguro que su predecesor, WPA2, pero aún no se ha adoptado ampliamente. No todo el hardware es compatible automáticamente con WPA3, y usar este protocolo suele requerir costosas actualizaciones.
 
 ![](media/10f4b318394ac5836ad47d06e531462a.png)
 
 ![](media/836d75f33641c73a299b215db079f364.jpeg)
 
-Otra forma de mejorar la seguridad de redes inalámbricas sería mediante el uso **servidores de encriptación**, usualmente *Radius*. Estos servidores utilizan protocolos de autenticación y autorización, de esta manera es el servidor el que se encarga de distribuir claves diferentes entre los usuarios. Este método es el más seguro, pero también el de mayor coste.
+### Servidores de encriptación
+
+Otra forma de mejorar la seguridad de redes inalámbricas sería mediante el uso **servidores de encriptación**, usualmente *Radius*. 
+
+Estos servidores gestionan la autenticación, autorización y registro de accesos (AAA) de forma centralizada, permitiendo asignar credenciales individuales a cada usuario y mejorar el control de acceso a la red inalámbrica.
+
+Este método es el más seguro, pero también el de mayor coste.
+
+### Filtrado de direcciones MAC
 
 El **filtrado de direcciones MAC** es otra medida de seguridad adicional y se recomienda utilizarla como complemento de algunos de los métodos de encriptación. Consiste en configurar el punto de acceso o router de tal forma que tenga un listado de direcciones MAC de los equipos autorizados a conectarse a la red inalámbrica, para que aquellos equipos que no estén en la lista no puedan conectarse.
 
+Sin embargo, esta medida no es segura por sí sola, ya que las direcciones MAC pueden falsificarse mediante técnicas de suplantación.
+
 ![](media/9f68abcd582b79faec19e1f598d39f94.jpeg)
+
+### WPS
 
 Muchos routers traen de serie un botón con las siglas WPS. **WPS** (*Wifi Protected Setup*) es un sistema que tiene por funcionalidad al pulsarlo, la de ofrecer una forma fácil de conectarse a una WiFi escribiendo tan sólo un PIN de 8 dígitos, en lugar de la contraseña inalámbrica completa, y conectar rápidamente dispositivos a la red.
 
 ![](media/906561be12d5cbe50313cd05637a9f84.jpeg)
 
-WPS no obstante puede hacer insegura a la red WiFi ya que su PIN de tan solo 8 dígitos hace que, en el momento en que se pulsa el botón, sea vulnerable a un ataque por fuerza bruta.
+WPS no obstante puede hacer insegura a la red WiFi ya que su PIN de tan solo 8 dígitos hace que, en el momento en que se pulsa el botón, sea vulnerable a un ataque por fuerza bruta, con lo cual ya tampoco se utiliza y se recomienda desactivarlo.
 
 ## Direcciones IPv6
 
