@@ -399,30 +399,61 @@ Una VLAN nos va a permitir *segmentar* una la red local en varias subredes más 
 ### Dominio de colisión
 
 ```note
-Un dominio de colisión es un segmento de red que comparte las comunicaciones con todos los equipos conectados a este y en la cual las tramas colisionan entre ellas.
+Un dominio de colisión es un conjunto de dispositivos que comparten el mismo medio físico de transmisión y donde pueden producirse colisiones si dos equipos transmiten al mismo tiempo.
 ```
+Una colisión ocurre cuando dos dispositivos intentan transmitir datos **simultáneamente** por el **mismo medio físico** (pj. el mismo cable Ethernet).
 
-Cuando un equipo transmite, lo hace para todos los dispositivos del segmento de red al que está conectado (cableado), con independencia de con cuál de ellos quiera comunicarse. El protocolo *CSMA/CD* en redes Ethernet gestiona estas colisiones.
+En redes Ethernet se utilizaba el protocolo CSMA/CD (*Carrier Sense Multiple Access with Collision Detection*) para detectar y gestionar estas colisiones.
 
--   Los equipos unidos a un **hub** o a un **repetidor** (capa 1) formarán un **dominio de colisión** (todo lo que se envía por un puerto se reenvía a todos)
--   Cualquier dispositivo de capa 2 o superior, en cambio, **limita los dominios de colisión**. Por ejemplo, cada toma o puerto de un **switch** formará un **dominio de colisión diferente** y dará lugar a tantos dominios de colisión como puertos tenga conectados. Los switches eliminan el problema de los dominios de colisión al segmentar el tráfico y asignar dominios de colisión individuales por puerto.
+**Hub o repetidor (capa 1)**
+- Todo lo que entra por un puerto sale por todos los demás.
+- Todos los equipos comparten el mismo medio.
+
+**Switch (capa 2)**
+- Cada puerto es un dominio de colisión independiente.
+- Permite comunicaciones simultáneas.
+- Reduce drásticamente las colisiones.
+
 
 ### Dominio de difusión
 
 ```note
-Un dominio de difusión (broadcast domain) es el área lógica en una red de computadoras en la que cualquier equipo host conectado a la red puede transmitir
-directamente a cualquier otro en dicho dominio sin precisar ningún dispositivo de encaminamiento o router.
+Un dominio de difusión es el conjunto de dispositivos que reciben un mensaje de broadcast enviado por cualquiera de los equipos en ese mismo dominio.
 ```
 
-Un switch, por defecto, permite que los paquetes de broadcast se propaguen a todos los puertos dentro de la misma VLAN. Sin embargo, un **router** segmenta los dominios de difusión, evitando que los paquetes de broadcast se propaguen más allá de su segmento de red.
+Un mensaje de **broadcast** es aquel que se envía **a todos los dispositivos** de una red local.
 
-Un dominio de difusión funciona con la última dirección IP de una subred tal y como ya hemos visto.
+Ejemplos:
+- Petición ARP o DHCP Discover
+- Dirección IP de broadcast (ej. 192.168.1.255 en una red /24)
 
-Se utilizan enrutadores (**routers**) para segmentar los **dominios de difusión**.
+**Switch (capa 2)**
+- Reenvía los paquetes broadcast a todos los puertos de la misma VLAN.
+- No separa dominios de difusión.
+
+**Router (capa 3)**
+- No reenvía paquetes broadcast entre redes.
+- Cada interfaz del router crea un dominio de difusión distinto.
+- Se utiliza para segmentar redes.
+
+
+### Dominios colisión vs difusión
 
 ![](media/84d2aec96fa087ebaff4025705dc50ac.jpeg)
 
 ![](media/0443fea484081b157a57647281e894ac.jpeg)
+
+
+| Característica             | Dominio de colisión             | Dominio de difusión           |
+| -------------------------- | ------------------------------- | ----------------------------- |
+| Nivel OSI relacionado      | Capa 1 y 2                      | Capa 2 y 3                    |
+| Qué ocurre                 | Choque de tramas                | Envío de mensaje a todos      |
+| Problema principal         | Interferencia física            | Exceso de tráfico broadcast   |
+| Se produce cuando          | Dos equipos transmiten a la vez | Se envía un paquete broadcast |
+| Lo separa                  | Switch (por puerto)             | Router (por interfaz)         |
+| Ejemplo típico             | Red con hub                     | Petición ARP o DHCP           |
+
+
 
 
 ## Seguridad en redes inalámbricas
