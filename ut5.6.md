@@ -282,6 +282,51 @@ Pueden clasificarse en dos categorías:
 ![](media/f6bbeac2507c40f5a1ba98bb5b65f780.jpeg)
 ![](media/413f91564cdddf982025e6c74e875db3.jpeg)
 
+### Servicios de impresión en red
+
+El servicio de impresión en red permite que varios usuarios puedan enviar trabajos de impresión a una o varias impresoras compartidas a través de la red.
+
+En lugar de conectar la impresora por USB a un único equipo, la impresora:
+- Se conecta directamente a la red (Ethernet o WiFi), 
+- Se comparte desde un servidor de impresión.
+
+Esto permite:
+- Centralizar la gestión.
+- Controlar permisos.
+- Monitorizar trabajos.
+- Reducir costes.
+- Asignar cuotas o restricciones.
+
+![](media/printer_network.jpg)
+
+#### Modelos de impresión en red
+
+**Impresora con interfaz de red**
+La impresora tiene:
+- Tarjeta de red integrada.
+- Dirección IP propia.
+- Interfaz web de administración.
+
+Los clientes envían directamente los trabajos. Uso típico sería en entornos medianos.
+
+**Servidor de impresión dedicado**
+- Un servidor central gestiona:
+- Cola de impresión.
+- Permisos.
+- Monitorización.
+
+Los clientes envían el trabajo al servidor y este lo reenvía a la impresora. Un uso típico sería en entornos empresariales u oficinas grandes.
+
+#### Protocolos de impresión en red
+
+| Protocolo                        | Puerto   | Descripción                       |
+| -------------------------------- | -------- | --------------------------------- |
+| IPP (Internet Printing Protocol) | 631 TCP  | Protocolo moderno, basado en HTTP |
+| LPD/LPR                          | 515 TCP  | Protocolo tradicional Unix        |
+| SMB                              | 445 TCP  | Compartición en entornos Windows  |
+| RAW / JetDirect                  | 9100 TCP | Envío directo a impresora         |
+
+
 ### Servicios de Cloud Computing
 
 El **Cloud Computing** es un servicio ampliamente utilizado en la actualidad y que consiste en ofrecer servicios de computación a través de la red usando el almacenamiento en la nube (hablaremos en unidades posteriores de ello).
@@ -340,7 +385,7 @@ Para compartir archivos en una red local se suelen utilizar **SMB** (Server Mess
 
 ![](media/a0690c251ad0535c6e87b2c31be0e383.png)
 
-|                                | **SMB (Server Message Block)**                                                     | **NFS (Network File System)**                                        |
+|     **Característica**         | **SMB (Server Message Block)**                                                     | **NFS (Network File System)**                                        |
 |--------------------------------|------------------------------------------------------------------------------------|----------------------------------------------------------------------|
 | **Desarrollador**              | Microsoft (originalmente IBM)                                                      | Sun Microsystems (ahora parte de Oracle)                             |
 | **Compatibilidad**             | Windows, Linux, macOS (con Samba)                                                  | Linux, Unix, macOS, Windows (con software adicional)                 |
@@ -352,14 +397,15 @@ Para compartir archivos en una red local se suelen utilizar **SMB** (Server Mess
 
 ### Resumen de servicios
 
-| **Protocolo/Servicio** | **Seguridad**                        | **Uso Típico**                                                                  |
-|------------------------|--------------------------------------|---------------------------------------------------------------------------------|
-| FTP                    | Inseguro                             | Transferencias simples en redes internas                                        |
-| FTPS                   | Cifrado SSL/TLS                      | Transferencia segura en Internet                                                |
-| SFTP                   | SSH                                  | Transferencias seguras en servidores Linux                                      |
-| SMB                    | Soporta autenticación                | Compartición de archivos en redes Windows                                       |
-| NFS                    |                                      | Compartición de archivos en entornos Linux/Unix                                 |
-| P2P                    | Variable (depende del cifrado usado) | Transferencia distribuida de archivos, uso en torrents y redes descentralizadas |
+
+| Protocolo/Servicio | Seguridad                               | Uso Típico                                                       |
+|--------------------|------------------------------------------|------------------------------------------------------------------|
+| FTP                | ❌ Inseguro                              | Transferencias simples en redes internas                         |
+| FTPS               | ✅ Cifrado SSL/TLS                       | Transferencia segura en Internet                                 |
+| SFTP               | ✅ SSH                                   | Transferencias seguras en servidores Linux                       |
+| SMB                | ✅ Soporta autenticación                 | Compartición de archivos en redes Windows                        |
+| NFS                | ✅ (según versión/configuración)         | Compartición de archivos en entornos Linux/Unix                  |
+| P2P                | ⚠️ Variable (depende del cifrado usado) | Transferencia distribuida de archivos, uso en torrents y redes descentralizadas |
 
 ## Otros servicios de red
 
