@@ -430,6 +430,25 @@ Su sintaxis:
 
 ![](media/1cf3b6028ac2f975347aaa3070b9a973.png)
 
+
+### Comandos wget y curl
+
+Tanto **wget** como **curl** son herramientas de línea de comandos en Linux utilizadas para transferir datos desde o hacia un servidor.
+
+El comando *wget* se utiliza para descargar archivos de la web utilizando los protocolos HTTP, HTTPS o FTP.
+
+Su sintaxis:
+
+    wget [OPCIONES] [URL]
+
+El comando *curl* es una más versáti para interactuar con servidores ya que admite una mayor variedad de protocolos.
+
+Por ejemplo:
+
+    curl -O https://www.ejemplo.com/archivo.zip
+
+
+
 Comandos de **gestión de redes** básicos en Linux:
 
 | **Comando**    | **Acción**                                                         | **Ejemplo**                                         |
