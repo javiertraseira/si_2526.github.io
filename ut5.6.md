@@ -276,12 +276,13 @@ Pueden clasificarse en dos categorías:
 
 -   **Acceso remoto en modo terminal**. Para acceder a un servidor en modo terminal se procede generalmente a través de **SSH** (*Secure SHell*). Antiguamente se accedía también a través de *Telnet*, pero ya apenas se usa por ser inseguro.
 
-![](media/65cfbcbca40f2d58b98fce7982d7efab.jpeg)
+    ![](media/65cfbcbca40f2d58b98fce7982d7efab.jpeg)
 
 -   **Acceso remoto en modo gráfico**. Para acceder en modo gráfico a un servidor se puede utilizar el servicio *VNC* (Windows y Linux) o el servicio de Escritorio remoto en sistemas Windows. También existen aplicaciones como TeamViewer o SupRemo.
 
-![](media/f6bbeac2507c40f5a1ba98bb5b65f780.jpeg)
-![](media/413f91564cdddf982025e6c74e875db3.jpeg)
+    ![](media/f6bbeac2507c40f5a1ba98bb5b65f780.jpeg)
+    
+    ![](media/413f91564cdddf982025e6c74e875db3.jpeg)
 
 ### Servicios de impresión en red
 
