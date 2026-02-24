@@ -128,7 +128,7 @@ Cada motor de búsqueda consiste de dos partes principales:
 
 ## Servicios de Directorio en red
 
-```notes
+```note
 Los **servicios de directorio (SD)** en red es un sistema especializado de almacenamiento y consulta de información diseñado para gestionar identidades y recursos dentro de una red.
 ```
 
@@ -201,6 +201,7 @@ Es un **árbol jerárquico** compuesto por:
 - *DC* → Componente de Dominio
 - *OU* → Unidad organizativa
 - *CN* → Nombre del objeto Así, por ejemplo:
+
 
     CN=Juan Perez,OU=Profesores,DC=instituto,DC=local
 
