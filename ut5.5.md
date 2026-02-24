@@ -154,7 +154,6 @@ Permite conocer los paquetes que vienen desde un host (punto de red). También s
 
 ![](media/5f923b254775d5a962f3a06da7585062.png)
 
-# Configuración y comandos de red Windows
 
 El comando **NETSH** ofrece multitud de opciones a la hora de obtener información sobre la conexión de red, así como configurarla:
 
@@ -169,8 +168,6 @@ El comando **NETSH** ofrece multitud de opciones a la hora de obtener informaci�
 -   Para ver los nombres de las interfaces de red de nuestro sistema:
 
         NETSH interface show interface
-
-# Configuración y comandos de red Windows
 
 -   Para modificar la configuración de la red a una dirección estática:
 
@@ -276,13 +273,14 @@ Usando el comando sin parámetros nos mostrará los elementos en red compartidos
 Para crear la infraestructura de una red en Linux como mínimo, tenemos que tener en cuenta los siguientes aspectos:
 
 - **Configuración de la red**. Para empezar, necesitamos configurar las diferentes interfaces de red de nuestro equipo.
-- **Configurar nuestro router (iptables)**. Para permitir la comunicación entre dos o más redes; y nos permite establecer el tráfico de entrada y de salida que permite
-nuestro equipo.
+- **Servidor DNS**. Configurar un servidor dns permitirá mantener una equivalencia entre un nombre de Dominio y su dirección IP. 
 - **Servidor DHCP**. Permite asignar automáticamente la configuración IP de los equipos clientes de nuestra red. Este servicio es muy importante ya que nos facilita
 la conexión de los equipos a nuestra red. Por ejemplo, cuando un portátil se conecta a nuestra red a través del servidor DHCP obtiene su configuración IP.
-- **Servidor DNS**. Permite mantener una equivalencia entre un nombre y su dirección IP. Por ejemplo, el nombre www.ual.es equivale a 150.214.156.62.
+- **Configurar nuestro router (firewall)**. Para permitir la comunicación entre dos o más redes; y nos permite establecer el tráfico de entrada y de salida que permite
+nuestro equipo.
 
-#### Interfaces de red
+
+### Interfaces de red
 
 Las interfaces de red también conocidas como NIC (*Network Interface Card*) utilizaban un identificador en Linux que solía llamarse:
 
@@ -332,6 +330,39 @@ Ejemplos de utilización del comando **ifconfig.**
     sudo ifconfig enp0s3 broadcast 192.168.1.255
 ``` 
 
+### Comando ip
+
+El comando **ip** es una actualización del comando ifconfig utilizado en la mayoría de las distribuciones modernas.
+
+Forma parte del paquete *iproute2* y sustituye/mejora a los siguientes comandos o herramientas de red:
+
+- ifconfig
+- route
+- arp
+- netstat (parcialmente)
+
+Ejemplos de uso del comando ip:
+
+```bash
+#Muestra todas las interfaces de red y sus direcciones IP:
+ip addr
+
+#Activar/desactivar interfaz:
+sudo ip link set enp0s3 down
+sudo ip link set enp0s3 up
+
+#Asignar IP manualmente:
+sudo ip addr add 192.168.1.50/24 dev enp0s3
+
+#Ver la table de rutas:
+ip route
+
+#Para añadir puerta de enlace:
+sudo ip route add default via 192.168.1.1
+```
+> La configuración aplicada por el comando ip es provisional. Si queremos que los cambios se mantengan al reiniciar el equipo hay que usar la herramienta netplan.
+
+
 ### Utilidad netplan (Ubuntu)
 
 La utilidad **netplan** se usa para configurar fácilmente la red usado en distribuciones Ubuntu. Se basa en crear un fichero de texto siguiendo especifaciones *yaml* en la carpeta **/etc/netplan**.
@@ -379,7 +410,31 @@ network:
                 addresses: [8.8.1.1]
 ```
 
-#### Comando ping
+### Configuración dns
+
+El fichero `/etc/resolv.conf` es el archivo de configuración que indica al sistema qué servidores DNS debe utilizar para resolver nombres de dominio.
+
+    nameserver 8.8.8.8
+    
+
+No obstante, si utilizamos la herramienta **netplan** para la configuración la red, al usar el comando `netplan apply` el sistema generará automáticamente su contenido y se generará un fichero que enlaza a otro.
+
+
+### Configuración dhcp
+
+Cuando el equipo debe obtener una IP automáticamente:
+
+```bash
+sudo dhclient enp0S3
+```
+
+Este comando:
+- Solicita IP al servidor DHCP
+- Recibe IP, máscar, Gateway y DNS
+- Modifica automáticamente la configuración del sistema
+
+
+### Comando ping
 
 El archiconocido comando **ping** data de los años 70 y es conocido por ser uno de los comandos de red más básicos. Sin embargo, no es tan simple como podemos creer y tiene muchos más usos de los que ya conocemos.
 
@@ -395,6 +450,31 @@ Está basado en el protocolo ICMP y se utiliza para determinar:
 El comando **nmap** es la abreviatura de la herramienta *Network Mapper*. Es una herramienta de línea de comandos de Linux de código abierto que se utiliza para escanear direcciones IP y puertos en una red y para detectar aplicaciones instaladas.
 
 ![](media/4e6078416ecea1d5e3edec9397644227.png)
+
+
+### Comando dig
+
+Aunque Linux también utiliza el comando nslookup, existe un comando más potente que se recomienda para realizar su función de forma más completa.
+
+    dig google.es
+
+
+El comando permite ver:
+- IP devuelta
+- Tiempo de respuesta
+- Servidor DNS consultado
+
+### Comando nmap
+
+El comando **nmap** es una herramienta de código abierto utilizada para la exploración y auditoría de redes. Permite analizar uno o varios equipos de una red mediante el envío de paquetes y el análisis de las respuestas recibidas.
+
+Se emplea principalmente para:
+- Detectar equipos activos en una red.
+- Identificar puertos abiertos, cerrados o filtrados.
+- Determinar los servicios que se están ejecutando en dichos puertos.
+- Obtener información sobre el sistema operativo y versiones de software.
+- Realizar tareas básicas de auditoría de seguridad.
+
 
 ### Comando netstat
 
@@ -426,6 +506,7 @@ Comandos de **gestión de redes** básicos en Linux:
 | **ifconfig**   | Muestra información y configura las interfaces de red del sistema. | ifconfig enp0s3 192.168.4.2                         |
 | **netplan**    | El gestor de redes en Ubuntu (editar fichero yaml)                 | sudo netplan apply                                  |
 | **ping**       | Verificar estado de la conexión con un host concreto.              | ping [www.linux.org](http://www.linux.org/)         |
+| **dig**        | Verificar la resolución de DNS                                     | dig linux.org                                       |
 | **netplan**    | Para aplicar configuraciones de red en el equipo.                  | netplan apply                                       |
 | **nslookup**   | Herramienta para verificar la resolución dns del equipo.           | nslookup educamadrid.org                            |
 | **netstat**    | Identificar conexiones abiertas con el equipo.                     | netstat -e                                          |
