@@ -530,6 +530,32 @@ Este protocolo funciona como capa adicional a los protocolos de la capa de acces
 
 ![](media/c53389ca5da7697453943f79a4b93e5f.png)![](media/a9ae651faa815cf412f475f9884c87d2.png)
 
+### Protocolos de impresión en red
+
+La impresión en red permite que varios dispositivos puedan enviar trabajos de impresión a una impresora compartida a través de una infraestructura TCP/IP.
+
+En entornos empresariales y domésticos, las impresoras pueden funcionar de tres formas:
+- Impresora local compartida (conectada por USB a un equipo que la comparte).
+- Impresora de red con IP propia.
+- Servidor de impresión dedicado.
+
+Desde el punto de vista del modelo TCP/IP, los protocolos de impresión se sitúan en la **capa de aplicación**, ya que utilizan TCP/IP como base para transportar los datos del trabajo de impresión.
+
+
+**IPP** (Internet Printing Protocol) es el protocolo utilizado en sistemas como **CUPS** (Linux) y muchas impresoras actuales.
+
+Utiliza por defecto el puerto 631 y por TCP. Puede funcionar sobre HTTP o HTTPS y se puede usar autenticación y cifrado.
+
+IPP permite:
+- Enviar trabajos de impresión
+- Consultar el estado de la impresora
+- Gestionar colas
+- Autenticación de usuarios
+- Cifrado mediante TLS
+
+
+![](media/ipp_protocol.png)
+
 ## IPsec
 
 ```note
