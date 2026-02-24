@@ -281,7 +281,7 @@ Pueden clasificarse en dos categorías:
 -   **Acceso remoto en modo gráfico**. Para acceder en modo gráfico a un servidor se puede utilizar el servicio *VNC* (Windows y Linux) o el servicio de Escritorio remoto en sistemas Windows. También existen aplicaciones como TeamViewer o SupRemo.
 
     ![](media/f6bbeac2507c40f5a1ba98bb5b65f780.jpeg)
-    
+
     ![](media/413f91564cdddf982025e6c74e875db3.jpeg)
 
 ### Servicios de impresión en red
@@ -376,6 +376,7 @@ La transferencia de archivos mediante **P2P**, que significa *Peer-to-Peer* o de
 Ejemplos de servicios P2P son BitTorrent, eMule, entre otros.
 
 ![](media/c383c8bbf0dd0ae1ccd3014b0fbe17df.png)
+
 ![](media/cd6d06d2a64010d22b3cba2bc1caee63.jpeg)
 
 ### Servicios de archivos en redes locales
