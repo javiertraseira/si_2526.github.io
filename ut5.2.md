@@ -544,7 +544,7 @@ Desde el punto de vista del modelo TCP/IP, los protocolos de impresión se sitú
 
 **IPP** (Internet Printing Protocol) es el protocolo utilizado en sistemas como **CUPS** (Linux) y muchas impresoras actuales.
 
-Utiliza por defecto el puerto 631 y por TCP. Puede funcionar sobre HTTP o HTTPS y se puede usar autenticación y cifrado.
+Utiliza por defecto el puerto 631 y sobre TCP. Puede funcionar sobre HTTP o HTTPS y se puede usar autenticación y cifrado.
 
 IPP permite:
 - Enviar trabajos de impresión
