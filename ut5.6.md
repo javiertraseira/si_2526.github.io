@@ -353,7 +353,7 @@ Entre las ventajas que tiene el uso de este tipo de soluciones:
 -   Rendimiento: mejor relación precio-rendimiento para las cargas en la nube
 -   Confiabilidad: sistemas distribuidos, escalables y tolerantes a fallos en todos los servicios.
 
-Existen diversos niveles de Cloud Computing (*SaaS, PaaS y IaaS*) que hemos visto en unidades anteriores:
+Existen diversos niveles de Cloud Computing (*SaaS, PaaS y IaaS*) ya conocidos por nosotros:
 
 ![](media/cfce958dad0dea9b79986539252929ff.jpeg)
 
