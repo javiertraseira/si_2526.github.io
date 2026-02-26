@@ -58,15 +58,18 @@ Las redes basadas en **Dominios** son comunes en empresas y organizaciones, dond
 
 ### Dirección IP
 
-Una vez identificados los equipos en la red, tendremos que configurar el protocolo *TCP/ IP* para que los equipos puedan comunicarse entre ellos. Por defecto en Windows siempre que dispongamos de adaptador de red el protocolo TCP/IP, se instalará automáticamente e iniciarán los servicios de red correspondientes.
+Una vez identificados los equipos en la red, tendremos que configurar el protocolo TCP/ IP para que los equipos puedan comunicarse entre ellos. Por defecto en Windows se instalará el protocolo TCP/IP e iniciarán los servicios de red.
 
-Recordemos la distinción entre las IP públicas y las IP privadas en una red de ordenadores locales:
+Es importante antes de nada distinguir entre la IP pública y la IP privada en una red de ordenadores locales:
 
 -   Una **IP privada:** es la que utiliza cada dispositivo dentro de su red local dentro de los siguientes rangos para IPv4:
     -   De 10.0.0.0 a 10.255.255.255 (clase A)
     -   172.16.0.0 a 172.31.255.255 (clase B)
     -   192.168.0.0 a 192.168.255.255 (Clase C)
--   Una **IP pública**: Es la que tendrá asignada cualquier equipo o dispositivo conectado de forma directa a Internet (como nuestro router)
+-   Una **IP pública**: Es la que tendrá asignada cualquier dispositivo conectado de forma directa a Internet (como nuestro router)
+
+> ⚠️ Cuando Windows toma como dirección IP una que comienza por **169.254.x.x** significará que hay un fallo de comunicación entre tu equipo y el router, con lo cual **no se tendrá acceso a Internet**.
+
 
 ### PING
 
