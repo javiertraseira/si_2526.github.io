@@ -381,9 +381,21 @@ Ejemplos de servicios P2P son BitTorrent, eMule, entre otros.
 
 ### Servicios de archivos en redes locales
 
+En una red local, uno de los servicios más importantes es la compartición de archivos. Permite que varios usuarios accedan a documentos, carpetas o recursos de almacenamiento desde distintos equipos como si estuvieran en su propio ordenador.
+
+En lugar de copiar archivos manualmente entre dispositivos, los servicios de archivos en red permiten:
+
+- Centralizar la información.
+- Controlar permisos de acceso.
+- Facilitar el trabajo colaborativo.
+- Realizar copias de seguridad centralizadas.
+- Aplicar políticas de seguridad sobre los datos.
+
+Este tipo de servicio es fundamental en entornos empresariales, educativos y administrativos, donde múltiples usuarios necesitan acceder a los mismos recursos.
+
 Para compartir archivos en una red local se suelen utilizar **SMB** (Server Message Block) o **NFS** (Network File System):
 
--   **SMB** es usado en sistemas Windows para compartir archivos e impresoras. Implementado en Samba en Linux.
+-   **SMB** es usado en sistemas Windows para compartir archivos e impresoras. En sistemas Linux se implementa mediante Samba, lo que permite interoperabilidad entre sistemas Windows y Linux.
 -   **NFS** es un protocolo nativo de Unix/Linux para compartir archivos en red. Permite montar directorios remotos como si fueran locales.
 
 ![](media/a0690c251ad0535c6e87b2c31be0e383.png)
