@@ -386,6 +386,11 @@ El comando **nmap** es la abreviatura de la herramienta *Network Mapper*. Es una
 
 ![](media/4e6078416ecea1d5e3edec9397644227.png)
 
+Para centrarse en puertos concretos se utiliza el parámetro -p:
+
+```bash
+nmap -p 80,443,53,25,587 localhost
+```
 
 ### Comando dig
 
