@@ -406,17 +406,28 @@ Cada entrada contiene normalmente:
 | 0.0.0.0     | /0      | 192.168.1.1 | eth0     |
 
 **Ruta estática**
+
 Configurada manualmente por el administrador.
 
 Ejemplo:
-Destino: 10.0.0.0/8
-Gateway: 192.168.1.1
+
+|             |               |  
+| ----------- | -------       |  
+|  Destino    | 10.0.0.0/8    | 
+|  Gateway    | 192.168.1.1   | 
+
 
 **Ruta por defecto (0.0.0.0/0)**
 
 Es la ruta utilizada cuando ninguna otra coincide.
-Destino: 0.0.0.0
-Máscara: 0.0.0.0
+
+Ejemplo:
+
+|             |             |  
+| ----------- | -------     |  
+|  Destino    |  0.0.0.0    | 
+|  Máscara    |  0.0.0.0    | 
+
 
 
 ## Creación de subredes: VLANs
