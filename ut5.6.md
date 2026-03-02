@@ -393,6 +393,8 @@ En lugar de copiar archivos manualmente entre dispositivos, los servicios de arc
 
 Este tipo de servicio es fundamental en entornos empresariales, educativos y administrativos, donde múltiples usuarios necesitan acceder a los mismos recursos.
 
+#### SMB y NFS
+
 Para compartir archivos en una red local se suelen utilizar **SMB** (Server Message Block) o **NFS** (Network File System):
 
 -   **SMB** es usado en sistemas Windows para compartir archivos e impresoras. En sistemas Linux se implementa mediante Samba, lo que permite interoperabilidad entre sistemas Windows y Linux.
@@ -411,7 +413,6 @@ Para compartir archivos en una red local se suelen utilizar **SMB** (Server Mess
 | **Uso típico**                 | Compartición de archivos en redes Windows y entornos mixtos                        | Compartición de archivos en entornos Linux/Unix                      |
 
 ### Resumen de servicios
-
 
 | Protocolo/Servicio | Seguridad                               | Uso Típico                                                       |
 |--------------------|------------------------------------------|------------------------------------------------------------------|
