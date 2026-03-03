@@ -244,7 +244,7 @@ Es utilizado para enviar mensajes de error e información operativa indicando, p
 
 ### Protocolo NAT
 
-**NAT** (*Network Address Translator*) es un protocolo encargado de traducir direcciones de red, también llamado enmascaramiento de IP o NAT. Se trata de un mecanismo utilizado por routers IP para cambiar paquetes entre dos redes que asignan mutuamente direcciones IP incompatibles. Consiste en convertir, en tiempo real, las direcciones utilizadas en los paquetes transportados.
+**NAT** (*Network Address Translator*) es un protocolo crucial, encargado de **traducir** direcciones de red, también llamado enmascaramiento de IP o NAT. Se trata de un mecanismo utilizado por routers IP para cambiar paquetes entre dos redes que asignan mutuamente direcciones IP incompatibles. Consiste en convertir, en tiempo real, las direcciones utilizadas en los paquetes transportados.
 
 Cada uno de los dispositivos que hay conectados en nuestra red tienen una **dirección IP única**. Aquí podemos mencionar ordenadores, móviles o cualquier otro equipo. El traductor de direcciones de red mediante *NAT* lo que hace es proporcionar una dirección IP pública a toda esa red, a todo el conjunto de equipos.
 
