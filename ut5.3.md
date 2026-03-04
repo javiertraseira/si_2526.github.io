@@ -681,10 +681,14 @@ Es un dispositivo que puede funcionar a todos los niveles de la capa OSI, aunque
 Sus principales funciones pueden ser:
 
 -   **Cortafuegos**: es un elemento de seguridad que controla el tráfico de datos entrante y saliente de una red, de acuerdo a unas **reglas** que establecen qué se puede admitir y qué no.
--   **Proxy**: es un elemento de seguridad que actúa como intermediario entre dos equipos. También funciona con reglas para regular el tráfico de datos, pero las reglas se hacen a nivel de equipo, en lugar de a nivel de la red completa.
+-   **Proxy**: Es un equipo que actúa como intermediario entre los equipos de una red interna e Internet. Cuando un usuario solicita acceder a un recurso (por ejemplo, una web), la petición se envía primero al proxy, que la procesa y la reenvía al servidor externo. Un proxy además:
+    - Registra la actividad de navegación de los usuarios.
+    - Guarda contenido en caché para mejorar el acceso.
+
 -   **VPN (Virtual Private Network):** la red privada virtual es una función que permite conectarse de forma segura a una LAN privada desde una red pública (Internet).
 
-Además, un Gateway puede realizar funciones de capas inferiores, comportándose como un switch o un router. A cambio de todas sus funcionalidades y flexibilidad, el retardo de propagación para la comunicación que atraviesa una pasarela es mucho mayor que en otros dispositivos ya vistos.
+Además, un Gateway puede realizar funciones de capas inferiores, comportándose como un switch o un router. No confundir con la puerta enlace predeterminada que veremos más adelante. 
+
 
 > No confundir con la puerta enlace predeterminada que veremos más adelante.
 
