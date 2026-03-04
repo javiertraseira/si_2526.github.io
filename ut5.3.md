@@ -481,7 +481,7 @@ Una tarjeta de red por lo general tiene dos indicadores luminosos (LEDs):
 **Modo de transmisión:**
 
 -   **Half duplex**: el canal de comunicación no se puede utilizar para enviar y recibir información simultáneamente.
--   **Full-duplex**: el canal de comunicación permite enviar y recibir información simultáneamente.
+-   **Full-duplex**: el canal de comunicación permite enviar y recibir información simultáneamente (lo habitual)
 
 **Conectores:**
 
@@ -688,7 +688,6 @@ Sus principales funciones pueden ser:
 -   **VPN (Virtual Private Network):** la red privada virtual es una función que permite conectarse de forma segura a una LAN privada desde una red pública (Internet).
 
 Además, un Gateway puede realizar funciones de capas inferiores, comportándose como un switch o un router. No confundir con la puerta enlace predeterminada que veremos más adelante. 
-
 
 > No confundir con la puerta enlace predeterminada que veremos más adelante.
 
