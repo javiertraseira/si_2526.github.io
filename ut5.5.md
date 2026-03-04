@@ -380,24 +380,11 @@ Está basado en el protocolo ICMP y se utiliza para determinar:
 
 ![](media/f58fe7281639c3b5718383116fb17e5c.png)
 
-### Comando nmap
-
-El comando **nmap** es la abreviatura de la herramienta *Network Mapper*. Es una herramienta de línea de comandos de Linux de código abierto que se utiliza para escanear direcciones IP y puertos en una red y para detectar aplicaciones instaladas.
-
-![](media/4e6078416ecea1d5e3edec9397644227.png)
-
-Para centrarse en puertos concretos se utiliza el parámetro -p:
-
-```bash
-nmap -p 80,443,53,25,587 localhost
-```
-
 ### Comando dig
 
 Aunque Linux también utiliza el comando nslookup, existe un comando más potente que se recomienda para realizar su función de forma más completa.
 
     dig google.es
-
 
 El comando permite ver:
 - IP devuelta
@@ -415,6 +402,15 @@ Se emplea principalmente para:
 - Obtener información sobre el sistema operativo y versiones de software.
 - Realizar tareas básicas de auditoría de seguridad.
 
+![](media/4e6078416ecea1d5e3edec9397644227.png)
+
+Para centrarse en puertos concretos se utiliza el parámetro -p:
+
+Así, por ejemplo:
+
+```bash
+nmap -p 80,443,53,25,587 localhost
+```
 
 ### Comando netstat
 
