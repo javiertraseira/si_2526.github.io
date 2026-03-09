@@ -321,6 +321,16 @@ Por este motivo, **UDP no es recomendable para la transferencia de archivos**, y
 
 ![](media/b06cc06424a24b6527e6ec0f7564c9ca.png)
 
+### Capas de presentación y sesión
+
+En el modelo TCP/IP, las funciones de las capas de sesión y presentación del modelo OSI no aparecen como capas independientes. Sus funciones se integrarían dentro de la capa de aplicación del modelo TCP/IP.
+
+- Para la capa de **presentación** los protocolos y estándares más conocidos están TLS y SSL, que permiten cifrar las comunicaciones en Internet (por ejemplo en HTTPS), y formatos de representación de datos como **ASCII**, **UTF-8**, **JPEG**, **sockets**.
+
+- Para la capa de **sesión**, encargada de establecer, mantener y finalizar las sesiones de comunicación los protocolos asociados a esta capa serían **NetBIOS**, usado en redes Windows para la comunicación entre equipos, y **RPC**, que permite ejecutar procedimientos en sistemas remotos.
+
+
+
 ### Protocolos HTTP y HTTPS
 
 **HTTP** y **HTTPS** es el protocolo que permite que los navegadores y servidores web se comuniquen adecuadamente. Este es utilizado por navegadores web para solicitar archivos HTML de parte de los servidores remotos. Así mediante el servicio **WWW**, los usuarios podrán interactuar con dichos archivos mediante la visualización y navegación por páginas web que cuentan con imágenes, música, vídeos, texto, etc.
