@@ -18,7 +18,7 @@ De esta raíz ‘cuelgan’ el resto de los archivos y directorios del sistema. 
 
 Cualquier persona o institución puede crear su propia **distribución** Linux y ponerla en el mercado.
 
-**FHS** nos dice cómo tiene que ser la estructura de directorios y archivos para que una distro sea considerada Linux. Si nuestra distribución no cumple con lo expresado por el estándar, no será considerada Linux, si no “*basada”* en Linux.
+> ℹ️ **FHS** FHS es un estándar recomendado, el cual casi todas las distribuciones cumplen, para mantener coherencia entre ellas.
 
 **FHS** distingue entre varios **tipos de directorios**:
 
