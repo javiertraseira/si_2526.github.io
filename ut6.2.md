@@ -1,5 +1,75 @@
 # UT6.2: Operaciones generales en sistemas Linux
 
+## Estructura de directorios FHS
+
+Las distribuciones Linux tienen todas un **árbol jerárquico o estructura de directorios** idéntico, muy similar a la estructura del sistema de archivos de plataformas UNIX.
+
+Originariamente, en los inicios de Linux, este árbol de directorios tenía diferencias de una distribución a otra.
+
+La falta de estandarización de los directorios de Linux fue solucionada por un grupo de trabajo compuesto por Rusty Russell, Daniel Quinlan y Christopher Yeoh, que entre otros creando el proyecto **FHS** *(Filesystem Hierarchy Standard)* en 1994-95 y usado en todas las distribuciones y sistemas Linux certificados actuales.
+
+![](media/73549fc50c80f701864ba86816a6d6fa.png)
+
+**FHS** establece que la **estructura de directorios de Linux** comienza a partir de un directorio raíz que se simboliza con la barra “**/**”.
+
+De esta raíz ‘cuelgan’ el resto de los archivos y directorios del sistema. No hay nada por encima de la raíz y tampoco hay nada al lado de la raíz.
+
+![](media/a8eab917a4ac432f34e7ec5140336b34.jpeg)
+
+Cualquier persona o institución puede crear su propia **distribución** Linux y ponerla en el mercado.
+
+**FHS** nos dice cómo tiene que ser la estructura de directorios y archivos para que una distro sea considerada Linux. Si nuestra distribución no cumple con lo expresado por el estándar, no será considerada Linux, si no “*basada”* en Linux.
+
+**FHS** distingue entre varios **tipos de directorios**:
+
+-   **Estáticos**: contienen binarios, bibliotecas, documentación, cuyo contenido <u>solo puede ser modificado y alterado por el administrador del sistema</u>. El resto de usuarios podrá sólo leerlos.
+-   **Dinámicos**: son aquellos directorios cuyo contenido puede modificarse libremente. Algunos son importantes, puesto que contienen documentos de los usuarios o configuraciones de estos.
+-   **Compartidos**: son archivos que pueden compartirse entre uno o varios usuarios del sistema Linux.
+
+![](media/f9cc44e21617decb74b1e8103cc61523.png)
+
+Una particularidad de Linux es que todo dentro del sistema es o se representa mediante **archivos**.
+
+Tanto el software como el hardware. Desde el ratón, pasando por la impresora, el reproductor de DVD, el monitor, un directorio/subdirectorio y un fichero de texto.
+
+Un Disco óptico o una unidad USB se **monta** como un subdirectorio en el sistema de archivos. En ese subdirectorio se ubicará el contenido del disco compacto cuando esté **montado** y, vacío cuando esté **desmontado**.
+
+![](media/0e8a772e685f12891c18d13fecdfe20d.png)
+
+- / (**Directorio raíz**): Parecido a el directorio raíz “**C:\\**” de los sistemas operativos DOS y Windows. Es el nivel más alto dentro de la jerarquía de directorios.
+
+- **/bin/** Los binarios son los **ejecutables** de Linux (similar a los archivos **.exe** de Windows). Contiene los comandos de consola como ls, cp, date, echo, mkdir, rmdir..
+
+- **/boot/** Archivos necesarios para el **inicio** de Linux, desde los archivos de configuración del cargador de arranque (GRUB– LILO), hasta el propio **Kernel** del sistema.
+
+- **/dev/** Este directorio contiene los **dispositivos hardware del sistema**, incluso los que no se les ha asignado (montado) un directorio, por ejemplo micrófonos, impresoras, pendrives (memorias USB)
+
+- **/proc/** Enlaces a los **procesos** en ejecución del sistema e información de los trabajos internos de Linux.
+
+- **/etc/** Aquí se guardan los principales **ficheros de configuración** del sistema, así como scripts del inicio del sistema.
+
+- **/home/** Reúne los ficheros de **configuración de usuario** así como los archivos personales del mismo (documentos, música, videos, etc.), a excepción del superusuario (administrador, *root*) el cual cuenta con otro directorio aparte.
+
+- **/lib/** Contiene las **bibliotecas** (librerías) esenciales de los programas alojados, para el núcleo, así como módulos y drivers.
+
+- **/media/** Contiene los puntos de montaje de los **medios extraíbles** de almacenamiento. (CD-ROM , Pendrives o memorias USB), e incluso sirve para montar otras particiones del disco duro.
+
+- **/mnt/** Se utiliza normalmente para montajes temporales de unidades. Es semejante a **/media**, pero usado por usuarios.
+
+- **/sbin/** Sistema de binarios especial, comandos y programas exclusivos del superusuario (root).
+
+- **/srv/** Aloja datos de servicios en red del sistema (servidores web, FTP, HTTP…)
+
+- **/tmp/** Es un directorio donde se almacenan ficheros temporales. Cada vez que se inicia el sistema este directorio debería limpiarse.
+
+- **/usr/** Contiene **archivos de programa compartidos** usados por todos los usuarios del sistema, pero que no obstante son de sólo lectura. Contiene **programas** no esenciales y utilidades usadas por los usuarios.
+
+- **/root/** Directorio /home del administrador conocido como **root**. Es el único que no está incluido por defecto en el directorio **/home.**
+
+- **/var/** Archivos que almacenan logs, correos electrónicos o bases de datos.
+
+![](media/c304b952dcf605f47a7e974ca186f081.jpeg)
+
 ## Operaciones básicas en consola
 
 ```note
