@@ -450,7 +450,7 @@ Los **parámetros previos** más utilizados de awk son los siguientes:
 
 Listado de varias **condiciones** de búsqueda que se pueden utilizar por **awk**:
 
-    awk **'condición** {acciones}'
+    awk 'condición {acciones}'
 
 | **Condición**          | **Significado**                                              |
 |------------------------|--------------------------------------------------------------|
@@ -468,7 +468,7 @@ Listado de varias **condiciones** de búsqueda que se pueden utilizar por **awk*
 
 Listado de **variables de tratamiento de línea** para las **acciones** específicas que se pueden utilizar por **awk**:
 
-    awk 'condición **{acciones}'**
+    awk 'condición {acciones}'
 
 | **Variable**    | **Uso**                                                      |
 |-----------------|--------------------------------------------------------------|
