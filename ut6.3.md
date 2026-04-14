@@ -80,9 +80,11 @@ Ello se puede llevar a cabo de dos formas:
 
         Nombre_usuario ALL=(ALL:ALL) ALL
 
-1.  Editando el fichero **/etc/group**
+2.  Añadiendo el usuario al grupo **sudo** (fichero **/etc/group**)
 
-    Si, en el fichero */etc/sudoers* ya existe una línea referente al grupo *sudo* (o *admin)* como se debe incluir al usuario a uno u otro grupo como secundario editando el fichero */etc/group* (o agregarlo mediante usermod) a dichos grupos.
+    La forma recomendada para dar privilegios de administrador a un usuario, es añadirlo al grupo sudo, sin necesidad de modificar directamente ningún fichero del sistema, ya que se hace a través de comandos como veremos más adelante.
+    
+> Para que dichos usuarios puedan usar sudo en /etc/sudoers también tiene que la siguiente línea (ya viene por defecto): `%sudo ALL=(ALL:ALL) ALL`
 
 ### Comandos de usuarios
 
