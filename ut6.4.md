@@ -339,3 +339,266 @@ sed –n '3p;5p'
 | c\\ texto            | Reemplaza la línea completa si coincide con el patrón                     | sed '/error/c\\ ERROR DETECTADO' archivo.txt                      |
 | y/abc/xyz/           | Sustituye caracteres individuales (como tr)                               | sed 'y/aeiou/AEIOU/' archivo.txt (convierte vocales a mayúsculas) |
 
+
+## Comparación de ficheros
+
+### Comando diff
+
+El comando **diff** sirve para **comparar** las diferencias entre ficheros línea a línea. Es un comando muy útil para desarrolladores o administradores de sistemas cuando queremos comprobar las diferencias entre archivos o incluso directorios.
+
+Su sintaxis básica es:
+
+    diff [opciones] fichero1 fichero2
+
+Donde *opciones* puede ser:
+
+| **Parámetro**       | **Descripción**                                                        |
+|---------------------|------------------------------------------------------------------------|
+| -u                  | Formato unificado: muestra diferencias con algunas líneas de contexto. |
+| -c                  | Formato contexto: similar a -u, con más contexto y diferente estilo.   |
+| -i                  | Ignora diferencias entre mayúsculas y minúsculas.                      |
+| -w                  | Ignora todos los espacios en blanco.                                   |
+| -b                  | Ignora diferencias en la cantidad de espacios en blanco.               |
+| -y o --side-by-side | Muestra los archivos comparados uno al lado del otro.                  |
+| --color=always      | Resalta en color rojo los faltantes o en verde los añadidos            |
+
+La salida del comando **diff** a la hora de comparar 2 ficheros tiene el siguiente formato:
+
+| **Símbolo** | **Aparece en** | **Significado**                                             |
+|-------------|----------------|-------------------------------------------------------------|
+| \<          | archivo1       | Línea que está en el primer archivo, pero no en el segundo  |
+| \>          | archivo2       | Línea que está en el segundo archivo, pero no en el primero |
+
+Y el siguiente código de símbolos:
+
+| **Símbolo** | **Significado**       | **Ejemplo** | **Traducción**                                                       |
+|-------------|-----------------------|-------------|----------------------------------------------------------------------|
+| a           | **add** (añadir)      | 3a4         | Después de la línea 3 del archivo1, se añade la línea 4 del archivo2 |
+| d           | **delete** (eliminar) | 4d3         | La línea 4 del archivo1 fue eliminada para coincidir con el archivo2 |
+| c           | **change** (cambiar)  | 2c2         | La línea 2 del archivo1 fue cambiada por la línea 2 del archivo2     |
+
+Por ejemplo, a la hora de comparar dos archivos en formato estándar:
+
+    diff archivo1.txt archivo2.txt
+
+Y aparece el siguiente resultado:
+
+    2c2
+    < Hola mundo
+    ---
+    > Hola Mundo
+    4d3
+    < Esta línea solo está en el archivo1
+
+
+Comparación visual en columnas:
+
+![](media/63fd911f027dc848c19cea68cfe3ba97.png)
+
+Significado de las líneas resaltadas:
+
+-   El color **rojo** indica las líneas eliminadas en el primer fichero
+-   El color **verde** indica las líneas añadidas en el segundo fichero
+
+
+## Comando awk
+
+El comando **awk** es una herramienta avanzada de procesamiento de **patrones** en líneas de texto. Su utilización estándar es la de filtrar ficheros o salida de comandos de Linux, tratando las líneas para, por ejemplo, mostrar unas determinadas columnas de información.
+
+La sintaxis básica de awk es:
+
+    awk [condicion] { comandos }
+
+Por ejemplo:
+
+```bash
+# Mostrar sólo los nombres y los tamaños de los ficheros:
+ls-l | awk'{ print$8 ":" $5 }'
+# Mostrar sólo los nombres y tamaños de ficheros .txt:
+ls-l | awk'$8 ~ /\.txt/ { print$8 ":" $5 }'
+```
+
+Dependiendo de la implementación concreta, awk reconoce varias opciones:
+
+    awk [parámetros] 'condición {acciones}' fichero
+
+> Un programa de awk es una secuencia de reglas (sentencias patrón-acción) con el formato que se describe a continuación. Las **acciones** se ejecutarán si en el registro actual se cumple el patrón o **condición**:
+
+    condición {acciones;acciones}
+
+-   Las llaves son necesarias para awk, por lo que suele ser necesario encerrar los programas de awk entre comillas, para evitar que el shell las interprete como caracteres especiales.
+-   Si no hay condición que se cumpla, se ejecutarán las acciones en todos los registros. Para indicar un **patrón** en una condición se usa entre **/ /**
+-   Si no hay **acciones**, se ejecuta la acción por defecto: copiar el registro en la salida estándar.
+
+### Parámetros
+
+Los **parámetros previos** más utilizados de awk son los siguientes:
+
+-   awk -f \<*fichero_programa.awk*\> fichero
+
+    Con este parámetro, se puede especificar un archivo que contenga un **script** en **awk**, en lugar de escribirlo directamente en la línea de comandos. Esto es útil para scripts más largos o complejos.
+
+-   awk –F ':' **'condición** {acciones}'
+
+    Este parámetro permite especificar el **separador de campos**. Por defecto, el separador es el espacio en blanco.
+
+-   awk –v variables **'condición** {acciones}'
+
+    Se utiliza para definir variables previamente en awk (por ejemplo, *lista=3*)
+
+### Condiciones
+
+Listado de varias **condiciones** de búsqueda que se pueden utilizar por **awk**:
+
+    awk **'condición** {acciones}'
+
+| **Condición**          | **Significado**                                              |
+|------------------------|--------------------------------------------------------------|
+| /cadena/               | Búsqueda de cadena.                                          |
+| /\^cadena/             | Búsqueda de cadena al principio de la línea                  |
+| /cadena\$/             | Búsqueda de cadena al final de la línea.                     |
+| **\$N** \~ /cadena/    | Búsqueda de cadena en el campo **N**                         |
+| **\$N** !\~ /cadena/   | Búsqueda de **no** coincidencia de cadena en el campo **N**. |
+| /(cadena1)\|(cadena2)/ | Búsqueda de cadena1 o cadena2                                |
+| /cadena1/,/cadena2/    | Todas las líneas entre cadena1 y cadena2                     |
+
+> awk también permite la utilización de algunas **funciones** propias como *length*, *substr*, *tolower* o *toupper*.
+
+### Acciones
+
+Listado de **variables de tratamiento de línea** para las **acciones** específicas que se pueden utilizar por **awk**:
+
+    awk 'condición **{acciones}'**
+
+| **Variable**    | **Uso**                                                      |
+|-----------------|--------------------------------------------------------------|
+| \$0             | mostrar la línea completa.                                   |
+| \$1, \$2 .. \$N | mostrar los campos (columnas) de la línea especificados.     |
+| **NR**          | número de línea actual (registro) que está siendo procesado. |
+| NF              | número de campos (columnas) de la línea actual.              |
+| FNR             | Índice del registro actual relativo al archivo en curso.     |
+| FILENAME        | nombre del archivo en curso.                                 |
+
+Un ejemplo sencillo para mostrar los campos de la salida de un comando concreto (en este caso ps -ef):
+
+![](media/5e73fc29750a865d15aa7af9a9327807.png)
+
+En relación con print se suele usar awk '/patron/ {print}'
+
+El ejemplo más sencillo que podemos ver de uso de awk es el de imprimir la cadena "*Hola mundo*“ gracias a la **función** integrada **print**:
+
+    awk '{ print "Hola mundo"}'
+
+En el caso de ficheros con múltiples columnas separadas por espacios en blanco ya hemos dicho que se identifican como **campos.** En el siguiente ejemplo se muestran las columnas 1 y 3 (campos) de un fichero con 4 columnas:
+
+    awk '{ print $1, $3}' fichero.txt
+
+Estas variables se pueden **manipular** (sumar, restar, cambiar, etc.) como cualquier otra variable, por ejemplo:
+
+    awk '{ $1 = $2 + $3; print $0 }' archivo
+
+Sumará los campos 2 y 3 en el campo 1, e imprimirá el nuevo registro (la línea completa).
+
+### Operadores lógicos
+
+El comando awk también permite la utilización de **operadores lógicos** ya conocidos por nosotros:
+
+| **Operador** | **Uso**                                   |
+|--------------|-------------------------------------------|
+| \<           | Menor que                                 |
+| \>           | Mayor que                                 |
+| ==           | Igual que                                 |
+| !            | Distinto de                               |
+| \~           | Correspondencia con una expresión regular |
+| &&           | Operador AND                              |
+| \|\|         | Operador OR                               |
+
+Si queremos seleccionar las líneas usando operadores lógicos **OR** podremos hacerlo de la siguiente forma:
+
+    awk '$2 > 30 || $3 > 180' { print $1} datos.txt
+
+Si queremos usar en cambio un operador **AND**:
+
+    awk '$2 > 25 && $3 > 170' { print $1} datos.txt
+
+### Ejemplos aplicados
+
+Más ejemplos sencillos usando el comando **awk**:
+
+```bash
+# Imprimir último campo de cada línea del fichero indicado:
+awk'{ print$NF }' fichero.txt
+# Imprimir primeras N líneas:
+awk'NR < 100 {print}’
+# Filtrar líneas basadas en la condición de que el 2º campo sea mayor que 10
+awk '$2 > 10 {print}' archivo.txt
+# Mostrar campos/líneas que cumplan determinadas condiciones entre campos junto con la utilización de la función length:
+awk'$2 > $3 {print$3}' fichero
+awk'$1 > $2 && $3 > 1 {printlength($1)}' fichero
+```
+
+Se puede utilizar el comando awk del siguiente modo para que solo muestre solo **la línea** cuya columna **contenga la expresión regular** dato5:
+
+    awk '/dato5/ { print }' ejemplo.txt
+
+Por ejemplo, las siguientes líneas dentro del comando awk contienen dos reglas:
+
+    /12/ { print $0 }
+    /21/ { print $0 }
+
+La primera regla tiene la cadena ‘12’ como patrón y realiza la acción ‘*print \$0*’. La segunda regla tiene la cadena ‘21’ como patrón y también realiza la acción ‘*print \$0*’.
+
+La función **print**, también puede aceptar cadenas de caracteres como argumento, así como la utilización del carácter **tabulación** "\\t" o "\\n" entre comillas dobles:
+
+![](media/72e050269bbce841f0a99ca91853904b.jpeg)
+
+### Condicionales
+
+En awk se pueden usar **condicionales** dentro de sus **condiciones** para controlar el flujo de ejecución del script basado en ciertas condiciones. La estructura básica de un condicional en awk es similar a la de otros lenguajes de programación, usando el patrón if-else y entre { }
+
+Así, por ejemplo:
+
+```bash
+awk '{
+if ($1 >= 60) {
+print $1, "Aprobado"
+} else {
+print $1, "Suspenso"
+}
+}' puntuaciones.txt
+```
+
+### BEGIN Y END
+
+**BEGIN** y **END** son otros dos patrones especiales se pueden utilizar para indicar a awk qué hacer antes de empezar a procesar y después de haber procesado los registros de entrada. La regla **BEGIN** se ejecuta una vez, antes de leer el primer registro de entrada. Y la regla **END** se ejecuta una vez después de que se hayan leído todos los registros de entrada.
+
+![](media/1951e243c997b3472c373bfcc3b118a2.png)
+
+La sintaxis de las palabras clave **BEGIN** y **END** es la siguiente:
+
+    BEGIN {
+        acciones iniciales
+        }
+    <condición1> {acciones}
+    <condición2> {acciones}
+    ...
+    END {
+        acciones finales
+    }
+
+## Resumen comandos de gestión de cadenas
+
+Listado de comandos de **gestión de cadenas** destacados:
+
+| **Comando** | **Acción**                                                 | **Ejemplo**             |
+|-------------|------------------------------------------------------------|-------------------------|
+| **tee**     | Leer la entrada estándar y escribir en uno o más archivos. | date \| tee -a log.txt  |
+| **wc**      | Contar el nº de líneas, caracteres y de palabras.          | wc –l fichero.txt       |
+| **grep**    | Buscar un patrón en un fichero.                            | grep javier /etc/passwd |
+| **sort**    | Ordenar el contenido de un fichero/listado.                | sort –r fichero.txt     |
+| **uniq**    | Elimina filas duplicadas.                                  | cat fichero \| uniq     |
+| **find**    | Buscar ficheros que concuerden con un patrón.              | find –name '\*.jpg'     |
+| **tr**      | Sustituir grupos de caracteres por otros indicados.        | tr 'abc' '123'          |
+| **cut**     | Cortar o extraer elementos de una línea de un fichero.     | cut –d “:” -f 2         |
+| **sed**     | Sustituir (entre otras opciones) texto u ocurrencias*.*    | sed /s/hola/adios/      |
+| **awk**     | Herramienta de filtrado y procesado avanzado de texto.     | awk '{print \$8"}'      |
