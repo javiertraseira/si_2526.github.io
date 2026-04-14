@@ -86,7 +86,7 @@ El comando **tail** funciona de la misma forma, pero mostrando las 10 **últimas
 
 ```tip
 El comando **grep** permite **buscar** dentro de archivos, directorios o texto las líneas que concuerden con el elemento que especifiquemos (un patrón de búsqueda).
-El comando grep localiza el patrón  <u>resaltándolo</u> en rojo.
+El comando grep localiza el patrón  resaltándolo en rojo.
 ```
 
 La sintaxis básica del comando es la siguiente:
@@ -122,7 +122,7 @@ ls –l | grep rwxrwxrwx
 
 Se puede usar el comando grep con el parámetro **-E** para buscar con un patrón usando lo que se conoce como **expresiones regulares básicas**. Las expresiones regulares están formadas por letras y números, así como por caracteres.
 
-Las <u>expresiones regulares</u> incluyen:
+Las **expresiones regulares** incluyen:
 
 | **Símbolo** | **Descripción**                                                     |
 |-------------|---------------------------------------------------------------------|
@@ -137,13 +137,13 @@ Las <u>expresiones regulares</u> incluyen:
 
 Ejemplos de **expresiones regulares básicas** que podemos usar con *grep*: 
 
-- Un signo de intercalación (\^) indica el <u>inicio de línea</u>:
+- Un signo de intercalación (\^) indica el **inicio de línea**:
 
     ```bash
         grep '^b' texto.txt 
     ```
 
-- Un signo de dólar (\$) indica el <u>fin de línea</u>:
+- Un signo de dólar (\$) indica el **fin de línea**:
 
     ```bash
         grep 'a$' texto.txt
@@ -238,10 +238,10 @@ echo "     espacio sobra      " | tr –s ' '
 ### Comando cut
 
 ```tip
-El comando **cut** es utilizado para la extracción de <u>segmentos</u> (o columnas) de las líneas de texto. 
+El comando **cut** es utilizado para la extracción de **segmentos** (o columnas) de las líneas de texto. 
 ```
 
-Dada una línea de texto la trocea según el <u>separador o delimitador</u> que le indiquemos.
+Dada una línea de texto la trocea según el **separador o delimitador** que le indiquemos.
 
 Su sintaxis es:
 
