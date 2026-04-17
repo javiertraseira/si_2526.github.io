@@ -405,6 +405,12 @@ Significado de las líneas resaltadas:
 
 El comando **awk** es una herramienta avanzada de procesamiento de **patrones** en líneas de texto. Su utilización estándar es la de filtrar ficheros o salida de comandos de Linux, tratando las líneas para, por ejemplo, mostrar unas determinadas columnas de información.
 
+Se utiliza principalmente para:
+- Filtrar información.
+- Extraer columnas.
+- Aplicar condiciones.
+- Realizar cálculos.
+
 La sintaxis básica de awk es:
 
     awk [condicion] { comandos }
@@ -429,6 +435,8 @@ Dependiendo de la implementación concreta, awk reconoce varias opciones:
 -   Las llaves son necesarias para awk, por lo que suele ser necesario encerrar los programas de awk entre comillas, para evitar que el shell las interprete como caracteres especiales.
 -   Si no hay condición que se cumpla, se ejecutarán las acciones en todos los registros. Para indicar un **patrón** en una condición se usa entre **/ /**
 -   Si no hay **acciones**, se ejecuta la acción por defecto: copiar el registro en la salida estándar.
+
+> Idea clave: cada **línea** se reconoce como un **registro** y cada **palabra/columna** como un **campo** *($1, $2..)*
 
 ### Parámetros
 
@@ -507,8 +515,9 @@ El comando awk también permite la utilización de **operadores lógicos** ya co
 |--------------|-------------------------------------------|
 | \<           | Menor que                                 |
 | \>           | Mayor que                                 |
+| !            | Negación                                  |
 | ==           | Igual que                                 |
-| !            | Distinto de                               |
+| !=           | Distinto de                               |
 | \~           | Correspondencia con una expresión regular |
 | &&           | Operador AND                              |
 | \|\|         | Operador OR                               |
