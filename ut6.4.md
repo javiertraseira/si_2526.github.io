@@ -136,6 +136,17 @@ Las **expresiones regulares** incluyen:
 | **{n,m}**   | Que el carácter o conjunto previo aparezca entre n y m veces.       |
 | **\b**      | Se utiliza para marcar el límite de una palabra exacta (boundary)   |
 
+El comando grep también permite el uso de **clases de carácterer** para usar en expresiones regulares, como las que veremos a continuación:
+
+| **Símbolo** | **Descripción**                                                     |
+|-------------|---------------------------------------------------------------------|
+| [:blank:]   | Caracteres en blanco, tales como un espacio o un tabulado.          |
+| [:digit:]   | Caracteres numéricos (equivale a [0-9])                             |
+| [:lower:]   | Caracteres alfabéticos en minúscula.                                |
+| [:upper:]   | Caracteres alfabéticos en mayúscula.                                |
+| [:punct:]   | Signos de puntuación tales como !, #, $ y @                         |
+
+> La ventaja de este tipo de clases de carácter es que incluyen caracteres acentuados y otros símbolos Unicode en las expresiones que no hacen los rangos típicos [a-z].
 
 Ejemplos de **expresiones regulares básicas** que podemos usar con *grep*: 
 
