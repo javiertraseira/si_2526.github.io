@@ -134,6 +134,8 @@ Las **expresiones regulares** incluyen:
 | **\$**      | Para representar el fin de línea de texto.                          |
 | **+**       | Que el carácter o conjunto previo aparezca al menos una vez.        |
 | **{n,m}**   | Que el carácter o conjunto previo aparezca entre n y m veces.       |
+| **\b**      | Se utiliza para marcar el límite de una palabra exacta (boundary)   |
+
 
 Ejemplos de **expresiones regulares básicas** que podemos usar con *grep*: 
 
