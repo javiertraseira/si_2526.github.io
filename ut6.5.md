@@ -27,7 +27,7 @@ Los **estados** en los que puede estar un proceso en Linux son los siguientes:
 | T      | Stopped                   | Proceso **detenido** por el envío de alguna señal. |
 | Z      | Zombie                    | Proceso **terminado**, pero cuyo padre aún sigue «vivo» y no ha capturado el estado de terminación del proceso hijo. |                                                                                                                        |
 
-> El comando ps puede mostrar combinaciones de estados como Ss, R+, etc. La primera letra indica el estado principal y las siguientes aportan información adicional (por ejemplo, si es un proceso en primer plano o líder de sesión).
+> El comando *ps* puede mostrar combinaciones de estados como Ss, R+, etc. La primera letra indica el estado principal y las siguientes aportan información adicional (por ejemplo, si es un proceso en primer plano o líder de sesión).
 
 
 ### Listado de procesos
