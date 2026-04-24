@@ -243,9 +243,10 @@ Las señales más conocidas se lanzan con **kill** y **killall**:
 
 ### Comando nohup
 
-El comando nohup permite mantener la ejecución de un comando (el cual le pasamos como un argumento) pese a salir de la terminal (logout), ya que hace que se ejecute de forma **independiente a la sesión**.
+El comando **nohup** (*no hang up*) permite ejecutar un proceso de forma que no se detenga cuando cerramos la terminal o la sesión. Normalmente, al cerrar la terminal, el sistema envía la señal *SIGHUP* a los procesos asociados, provocando que finalicen. Sin embargo, nohup hace que el proceso ignore esa señal, por lo que sigue ejecutándose de manera independiente, aunque el usuario ya no esté conectado.
 
-Básicamente, lo que hace es ignorar la señal SIGHUP (señal que se envía a un proceso cuando la terminal que lo controla se cierra), esto implica que, aunque cerremos la terminal o le enviamos dicha señal, dicho proceso seguirá en ejecución.
+Se suele usar junto con **&** para lanzar el proceso en segundo plano. Además, si el proceso genera salida, esta se guarda en un fichero llamado *nohup.out*. Es útil para ejecutar tareas largas, como scripts o backups, sin mantener la terminal abierta.
+
 
 ![](media/nohup.png)
 
