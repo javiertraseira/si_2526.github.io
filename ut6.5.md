@@ -334,7 +334,7 @@ El comando dmesg por tanto:
 |---------------|--------------------------------------|----------------------|
 | **ps**        | mostrar procesos                     | ps –aux              |
 | **top**       | monitoreo en tiempo real de procesos | top                  |
-| **htop**      | interfaz de monitorio basada en top  | htop                 |
+| **htop**      | interfaz de monitoreo basada en top  | htop                 |
 | **kill**      | matar un proceso                     | kill 11428           |
 | **pkill**     | detener un proceso                   | pkill 11428          |
 | **pidof**     | conocer el PID de un proceso         | pidof bash           |
@@ -344,3 +344,4 @@ El comando dmesg por tanto:
 | **sleep**     | retrasar la ejecución                | sleep 1m 2           |
 | **systemctl** | Comando de gestión de servicios      | systemctl stop foo   | 
 | **journalctl**| Mostrar log de servicios             | journalctl –p 2      | 
+| **dmesg**     | Mensajes del kernel de Linux         | dmesg -w             | 
