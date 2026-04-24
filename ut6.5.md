@@ -167,6 +167,8 @@ Todo proceso en Linux tiene dos valores de prioridad asociados:
     - Para procesos normales PR= 20 + (-20 a 19) 
     - Aparece en la columna **PR**.
 
+![](media/priorities.png)
+
 
 ```tip
 Podemos cambiar la **prioridad relativa** de cualquier proceso que vayamos a lanzar a través del comando **nice**. 
