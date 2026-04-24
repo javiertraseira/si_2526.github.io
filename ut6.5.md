@@ -312,7 +312,9 @@ Donde opciones puede ser:
     -k mostrar el log del kernel de Linux
     -p para filtrar por prioridad (pj warning, 2)
     _PID para mostrar el log de dicho PID
-    -since -until para filtrar por fechas (por ejemplo --since='2024-02-29 00:01’      --until='2024-03-29 00:01)
+    -since -until para filtrar por fechas (por ejemplo --since='2024-02-29 00:01’ --until='2024-03-29 00:01)
+
+![](media/journactl.png)
 
 ### dmesg
 
