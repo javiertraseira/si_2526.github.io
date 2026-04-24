@@ -137,7 +137,7 @@ Linux es un SO operativo multiusuario y la consola no es una excepción. Ello im
 
 Para ello se ejecuta el comando correspondiente seguido del símbolo **&**: 
     
-    comando **&**
+    comando &
 
 **Ejecución del comando en primer plano:** hay que esperar hasta que termine el programa o proceso abierto.
 
@@ -154,13 +154,27 @@ Para ello se ejecuta el comando correspondiente seguido del símbolo **&**:
 
 ## Prioridad de procesos
 
+Todo proceso en Linux tiene dos valores de prioridad asociados:
+
+- Su valor **nice** (*NI*), que es su **prioridad relativa** respecto al resto de procesos:
+    - Es establecida por su propietario o por el usuario root.
+    - Aparece en la columna **NI** (prioridad relativa)
+    - Valores de -20 a 19 (0 si no se le especifica ninguna al comando nice)
+
+- Su valor de **prioridad de ejecución (PR)**
+    - Calculada y actualizada dinámicamente por la CPU (Kernel scheduler de Linux)
+    - Se puede ajustar a nivel del kernel alterando su comportamiento (según distribución)
+    - Para procesos normales PR= 20 + (-20 a 19) 
+    - Aparece en la columna **PR**.
+
+
 ```tip
 Podemos cambiar la **prioridad relativa** de cualquier proceso que vayamos a lanzar a través del comando **nice**. 
 ```
 
 Su sintaxis:
 
-    nice **–n** \<prioridad\> comando
+    nice –n \<prioridad\> comando
 
 💡 El rango de asignación de **prioridad** disponible es de **-20** (mayor) a **19** (menor)
 
@@ -255,7 +269,7 @@ Los sufijos disponibles son:
 ```tip
 En **Linux** el comando **systemctl** se utiliza para controlar y administrar **servicios o demonios** en el sistema, durante el arranque o durante la sesión actual.
 ```
-El comando systemctl admite los siguientes parámetros de uso:
+El comando systemctl admite los siguientes **parámetros** de uso:
 
 | **Acción**                                                               | **systemd**               |
 |--------------------------------------------------------------------------|---------------------------|
