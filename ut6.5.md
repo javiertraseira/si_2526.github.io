@@ -306,6 +306,7 @@ La sintaxis del comando journalctl es la siguiente:
     journalctl [opciones] [unit]
 
 Donde opciones puede ser:
+
     -n limita el número de entradas mostradas
     -u para mostrar el log del servicio que le indiquemos a continuación
     -k mostrar el log del kernel de Linux
