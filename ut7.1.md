@@ -1,4 +1,4 @@
-# UT 12.2 Administración de Linux. Información, redes y tareas
+# UT 12.2 Administración de Linux. Información y programación de tareas
 
 ## Información del sistema
 
@@ -48,6 +48,8 @@ Comando ya conocido, que muestra la fecha y hora del sistema, pudiendo cambiar s
 **neofetch**
 
 **neofetch** es una utilidad escrita en lenguaje bash, que permite ver en la terminal la información básica del hardware y del software instalado de forma visual.
+
+![](media/neofetch.png)
 
 Listado de comandos de **información del sistema** vistos:
 
