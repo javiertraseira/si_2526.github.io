@@ -52,226 +52,80 @@ Comando ya conocido, que muestra la fecha y hora del sistema, pudiendo cambiar s
 
 ![](media/neofetch.png)
 
+
+### Comando df (disk free)
+
+El comando **df** (*disk free*) muestra detalles acerca de los sistemas de archivos montados, es decir, detalla el espacio total, ocupado y libre de nuestro sistema.
+
+Al ejecutarse sin opciones, el comando muestra el espacio disponible en todos los sistemas de archivos montados al momento.
+
+Es aconsejable el parámetro *-h*, para que facilite la lectura en Gb, Mb o Kb.
+
+![](media/4f0cf085d23d03d41e9bec9749650e87.png)
+
+También podemos investigar el espacio libre y ocupado de determinados tipos de sistemas de archivos en particular. Para esto utilizamos la opción -t seguido del tipo de sistema de archivo que nos interese.
+
+### Comando du (disk usage)
+
+El comando du (disk usage) es el comando estándar de Linux para estimar el uso de espacio en disco de un archivo, directorio en particular o archivos.
+
+El comando se desplazará de forma recursiva a través de todos los archivos y subdirectorios dentro del directorio especificado.
+
+Por ejemplo, el espacio gastado en disco usando du –shc ./* desde la raíz
+
+![](media/imagen_du.png)
+
+### Información de discos
+
+El comando **lsblk** es útil ya que muestra información de todos los dispositivos de bloque del sistema y sus puntos de montaje:
+
+![](media/c55c0dfa16aca25db1bc7f786c53a197.png)
+
+Recuerda que en Linux las particiones en *MBR* se mostrarán de la siguiente forma:
+
+-   Las nombradas de la 1 a la 4 son particiones **primarias**
+-   Las nombradas a partir de la 5 son particiones **lógicas**
+
+
 Listado de comandos de **información del sistema** vistos:
 
-| **Comando** | **Descripción**                                                             |
-|-------------|-----------------------------------------------------------------------------|
-| **uname**   | Mostrar información del sistema: versión, kernel de Linux y otros detalles. |
-| **free**    | Estado de la memoria RAM y *swap* ocupados.                                 |
-| **uptime**  | Tiempo e información desde que el sistema ha estado funcionando.            |
-| **last**    | Últimos accesos al sistema.                                                 |
-| **lastb**   | Últimos accesos erróneos al sistema.                                        |
-| **w, who**  | Usuarios logueados en el sistema.                                           |
+| Comando | Descripción |
+|--------|------------|
+| uname  | Mostrar información del sistema: versión, kernel de Linux y otros detalles. |
+| free   | Estado de la memoria RAM y swap ocupados. |
+| uptime | Tiempo e información desde que el sistema ha estado funcionando. |
+| last   | Últimos accesos al sistema. |
+| lastb  | Últimos accesos erróneos al sistema. |
+| w, who | Usuarios logueados en el sistema. |
+| du     | Uso de espacio en disco. |
+| df     | Mostrar espacio libre en disco. |
+| lsblk  | Enumera información sobre los dispositivos de bloque disponibles o especificados. |
 
-## Gestión de redes
-
-Las **direcciones IP** son uno de los elementos de red que son fundamentales a la hora de gestionar redes ya que nos permiten realizar tareas de gestión como:
-
--   Conectar el equipo a la red local o Internet.
--   Definir donde se encuentra el equipo y su estado de actividad.
--   Verificar servicios y muchas más.
-
-    Contamos con dos posibilidades a la hora de gestionar las direcciones IP en cualquier tipo de sistema:
-
--   **DHCP**: Mediante esta opción se configura un servidor para que distribuya de forma dinámica todas las direcciones IP las cuales se han establecido en un rango definido anteriormente pero con este método las direcciones IP cambian de forma frecuente.
--   **Estática**: Al usarse esta alternativa definimos una dirección IP fija para el equipo la cual solo puede ser modificada de forma manual.
-
-### Interfaces de red
-
-Las interfaces de red también conocidas como NIC (*Network Interface Card*) utilizaban un identificador en Linux que solía llamarse:
-
-| **Interfaz** | **descripción**                                 |
-|--------------|-------------------------------------------------|
-| eth0         | Primera interfaz de red Ethernet cableada local |
-| eth1         | Segunda interfaz de red Ethernet cableada local |
-| wlan0        | Primera interfaz de red inalámbrica             |
-| lo           | Interfaz loopback (localhost)                   |
-
-A partir de la versión **15.10** de Ubuntu estas nomenclaturas han cambiado y reciben el nombre de *Ethernet Interface Logical Name*. Sus nuevas nomenclaturas son:
-
-| **Interfaz** | **equivalencia**        |
-|--------------|-------------------------|
-| enp0s3       | El equivalente de eth0  |
-| enp0s8       | El equivalente de eth1  |
-| wlp1s0       | El equivalente de wlan0 |
-
-### Comando ifconfig
-
-Para identificar, mostrar y configurar las redes de las interfaces del sistema se utiliza el comando **ifconfig.**
-
-![](media/de5f623239f38b8bdde1962326cb86cf.jpeg)
-
-Si a **ifconfig** se le añade el nombre de la interfaz, presentará la información de dicha interfaz. Si indicamos una dirección IP le asignaremos una dirección estática.
-
-La sintaxis del comando es la siguiente:
-
-    ifconfig interfaz [dirección [parámetros]]
-
-Ejemplos de utilización del comando **ifconfig**:
-
-```bash
-#Obtener información de un adaptador de red:
-ifconfig enp0s3
-
-#Deshabilitar un adaptador de red:
-ifconfig enp0s3 down
-
-#Habilitar un adaptador de red:
-ifconfig wlp1s0 up
-
-#Asignar una nueva dirección IP a un adaptador de red:
-sudo ifconfig wlp1s0 192.168.1.10
-
-#Asignar una nueva máscara de red a un adaptador de red:
-sudo ifconfig enp0s3 netmask 255.255.255.0
-
-#Para asignar una nueva dirección de broadcast:
-sudo ifconfig enp0s3 broadcast 192.168.1.255
-```
-
-### Utilidad netplan (Ubuntu)
-
-La utilidad **netplan** se usa para configurar fácilmente la red usado en distribuciones Ubuntu desde su versión 15. Se basa en crear un fichero de texto siguiendo especifaciones *yaml* en la carpeta **/etc/netplan**.
-
-> Antiguamente se usaba el fichero /etc/network/interfaces pero ya no funciona. 
-
-Deberemos modificar el fichero **/etc/netplan/01-network-manager-all.yaml**
-
-![](media/65928d5b709231a252a519c9e0fe2e04.png)
-
-Al hacer cambios en dicho fichero deberemos luego usar los siguientes comandos:
-
-```bash
-# Probar que los cambios funcionan
-sudo netplan try
-# Aplicar definitivamente los cambios
-sudo netplan apply
-```
-
-El fichero *yaml* tiene un formato concreto que debemos conocer.
-
-Veamos el siguiente ejemplo típico de una configuración para el fichero *yaml*:
-
-```yaml
-IP 192.168.1.50/24
-Gateway: 192.168.1.1
-DNS: 192.168.1.1
-Search Domain: mytcpip.local
-```
-
-Bastará con añadir las siguientes líneas al archivo **/etc/netplan/01-netcfg.yaml**
-
-```yaml
-network:
-  version: 2
-  renderer: networkd
-  ethernets:
-    enp0s3:
-      addresses: [192.168.1.50/24]
-      gateway4: 192.168.1.1
-      nameservers:
-        search: [mytcpip.local]
-        addresses: [8.8.1.1]
-```
-
-> No usar nunca tabuladores a la hora de rellenar los ficheros *yaml*
-
-### Comando ping
-
-El archiconocido comando **ping** data de los años 70 y es conocido por ser uno de los comandos de red más básicos. Sin embargo, no es tan simple como podemos creer y tiene muchos más usos de los que ya conocemos.
-
-Está basado en el protocolo ICMP y se utiliza para determinar:
--   Si hay conectividad entre nuestra máquina y otra máquina en la red.
--   Sirve para medir la “velocidad” o el tiempo de latencia.
-
-![](media/f58fe7281639c3b5718383116fb17e5c.png)
-
-### Comando netstat
-
-**Netstat** es otro comando de red que se utiliza para identificar todas las conexiones *TCP* y *UDP* abiertas en una máquina. Además de esto, nos permite conocer la información siguiente:
-
--   Tablas de rutas para conocer nuestras interfaces de red y las salidas de las mismas.
--   Estadísticas Ethernet que nos muestran los paquetes enviados, los recibidos y los posibles errores.
--   Saber el id del proceso que está siendo utilizado por la conexión.
-
-![](media/6929af58c1dd9d1166b2c73da2a3251f.png)
-
-### Comando traceroute
-
-Para conocer el camino que recorre un paquete a través de nuestra red se utilizará el comando **traceroute**.
-
-Este comando de red nos permitirá saber por dónde pasa el paquete (máquinas, switches, routers) y comprobar que nuestra red funciona correctamente.
-
-Su sintaxis:
-
-    traceroute [opciones] host [tamaño del paquete].
-
-![](media/1cf3b6028ac2f975347aaa3070b9a973.png)
-
-### Comandos wget y curl
-
-Tanto **wget** como **curl** son herramientas de línea de comandos en Linux utilizadas para transferir datos desde o hacia un servidor.
-
-El comando **wget** se utiliza para descargar archivos de la web utilizando los protocolos HTTP, HTTPS o FTP.
-
-Su sintaxis:
-wget [OPCIONES] [URL]
-
-    wget https://www.ejemplo.com/archivo.zip 
-
-El comando **curl** es una más versáti para interactuar con servidores ya que admite una mayor variedad de protocolos.
-
-Por ejemplo:
-
-    curl -O https://www.ejemplo.com/archivo.zip
-
-
-Comandos de **gestión de redes** básicos:
-
-| **Comando**    | **Acción**                                                         | **Ejemplo**                                         |
-|----------------|--------------------------------------------------------------------|-----------------------------------------------------|
-| **hostname**   | Muestra información del nombre de la máquina                       | hostname                                            |
-| **ifconfig**   | Muestra información y configura las interfaces de red del sistema. | ifconfig enp0s3 192.168.4.2                         |
-| **netplan**    | El gestor de redes en Ubuntu (editar fichero yaml)                 | sudo netplan apply                                  |
-| **ping**       | Verificar estado de la conexión con un host concreto.              | ping [www.linux.org](http://www.linux.org/)         |
-| **netplan**    | Para aplicar configuraciones de red en el equipo.                  | netplan apply                                       |
-| **nslookup**   | Herramienta para verificar la resolución dns del equipo.           | nslookup educamadrid.org                            |
-| **netstat**    | Identificar conexiones abiertas con el equipo.                     | netstat -e                                          |
-| **traceroute** | Mostrar camino que recorre un paquete al destino.                  | traceroute [www.google.com](http://www.google.com/) |
-
-
-Para crear la infraestructura de una red, como mínimo, tenemos que tener en cuenta los siguientes aspectos:
-
--   **Configuración de la red**. Para empezar necesitamos configurar las diferentes interfaces de red de nuestro equipo.
--   **Configurar nuestro router (iptables)**. Para permitir la comunicación entre dos o más redes; y nos permite establecer el tráfico de entrada y de salida que permite nuestro equipo.
--   **Servidor DHCP**. Permite asignar automáticamente la configuración IP de los equipos clientes de nuestra red. Este servicio es muy importante ya que nos facilita la conexión de los equipos a nuestra red. Por ejemplo, cuando un portátil se conecta a nuestra red a través del servidor DHCP obtiene su configuración IP.
--   **Servidor DNS**. Permite mantener una equivalencia entre un nombre y su dirección IP. Por ejemplo, el nombre [www.ual.es](http://www.ual.es/) equivale a 150.214.156.62.
 
 ## Programación de tareas
 
-**Cron** es un administrador regular de procesos en segundo plano.
+Para la programación de tareas en el tiempo se suele utilizar **cron**, que es un administrador regular de procesos en segundo plano. El demonio de cron, llamado **crond** se despierta una vez cada minuto, examina los ficheros de control, que se encuentran en */etc/crontab* en algunos sistemas o en */etc/spool/cron/crontabs*. 
+
 
 **Crontab** es un simple archivo de texto que guarda una lista de comandos a ejecutar en un tiempo especificado por el usuario.
 
 El demonio de cron, llamado **crond** se despierta una vez cada minuto, examina los ficheros de control, que se encuentran en /etc/crontab en algunos sistemas o en */etc/spool/cron/crontabs*
 
-En estos ficheros se almacenan los trabajos planificados mediante **crontab.** Si encuentra algún trabajo que deba ser ejecutado en ese minuto los ejecuta y si no los hay, vuelve a dormir hasta el siguiente minuto.
+En estos ficheros se almacenan los trabajos planificados mediante **crontab.** Si encuentra algún trabajo que deba ser ejecutado en ese minuto los ejecuta y si no los hay, vuelve a dormir hasta el siguiente **minuto**.
 
-En la actualidad existen otras herramientas muy utilizadas para tareas como systemd.timer, que en esencia funcionan igual que cron.
+En la actualidad existen otras herramientas muy utilizadas para tareas como **systemd.timer**, que en esencia funcionan igual que cron.
 
-En Linux además existen varias formas de programar tareas en respuesta a diversos eventoscomo udevo inotify.
+En Linux además existen varias formas de programar tareas en respuesta a diversos eventos como *udev* o *inotify*.
 
 ![](media/1fcff771d5050079767cd6ea25adadec.png)
 
 ### Crontab
 
-Para programar de forma periódica la ejecución de determinados procesos y aplicaciones se utiliza el comando **crontab**
+Para programar de forma periódica la ejecución de determinados procesos y aplicaciones se utiliza el comando **crontab**. El fichero de configuración de crontab se almacena en */etc/crontab*.
 
 Para agregar una tarea se usa el comando **crontab –e** y se agregan líneas usando el siguiente formato de 5 campos:
 
 ![](media/ba76692c39f0fa80ca48555e8a56c098.png)
-
-El fichero de configuración de crontab se almacena en */etc/crontab*
 
 Rango de valores aceptados para cada campo:
 
@@ -286,12 +140,11 @@ Rango de valores aceptados para cada campo:
 | 4         | Mes              | 1-12                |                             |
 | 5         | Día de la semana | 0-6                 | mon,tue,wed,thu,fri,sat,sun |
 
--   Si queremos ejecutar una tarea cada x tiempo utilizaremos la barra inclinada **/** para indicarlo: **/**10
+-   Si queremos ejecutar una tarea cada **x tiempo** utilizaremos la barra inclinada **/** para indicarlo: /10
+-   Si queremos indicar un **rango** entre números utilizaremos el guion: 1-5
+-   Si queremos indicar varios valores usaremos las comas: 1,3,6
 
-    -   Si queremos indicar un rango entre números utilizaremos el guion: 1-5
-    -   Si queremos indicar varios valores usaremos las comas: 1,3,6
-
-Existen también una serie de palabras reservadas para simplificar la creación de tareas:
+Existen también una serie de **palabras reservadas** para simplificar la creación de tareas:
 
 | **Entrada** | **Descripción**                | **Equivale a** |
 |-------------|--------------------------------|----------------|
@@ -323,3 +176,35 @@ Cron así mismo permite controlar que usuarios pueden o no pueden usar los servi
 
 -   /etc/cron.allow
 -   /etc/cron.deny
+
+### Systemd timers
+
+systemd timers son el mecanismo de programación de tareas de systemd que reemplaza (en gran parte) a cron en sistemas modernos.
+
+Permiten lanzar unidades (.service) en momentos o intervalos definidos, con gran flexibilidad y mejor integración con el sistema.
+
+Sus componentes básicos:
+- .service: unidad que define la acción a ejecutar: `ExecStart=/usr/bin/rsync`
+- .timer: unidad que define cuándo debe ejecutarse el .service: `OnCalendar=hourly, OnBootSec=5min`
+
+### udev
+
+Para generar una respuesta mediante scripts cuando se conecta o desconecta un dispositivo (USB, discos, etc.), se puede utilizar el comando **udev**.
+
+Para ello se debe editar el fichero /etc/udev/rules.d/99-usb.rules para especificar las reglas concretas.
+
+Por ejemplo:
+
+    ACTION=="add", SUBSYSTEM=="usb", RUN+="/ruta/del/script.sh"
+    
+Una vez editado dicho fichero de reglas será necesario recargar las reglas mediante el comando:
+
+    sudo udevadm control --reload-rules
+    
+### inotify / system.path
+
+inotify es una API del kernel de Linux que monitoriza eventos del sistema de archivos que pueden utilizarse para lanzar un script de una tarea concreta.
+
+También puede utilizarse systemd.path para ejecutar servicios en respuesta a cambios en archivos o directorios.
+
+Para ello habría que crear un archivo de configuración dentro de */etc/systemd/system/mi-servicio.path*
