@@ -78,12 +78,12 @@ echo Hola Mundo
 
 El comando **echo** sirve para mostrar una cadena de texto concreta con un mensaje para el usuario en la consola:
 
-    Sintaxis: *echo [-n] [-e] cadenadetexto*
+    Sintaxis: echo [-n] [-e] cadenadetexto
 
 Parámetros:
 
-**-n** Suprime la actuación normal de echo, que consiste en que añade una nueva línea a continuación de la salida.
-**-e** Permite la interpretación de una serie de *secuencias de caracteres* en la cadena.
+- -n Suprime la actuación normal de echo, que consiste en que añade una nueva línea a continuación de la salida.
+- -e Permite la interpretación de una serie de *secuencias de caracteres* en la cadena.
 
 | **Formato** | **valor** | **Formato** | **valor** |
 |-------------|-----------|-------------|-----------|
@@ -122,7 +122,6 @@ El valor de $VAR es mi valor
 
 > Como se puede ver, la variable se expande a su valor, pero el carácter \$ se escapa con una barra invertida \\ para que sea interpretado de forma literal.
 
-![](media/acbba4c7c9974e1ea219eb8bf3761ec7.png)
 
 **Comillas invertidas [\` \`] o \$( )**
 
@@ -291,7 +290,7 @@ Parámetros del comando **read**:
 
 Ejemplo:
 
-    read–s –n1 -p "si (S) o no (N)?"respuesta
+    read–s –n1 -p "si (S) o no (N)?" respuesta
 
 ## Operadores aritméticos
 
@@ -417,8 +416,9 @@ Para utilizar expresiones regulares en un if usaremos el comparador **=\~** y la
 
 **expresión regular**, de las que hemos hablado en unidades anteriores:
 
+| Expresión    | Descripción                                 |
+|--------------|---------------------------------------------|
 | \^    | Principio de línea                                 |
-|-------|----------------------------------------------------|
 | \$    | Final de línea                                     |
 | .     | Cualquier carácter excepto salto de línea          |
 | [ ]   | Conjunto de caracteres                             |
@@ -458,16 +458,16 @@ Ejecuta las *sentencias* solo si la **expresion** o condición es verdadera
 -   Ejecuta la sentencia-1 solo si la **expresión** es verdadera
 -   Ejecuta la sentencia-2 si la **expresión** es falsa
 
-    if [ expresion ]; then
-        sentencias
-    elif [ expresion ]; then
-        sentencias
-    else
-        sentencias
-    fi
+        if [ expresion ]; then
+            sentencias
+        elif [ expresion ]; then
+            sentencias
+        else
+            sentencias
+        fi
 
-- La palabra elif equivaldría a usar “else if”
-- Es parte de la sentencia ify no puede usarse sola, al igual que else.
+- La palabra `elif` equivaldría a usar `else if`
+- Es parte de la sentencia if y no puede usarse sola, al igual que else.
 
 | **Tipo**     | **Expresión**      | **Descripción**                                                                                                       |
 |--------------|--------------------|-----------------------------------------------------------------------------------------------------------------------|
@@ -613,7 +613,7 @@ No obstante, también existe el bucle for clásico, recorriendo un índice e inc
 ```bash
 for((i=1;i<=20;i++))
 do
-echo "$i"
+    echo "$i"
 done
 ```
 
@@ -698,29 +698,41 @@ En Bash existen diferentes formas de **declarar** un array:
 
 -   Asignando valores:
 
+```bash
     distros[0]='Ubuntu’
+```
 
 -   Utilizando la palabra clave declare:
 
+```bash
     declare -a distros=('Ubuntu' 'Linux Mint’)
+```
 
 -   Directamente:
 
+```bash
     array_distros=('Ubuntu' 'Linux Mint’)
+```
 
 Para **mostrar valores** podemos los siguientes formas:
 
 -   Mostrar todos los elementos del array:
 
+```bash
     echo ${array[*]}
+```
 
 -   Mostrar un elemento concreto
 
+```bash
     echo ${array[2]}
+```
 
 -   Mostrar el nº de elementos
 
+```bash
     echo ${#array[*]}
+```
 
 Para **recorrer** un array utilizaremos la siguiente forma mediante un bucle for:
 
