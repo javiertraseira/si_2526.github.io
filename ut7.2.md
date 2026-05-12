@@ -45,7 +45,6 @@ Existen diferencias importantes entre los lenguajes de programación tradicional
 -   Necesidad de realizar E/S a través de puertos o sockets
 -   Aplicaciones de código-cerrado (Los shell scripts suelen ser Open Source)
 
-![](media/acbba4c7c9974e1ea219eb8bf3761ec7.png)
 
 ### Formato
 
@@ -93,7 +92,6 @@ Parámetros:
 | Rojo        | \\e[31m   | Blanco      | \\e[37m   |
 | Verde       | \\e[32m   | Subrayado   | \\e[4m    |
 
-![](media/acbba4c7c9974e1ea219eb8bf3761ec7.png)
 
 ## Caracteres especiales
 
