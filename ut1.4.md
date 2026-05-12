@@ -1,4 +1,4 @@
-# UT 1.4 Introducción a los Sistemas Informáticos: Redes de telecomunicaciones
+# UT1.4 Introducción a los Sistemas Informáticos: Redes de telecomunicaciones
 
 ## Red de datos de telecomunicaciones
 
