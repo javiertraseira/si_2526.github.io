@@ -1,4 +1,4 @@
-# UT 12.2 Administración de Linux. Información y programación de tareas
+# UT 7.1 Administración de Linux. Información y programación de tareas
 
 ## Información del sistema
 
