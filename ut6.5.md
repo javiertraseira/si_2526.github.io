@@ -154,6 +154,8 @@ Para ello se ejecuta el comando correspondiente seguido del símbolo **&**:
 
 ## Prioridad de procesos
 
+### Prioridad relativa y de ejecución
+
 Todo proceso en Linux tiene dos valores de prioridad asociados:
 
 - Su valor **nice** (*NI*), que es su **prioridad relativa** respecto al resto de procesos:
@@ -169,6 +171,7 @@ Todo proceso en Linux tiene dos valores de prioridad asociados:
 
 ![](media/priorities.png)
 
+### Prioridad relativa (NI)
 
 ```tip
 Podemos cambiar la **prioridad relativa** de cualquier proceso que vayamos a lanzar a través del comando **nice**. 
