@@ -131,3 +131,31 @@ De esta forma se facilita al usuario acceder a estos recursos desde su perfil de
 Powershell es un motor de administración orientado a objetos basado en .NET Framework. Un “objeto” es un elemento del SO con un estado concreto y al que se le puede dar un comportamiento. En PowerShell todo son objetos, aunque veamos la salida por pantalla de la ejecución de comandos como una cadena de texto. 
 
 Además de la consola por la línea de comandos, existe desde la versión 2.0 un excelente entorno de desarrollo de scripts PowerShell en modo gráfico llamado PowerShell ISE.
+
+Algunas características reseñables de PowerShell:
+
+- Los comandos de PowerShell se denominan **cmdlets** (command-applets). 
+- PowerShell tiene 10 veces más comandos o cmdlets en comparación con CMD. 
+- Orientación a objetos. Aunque los cmdlets se escriben como texto, se comportan como objetos.
+- Muchos de estos cmdlets permiten usar alias, los cuales los permiten usar como si fueran los comandos tradicionales a los que ya estamos acostumbrados. Así por ejemplo, para listar los elementos de un directorio podemos utilizar dir, ls o gci.
+- Es importante destacar que PowerShell **no es sensible a mayúsculas y minúsculas**. En PowerShell "get-service" , "Get-Service" o "GeT-SerVIce" son el mismo comando.
+- Los comandos que vimos en la consola CMD funcionan en PowerShell, al igual que muchos de los comandos de Linux que estudiaremos posteriormente. 
+- Powershell también permite el uso y la creación de variables de entorno locales y del sistema.
+
+Además de la consola existe un entorno de desarrollo integrado, el **Powershell ISE** desde la cual documentarnos de sus comandos en la pestaña de la derecha.
+
+![](media/powershell_ise.png)
+
+> La extensión de los scripts en Powershell suele ser ps1.
+
+### Estructura cmdlets
+
+Los comandos de PowerShell, llamados cmdlets (command-applets) están estructurados de la siguiente manera: un **verbo** y un **nombre** (en inglés obviamente) separados por un guion (-): verbo-nombre. 
+
+Por ejemplo, Get-Command.
+
+El verbo describe la acción a realizar sobre el nombre. En el anterior ejemplo, recuperamos (Get) los comandos (Command).
+
+Con PowerShell encontramos numerosos verbos genéricos tales como Get, Set, Add, New, Remove, etc. que se combinan con diferentes nombres como Path, Variable, Item, Object, Computer, etc.
+
+Los nombres que constituyen los comandos están siempre en singular. Esto es válido también para los parámetros.
